@@ -22,19 +22,19 @@ body{
 }
 @font-face {
     font-family: myFontRetina;
-    src: url(/fira-code/FiraCode-Retina.OTF);
+    src: url(../fira-code/FiraCode-Retina.OTF);
 }
 @font-face {
     font-family: myFontBold;
-    src: url(/fira-code/FiraCode-Bold.OTF);
+    src: url(../fira-code/FiraCode-Bold.OTF);
 }
 @font-face {
     font-family: myFontThin;
-    src: url(/fira-code/FiraCode-Light.OTF);
+    src: url(../fira-code/FiraCode-Light.OTF);
 }
 @font-face {
     font-family: myFontRegular;
-    src: url(/fira-code/FiraCode-Regular.OTF);
+    src: url(../fira-code/FiraCode-Regular.OTF);
 }
 .loading{
     height: 100vh;
