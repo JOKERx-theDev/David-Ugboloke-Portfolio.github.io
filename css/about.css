@@ -101,7 +101,6 @@ body{
     opacity: 1;
 }
 .navList ul a:nth-child(3){
-    padding-right: 99px;
     border-bottom: 2px solid #FEA55F ;
     opacity: 1;
 }
@@ -914,7 +913,10 @@ body{
     text-decoration: none;
     color: #607B96;
 }
-
+.navList ul a:nth-child(3){
+    border-bottom: 2px solid #FEA55F ;
+    opacity: 1;
+}
 .navContact ul a:nth-child(1):hover{
     opacity: 0.5;
 }
