@@ -913,6 +913,11 @@ body{
     text-decoration: none;
     color: #607B96;
 }
+.navList ul a:nth-child(1){
+    padding-right: 99px;
+    border-bottom: none;
+    opacity: 1;
+}
 .navList ul a:nth-child(3){
     border-bottom: 2px solid #FEA55F ;
     opacity: 1;
