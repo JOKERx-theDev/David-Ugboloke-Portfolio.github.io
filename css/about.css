@@ -11,15 +11,15 @@ body{
 }
 @font-face {
     font-family: myFontRetina;
-    src: url(../fira-code/FiraCode-Retina.otf) format("OpenType");
+    src: url(../fira-code/FiraCode-Retina.otf);
 }
 @font-face {
     font-family: myFontBold;
-    src: url(../fira-code/FiraCode-Bold.otf) format("OpenType");
+    src: url(../fira-code/FiraCode-Bold.otf);
 }
 @font-face {
     font-family: myFontThin;
-    src: url(../fira-code/FiraCode-Light.otf) format("OpenType");
+    src: url(../fira-code/FiraCode-Light.otf);
 }
 @font-face {
     font-family: myFontRegular;
