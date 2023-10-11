@@ -1,0 +1,1232 @@
+body{
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+    background-image: url(images/ph1.JPG);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    orientation: landscape;
+    overflow: hidden;
+    caret-color: transparent;
+}
+body::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: inset 0 0 2000px #000;
+    border-radius: 100%;
+    border-radius: 0;
+    z-index: -1;
+}
+.logo{
+    z-index: 100;
+}
+.logo img{
+    width: 50%;
+    z-index: 101;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    z-index: 99;
+    padding-top: 10px;
+}
+.nav ul{
+    display: flex;
+    gap: 50px;
+}
+.nav ul li{
+    list-style: none;
+}
+.nav ul li a{
+    font-size: 12px;
+    text-decoration: none;
+    color: #ffffffb7;
+}
+.nav ul li a:hover{
+    color: #00A3FF;
+}
+.nav ul li a:focus{
+    color: #00A3FF;
+}
+.nav ul li:nth-child(1){
+    display: none;
+}
+.nav ul a button{
+    width: 60px;
+    height: 20px;
+    border-radius: 30px;
+    border: 1px solid #fff;
+    font-size: 10px;
+    cursor: pointer;
+}
+.nav ul li .active{
+    color: #00A3FF;
+}
+.bar{
+    display: block;
+    cursor: pointer;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3 ease-in-out;
+    transition: all 0.3 ease-in-out;
+    background-color: #fff;
+}
+.ham-burg{
+    display: none;
+    color: #fff;
+    z-index: 100;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.ham-burg.active-nav .bar:nth-child(2){
+    opacity: 0;
+}
+.ham-burg.active-nav .bar:nth-child(1){
+    transform: translateY(8px) rotate(45deg);
+    transition: 0.3s
+}
+.ham-burg.active-nav .bar:nth-child(3){
+    transform: translateY(-8px) rotate(-45deg);
+    transition: 0.3s;
+}
+.nav-menu{
+    position: fixed;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    min-height: 100%;
+    z-index: 98;
+    background: #080A0B;
+    display: none;
+    padding-top: 29%;
+    text-align: center;
+    transition: 0.4s;
+}
+.nav-menu.is-active{
+    left: 0;
+}
+.nav-menu li a{
+    display: block;
+    padding: 9px 16px;
+    width: 100%;
+    max-width: 150px;
+    text-align: center;
+    margin: 0 auto 16px;
+    color: #000;
+}
+.nav-menu li a:hover{
+    color: #fff;
+    transition: 0.3s ease-in;
+}
+.nav-menu button{
+    width: 300px;
+}
+/*MAIN*/
+.main{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 200px;
+}
+.image{
+    text-align: center;
+    margin-top: 15%;
+}
+.a img{
+    width: 60%;
+
+}
+.b img{
+    width: 20%;
+}
+.sign-log{
+    margin-top: 6.5%;
+    display: flex;
+}
+.sign-up{
+    background-color: #ffffff2f;
+    backdrop-filter: blur(4px);
+    border: 2px solid #fff;
+    width: 350px;
+    height: 80vh;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 20px;
+}
+.sign-up h3, .sign-up p{
+    color: #fff;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+.sign-up h3{
+    font-size: 25px;
+    text-transform: capitalize;
+    font-weight: bolder;
+    font-family: 'Poppins', sans-serif;
+}
+.sign-up p{
+    font-size: 9px;
+    margin-top: -20px;
+}
+.sign-up label, .sign-up input{
+    margin-left: 10%;
+}
+.sign-up label{
+    color: #fff;
+    font-size: 11px;
+    margin-top: 10px;
+}
+.sign-up input::placeholder{
+    color: #fff;
+    font-size: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+.sign-up input{
+    border: none;
+    color: #fff;
+    background: transparent;
+    outline: none;
+    height: 15px;
+    margin-top: -50px;
+    border-bottom: 2px solid #fff;
+    padding-bottom: 10px;
+    margin-bottom: 7px;
+    font-size: 10px;
+    color: #fff;
+    width: 260px;
+    font-family: 'Poppins', sans-serif;
+}
+#password{
+    margin-bottom: -5px;
+}
+.eye{
+    position: absolute;
+    color: #71797e;
+    margin-left: -30px;
+    cursor: pointer;
+}
+.eye i{
+    font-size: 12px;
+}
+.sign-up button{
+    width: 150px;
+    height: 25px;
+    margin-left: 28%;
+    background: #FF592A;
+    border: 1px solid #FF592A;
+    border-radius: 4px;
+    font-size: 10px;
+    color: #403B3B;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+}
+.or{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin-top: 10px;
+
+}
+.or p{
+    font-size: 9px;
+    position: relative;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+.or input{
+    -webkit-appearance: none;
+    appearance: none;
+    width: 85px;
+    margin-left: 0%;
+}
+.options{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+.option1 img{
+    width: 100%;
+    height: 100%;
+}
+.option2 img{
+    width: 100%;
+    height: 100%;
+}
+input[type=password]::-ms-reveal,
+input[type=password]::-ms-clear
+{
+    display: none;
+}
+#click, #click1{
+    color: #FF8B6A;
+    cursor: pointer;
+}
+/*login*/
+.login{
+    background-color: #ffffff2f;
+    backdrop-filter: blur(4px);
+    border: 2px solid #fff;
+    width: 350px;
+    height: 80vh;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 20px;
+    display: none;
+}
+.login h3, .login p{
+    color: #fff;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+.login h3{
+    font-size: 25px;
+    text-transform: capitalize;
+    font-weight: bolder;
+    font-family: 'Poppins', sans-serif;
+}
+.login p{
+    font-size: 9px;
+    margin-top: -20px;
+}
+.login label, .login input{
+    margin-left: 10%;
+}
+.login label{
+    color: #fff;
+    font-size: 11px;
+    margin-top: 10px;
+}
+.login input::placeholder{
+    color: #fff;
+    font-size: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+.login input{
+    border: none;
+    color: #fff;
+    background: transparent;
+    outline: none;
+    height: 15px;
+    margin-top: -50px;
+    border-bottom: 2px solid #fff;
+    padding-bottom: 10px;
+    margin-bottom: 7px;
+    font-size: 10px;
+    color: #fff;
+    width: 260px;
+    font-family: 'Poppins', sans-serif;
+}
+#password{
+    margin-bottom: -5px;
+}
+.eye{
+    position: absolute;
+    color: #fff;
+    margin-left: -30px;
+    cursor: pointer;
+}
+.eye i{
+    font-size: 12px;
+}
+.login button{
+    width: 150px;
+    height: 25px;
+    margin-left: 28%;
+    background: #FF592A;
+    border: 1px solid #FF592A;
+    border-radius: 4px;
+    font-size: 10px;
+    color: #403B3B;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+}
+.or{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin-top: 10px;
+
+}
+.or p{
+    font-size: 9px;
+    position: relative;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+.or input{
+    -webkit-appearance: none;
+    appearance: none;
+    width: 85px;
+    margin-left: 0%;
+}
+.options{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+.option1{
+    height: 20px;
+    width: 20px;
+    object-fit: cover;
+    background: #fff;
+    padding: 5px;
+    border-radius: 5px;
+}
+.option2{
+    height: 19px;
+    width: 17px;
+    object-fit: cover;
+    background: #fff;
+    padding: 6px;
+    border-radius: 5px;
+}
+.option1 img{
+    width: 100%;
+    height: 100%;
+}
+.option2 img{
+    width: 100%;
+    height: 100%;
+}
+input[type=password]::-ms-reveal,
+input[type=password]::-ms-clear
+{
+    display: none;
+}
+.click{
+    color: #FF8B6A;
+    cursor: pointer;
+}
+.maxWidth{
+    display: none;
+}
+@media screen and (min-width:2100px) and (orientation:landscape)  {
+    body{
+        background-image: none;
+        background-color: #000;
+    }
+    .signHtml{
+        display: none;
+    }
+    .maxWidth{
+        display: block;
+        font-family: 'Montserrat', sans-serif;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: fit-content;
+        color: #fff;
+    }
+    .maxWidth h1{
+        font-size: 70px;
+    }
+    .maxWidth p{
+        font-size: 40px;
+    }
+    .aboutMainContent{
+        display: none;
+    }
+    .footer{
+        display: none;
+    }
+}
+@media screen and (min-width:1300px) and (orientation:landscape) {
+    .logo img{
+        width: 60%;
+    }
+    .nav ul{
+        align-items: center;
+    }
+    .nav ul li a{
+        font-size: 15px;
+    }
+    .nav ul a button{
+        width: 120px;
+        height: 35px;
+        border: 1px solid #fff;
+        background: transparent;
+        color: #fff;
+        font-size: 15px;
+    }
+    .a img{
+        width: 70%;
+    
+    }
+    .b img{
+        width: 30%;
+    }
+
+    .sign-up h3{
+        font-size: 35px;
+    }
+    .sign-up p{
+        font-size: 10px;
+        margin-top: -30px;
+    }
+    .sign-up, .login{
+        width: 500px;
+        height: 60vh;
+    }
+
+    .sign-up input{
+        width: 400px;
+        height: 40px;
+        font-size: 13px;
+    }
+    .sign-up input::placeholder{
+        font-size: 13px;
+    }
+    #line{
+        width: 70px;
+        height: 0px;
+    }
+    .wrapper{
+        align-items: center;
+        margin-top: 5px;
+    }
+    .eye i{
+        font-size: 15px;
+    }
+    .sign-up button{
+        width: 250px;
+        height: 25px;
+        margin-left: 25%;
+        height: 30px;
+        padding: 0;
+        font-size: 11px;
+    }
+    .or{
+        align-items: center;
+        margin-top: 30px;
+    }
+    .or p{
+        font-size: 13px;
+    }
+    .options{
+        gap: 30px;
+    }
+    .option1 , .option2{
+        width: 30px;
+        height: 30px;
+    }
+    .option1 img, .option2 img{
+        object-fit: contain;
+    }
+
+    /*LOGIN*/
+    .login h3{
+        font-size: 35px;
+    }
+    .login p{
+        font-size: 10px;
+        margin-top: -30px;
+    }
+    .login input{
+        width: 400px;
+        height: 40px;
+        font-size: 13px;
+    }
+    .login input::placeholder{
+        font-size: 13px;
+    }
+    .login button{
+        width: 250px;
+        height: 25px;
+        margin-left: 25%;
+        height: 30px;
+        padding: 0;
+        font-size: 11px;
+    }
+    #line{
+        width: 70px;
+        height: 0px;
+    }
+}
+@media screen and (max-width:1299px) and (orientation:landscape){
+    .logo img{
+        width: 60%;
+    }
+    .nav ul{
+        align-items: center;
+    }
+    .nav ul li a{
+        font-size: 15px;
+    }
+    .nav ul a button{
+        width: 120px;
+        height: 35px;
+        border: 1px solid #fff;
+        background: transparent;
+        color: #fff;
+        font-size: 15px;
+    }
+    .a img{
+        width: 70%;
+    
+    }
+    .b img{
+        width: 30%;
+    }
+
+    .sign-up h3{
+        font-size: 35px;
+    }
+    .sign-up p{
+        font-size: 10px;
+        margin-top: -30px;
+    }
+    .sign-up, .login{
+        width: 500px;
+        height: 80vh;
+    }
+
+    .sign-up input{
+        width: 400px;
+        height: 40px;
+        font-size: 13px;
+    }
+    .sign-up input::placeholder{
+        font-size: 13px;
+    }
+    #line{
+        width: 70px;
+        height: 0px;
+    }
+    .wrapper{
+        align-items: center;
+        margin-top: 5px;
+    }
+    .eye i{
+        font-size: 15px;
+    }
+    .sign-up button{
+        width: 250px;
+        height: 25px;
+        margin-left: 25%;
+        height: 30px;
+        padding: 0;
+        font-size: 11px;
+    }
+    .or{
+        align-items: center;
+        margin-top: 30px;
+    }
+    .or p{
+        font-size: 13px;
+    }
+    .options{
+        gap: 30px;
+    }
+    .option1 , .option2{
+        width: 30px;
+        height: 30px;
+    }
+    .option1 img, .option2 img{
+        object-fit: contain;
+    }
+
+    /*LOGIN*/
+    .login h3{
+        font-size: 35px;
+    }
+    .login p{
+        font-size: 10px;
+        margin-top: -30px;
+    }
+    .login input{
+        width: 400px;
+        height: 40px;
+        font-size: 13px;
+    }
+    .login input::placeholder{
+        font-size: 13px;
+    }
+    .login button{
+        width: 250px;
+        height: 25px;
+        margin-left: 25%;
+        height: 30px;
+        padding: 0;
+        font-size: 11px;
+    }
+    #line{
+        width: 70px;
+        height: 0px;
+    }
+}
+@media screen and (max-width:1024px) and (orientation:landscape) {
+    .logo img{
+        width: 50%;
+    }
+    
+    .navigation {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        position: fixed;
+        width: 100%;
+        z-index: 99;
+        padding-top: 10px;
+    }
+    .nav ul{
+        display: flex;
+        gap: 50px;
+    }
+    .nav ul li{
+        list-style: none;
+    }
+    .nav ul li a{
+        font-size: 12px;
+        text-decoration: none;
+        color: #ffffffb7;
+    }
+    .nav ul li a:hover{
+        color: #00A3FF;
+    }
+    .nav ul li a:focus{
+        color: #00A3FF;
+    }
+    .nav ul li:nth-child(1){
+        display: none;
+    }
+    .nav ul a button{
+        width: 60px;
+        height: 20px;
+        border-radius: 30px;
+        border: 1px solid #fff;
+        font-size: 10px;
+        cursor: pointer;
+    }
+    .nav ul li .active{
+        color: #00A3FF;
+    }
+    /*MAIN*/
+    .main{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        gap: 200px;
+    }
+    .image{
+        text-align: center;
+        margin-top: 15%;
+    }
+    .a img{
+        width: 60%;
+    
+    }
+    .b img{
+        width: 20%;
+    }
+    .sign-log{
+        margin-top: 6.5%;
+        display: flex;
+    }
+    .sign-up{
+        background-color: #ffffff2f;
+        backdrop-filter: blur(4px);
+        border: 2px solid #fff;
+        width: 350px;
+        height: 80vh;
+        font-family: 'Poppins', sans-serif;
+        border-radius: 20px;
+    }
+    .sign-up h3, .sign-up p{
+        color: #fff;
+        text-align: center;
+        font-family: 'Poppins', sans-serif;
+    }
+    .sign-up h3{
+        font-size: 25px;
+        text-transform: capitalize;
+        font-weight: bolder;
+        font-family: 'Poppins', sans-serif;
+    }
+    .sign-up p{
+        font-size: 9px;
+        margin-top: -20px;
+    }
+    .sign-up label, .sign-up input{
+        margin-left: 10%;
+    }
+    .sign-up label{
+        color: #fff;
+        font-size: 11px;
+        margin-top: 10px;
+    }
+    .sign-up input::placeholder{
+        color: #fff;
+        font-size: 10px;
+        font-family: 'Poppins', sans-serif;
+    }
+    .sign-up input{
+        border: none;
+        color: #fff;
+        background: transparent;
+        outline: none;
+        height: 15px;
+        margin-top: -50px;
+        border-bottom: 2px solid #fff;
+        padding-bottom: 10px;
+        margin-bottom: 7px;
+        font-size: 10px;
+        color: #fff;
+        width: 260px;
+        font-family: 'Poppins', sans-serif;
+    }
+    #password{
+        margin-bottom: -5px;
+    }
+    .eye{
+        position: absolute;
+        color: #71797e;
+        margin-left: -30px;
+        cursor: pointer;
+    }
+    .eye i{
+        font-size: 12px;
+    }
+    .sign-up button{
+        width: 150px;
+        height: 25px;
+        margin-left: 28%;
+        background: #FF592A;
+        border: 1px solid #FF592A;
+        border-radius: 4px;
+        font-size: 10px;
+        color: #403B3B;
+        cursor: pointer;
+        font-family: 'Poppins', sans-serif;
+        font-weight: bold;
+    }
+    .or{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        margin-top: 10px;
+    
+    }
+    .or p{
+        font-size: 9px;
+        position: relative;
+        text-align: center;
+        font-family: 'Poppins', sans-serif;
+    }
+    .or input{
+        -webkit-appearance: none;
+        appearance: none;
+        width: 85px;
+        margin-left: 0%;
+    }
+    .options{
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 10px;
+    }
+    .option1 img{
+        width: 100%;
+        height: 100%;
+    }
+    .option2 img{
+        width: 100%;
+        height: 100%;
+    }
+    input[type=password]::-ms-reveal,
+    input[type=password]::-ms-clear
+    {
+        display: none;
+    }
+    #click, #click1{
+        color: #FF8B6A;
+        cursor: pointer;
+    }
+    /*login*/
+    .login{
+        background-color: #ffffff2f;
+        backdrop-filter: blur(4px);
+        border: 2px solid #fff;
+        width: 350px;
+        height: 80vh;
+        font-family: 'Poppins', sans-serif;
+        border-radius: 20px;
+        display: none;
+    }
+    .login h3, .login p{
+        color: #fff;
+        text-align: center;
+        font-family: 'Poppins', sans-serif;
+    }
+    .login h3{
+        font-size: 25px;
+        text-transform: capitalize;
+        font-weight: bolder;
+        font-family: 'Poppins', sans-serif;
+    }
+    .login p{
+        font-size: 9px;
+        margin-top: -20px;
+    }
+    .login label, .login input{
+        margin-left: 10%;
+    }
+    .login label{
+        color: #fff;
+        font-size: 11px;
+        margin-top: 10px;
+    }
+    .login input::placeholder{
+        color: #fff;
+        font-size: 10px;
+        font-family: 'Poppins', sans-serif;
+    }
+    .login input{
+        border: none;
+        color: #fff;
+        background: transparent;
+        outline: none;
+        height: 15px;
+        margin-top: -50px;
+        border-bottom: 2px solid #fff;
+        padding-bottom: 10px;
+        margin-bottom: 7px;
+        font-size: 10px;
+        color: #fff;
+        width: 260px;
+        font-family: 'Poppins', sans-serif;
+    }
+    #password{
+        margin-bottom: -5px;
+    }
+    .eye{
+        position: absolute;
+        color: #fff;
+        margin-left: -30px;
+        cursor: pointer;
+    }
+    .eye i{
+        font-size: 12px;
+    }
+    .login button{
+        width: 150px;
+        height: 25px;
+        margin-left: 28%;
+        background: #FF592A;
+        border: 1px solid #FF592A;
+        border-radius: 4px;
+        font-size: 10px;
+        color: #403B3B;
+        cursor: pointer;
+        font-family: 'Poppins', sans-serif;
+        font-weight: bold;
+    }
+    .or{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        margin-top: 10px;
+    
+    }
+    .or p{
+        font-size: 9px;
+        position: relative;
+        text-align: center;
+        font-family: 'Poppins', sans-serif;
+    }
+    .or input{
+        -webkit-appearance: none;
+        appearance: none;
+        width: 85px;
+        margin-left: 0%;
+    }
+    .options{
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 10px;
+    }
+    .option1{
+        height: 20px;
+        width: 20px;
+        object-fit: cover;
+        background: #fff;
+        padding: 5px;
+        border-radius: 5px;
+    }
+    .option2{
+        height: 19px;
+        width: 17px;
+        object-fit: cover;
+        background: #fff;
+        padding: 6px;
+        border-radius: 5px;
+    }
+    .option1 img{
+        width: 100%;
+        height: 100%;
+    }
+    .option2 img{
+        width: 100%;
+        height: 100%;
+    }
+    input[type=password]::-ms-reveal,
+    input[type=password]::-ms-clear
+    {
+        display: none;
+    }
+    .click{
+        color: #FF8B6A;
+        cursor: pointer;
+    }
+}
+@media screen and (max-width:1024px) and (orientation:portrait){
+    body{
+        background-image: url(images/ph2.JPG);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .logo img{
+        width: 60%;
+    }
+    .nav ul{
+        align-items: center;
+    }
+    .nav ul li a{
+        font-size: 15px;
+    }
+    .nav ul a button{
+        width: 120px;
+        height: 35px;
+        border: 1px solid #fff;
+        background: transparent;
+        color: #fff;
+        font-size: 15px;
+    }
+    .image{
+        display: none;
+    }
+    .sign-up{
+        height: 40vh;
+        width: 90%;
+    }
+    .sign-up h3{
+        font-size: 35px;
+    }
+    .sign-up p{
+        font-size: 10px;
+        margin-top: -30px;
+    }
+    .sign-up, .login{
+        width: 500px;
+        height: 40vh;
+        margin-top: 20%;
+    }
+
+    .sign-up input{
+        width: 400px;
+        height: 40px;
+        font-size: 13px;
+    }
+    .sign-up input::placeholder{
+        font-size: 13px;
+    }
+    #line{
+        width: 70px;
+        height: 0px;
+    }
+    .wrapper{
+        align-items: center;
+        margin-top: 5px;
+    }
+    .eye i{
+        font-size: 15px;
+    }
+    .sign-up button{
+        width: 250px;
+        height: 25px;
+        margin-left: 25%;
+        height: 30px;
+        padding: 0;
+        font-size: 11px;
+    }
+    .or{
+        align-items: center;
+        margin-top: 30px;
+    }
+    .or p{
+        font-size: 13px;
+    }
+    .options{
+        gap: 30px;
+    }
+    .option1 , .option2{
+        width: 30px;
+        height: 30px;
+    }
+    .option1 img, .option2 img{
+        object-fit: contain;
+    }
+
+    /*LOGIN*/
+    .login h3{
+        font-size: 35px;
+    }
+    .login p{
+        font-size: 10px;
+        margin-top: -30px;
+    }
+    .login input{
+        width: 400px;
+        height: 40px;
+        font-size: 13px;
+    }
+    .login input::placeholder{
+        font-size: 13px;
+    }
+    .login button{
+        width: 250px;
+        height: 25px;
+        margin-left: 25%;
+        height: 30px;
+        padding: 0;
+        font-size: 11px;
+    }
+    #line{
+        width: 70px;
+        height: 0px;
+    }
+}
+@media screen and (max-width:850px) and (orientation:portrait){
+    body{
+        background-image: url(images/ph2.JPG);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .login,.sign-up{
+        height: 50vh;
+    }
+}
+@media screen and (max-width:1024px) and (orientation:landscape){
+    .image{
+        display: none;
+    }
+    .sign-up,.login{
+        width: 500px;
+        height: 60vh;
+    }
+    .sign-up h3 ,.login h3{
+        font-size: 30px;
+        margin-top: 3px;
+    }
+    .sign-up p, .login p{
+        font-size: 9px;
+        margin-top: -30px;
+        margin-bottom: -5px;
+    }
+    .sign-up input , .login input{
+        padding-bottom: 3px;
+        width: 400px;
+    }
+    .sign-up button , .login button{
+        margin-left: 30%;
+        width: 200px;
+    }
+    #line{
+        width: 80px;
+    }
+    .options{
+        margin: 5px;
+        gap: 20px;
+    }
+    .option1,.option2{
+        padding: 4px;
+    }
+    .or{
+        display: none;
+    }
+    .options{
+        display: none;
+    }
+}
+@media screen and (max-width:500px) and (orientation:portrait){
+    body{
+        background-image: url(images/ph2.JPG);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .nav_link{
+        display: none;
+    }
+    .nav ul{
+        justify-content: center;
+        gap: 0;
+    }
+    .ham-burg{
+        display: block;
+    }
+    .nav-menu{
+        display: block;
+    }
+    .navigation{
+        justify-content: center;
+    }
+    .logo img{
+        width: 50%;
+    }
+    .sign-up,.login{
+        width: 300px;
+        height: 60vh;
+    }
+    .sign-up h3,.login h3{
+        font-size: 30px;
+        margin-top: 10px;
+    }
+    .sign-up p,.login p{
+        font-size: 9px;
+        padding-bottom: 10px;
+    }
+    .sign-up input,.login input{
+        width: 220px;
+        font-size: 10px;
+        padding-bottom: 4px;
+        margin-bottom: 10px;
+    }
+    .sign-up input::placeholder,.login input::placeholder{
+        font-size: 10px;
+    }
+    .sign-up button,.login button{
+        width: 170px;
+        margin-left: 20%;
+    }
+    .or p{
+        font-size: 8px;
+    }
+    #line{
+        width: 40px;
+    }
+    .option1,.option2{
+        padding: 3px;
+    }
+}

@@ -1,0 +1,1472 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #000;
+    overflow-x: none;
+}
+.body.onscroll{
+    overflow: hidden;
+    height: 100%;
+}
+html{
+    height: 100%;
+}
+@font-face{
+    font-family: myFont;
+    src: url(./AndroidAssassin-WXXY.ttf);
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 100vh;
+    background: #000;
+    position: fixed;
+    top: 0;
+    z-index: -1;
+}
+.contain{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.moon{
+    background-color: #fff;
+    position: fixed;
+    top: 110%;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    position: absolute;
+    left: -10%;
+    box-shadow: 0px 0px 20px 5px #fff;
+    animation: sunset 10s linear infinite;
+    z-index: -1;
+    overflow: hidden;
+}
+.sun{
+    background-color: #ff8c1a;
+    position: fixed;
+    top: 50%;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    position: absolute;
+    left: -10%;
+    box-shadow: 0px 0px 20px 5px #ff8c1a;
+    animation: sunset 15s linear infinite;
+    z-index: -1;
+    overflow: hidden;
+}
+@keyframes sunset {
+    100%{
+        transform: translateX(1200%);
+    }
+}
+
+
+.particles{
+    position: relative;
+    display: flex;
+    z-index: 1;
+    padding: 0 20px;
+    height: 100vh;
+}
+.part{
+    position: relative;
+    bottom: 1px;
+    width: 1px;
+    height: 1px;
+    background: #ffffffb0;
+    box-shadow: 0 0 0 5px #ffffffb0,
+    0 0 1 #E2E2E2,
+    -100px 0 #E2E2E2;
+    margin: 0 4px;
+    border-radius: 40%;
+    animation: animate 15s ease-in-out infinite;
+    animation-duration:  calc(125s / var(--i));
+}
+.part:nth-child(even){
+    background-color: 	#ffffffb0;
+    box-shadow: 0 0 0 1px #E2E2E2,
+    0 0 1px #ffffffb0,
+    -100px 0 #E2E2E2
+    ;
+}
+@keyframes animate {
+    0%{
+        transform: translateY(120vh) scale(0) rotate(0deg);
+    }
+    20%{
+        transform: translateY(100vh) scale(1) rotate(0deg);
+    }
+    100%{
+        transform: translateY(-50vh) scale(0.5) rotate(0deg);
+    }
+}
+
+
+
+
+
+.logo{
+    z-index: 100;
+}
+.logo img{
+    width: 50%;
+}
+
+.hero{
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    max-height: 100%;
+    height: 100%;
+    background-position: center;
+    background-position-y: bottom;
+    background-blend-mode: darken;
+}
+.navigation {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    z-index: 99;
+    padding-top: 10px;
+    gap: 0;
+}
+.nav ul{
+    display: flex;
+    gap: 50px;
+}
+.nav ul li{
+    list-style: none;
+}
+.nav ul li a{
+    font-size: 12px;
+    text-decoration: none;
+    color: #ffffffb7;
+}
+.nav ul li a:hover{
+    color: #00A3FF;
+}
+.nav ul li a:focus{
+    color: #00A3FF;
+}
+.nav ul li:nth-child(1){
+    display: none;
+}
+.nav ul a button{
+    width: 60px;
+    height: 20px;
+    border-radius: 30px;
+    border: 1px solid #fff;
+    font-size: 10px;
+    cursor: pointer;
+    background: transparent;
+    color: #fff;
+}
+.nav ul li .active{
+    color: #00A3FF;
+}
+.bar{
+    display: block;
+    cursor: pointer;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3 ease-in-out;
+    transition: all 0.3 ease-in-out;
+    background-color: #fff;
+}
+.ham-burg{
+    display: none;
+    color: #fff;
+    z-index: 100;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.ham-burg.active-nav .bar:nth-child(2){
+    opacity: 0;
+}
+.ham-burg.active-nav .bar:nth-child(1){
+    transform: translateY(8px) rotate(45deg);
+    transition: 0.3s
+}
+.ham-burg.active-nav .bar:nth-child(3){
+    transform: translateY(-8px) rotate(-45deg);
+    transition: 0.3s;
+}
+.nav-menu{
+    position: fixed;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    min-height: 100%;
+    z-index: 98;
+    background: #080A0B;
+    display: none;
+    padding-top: 27%;
+    text-align: center;
+    transition: 0.4s;
+}
+.nav-menu.is-active{
+    left: 0;
+}
+.nav-menu li a{
+    display: block;
+    padding: 9px 16px;
+    width: 100%;
+    max-width: 150px;
+    text-align: center;
+    margin: 0 auto 16px;
+    color: #000;
+}
+.nav-menu li a:hover{
+    color: #fff;
+    transition: 0.3s ease-in;
+}
+.nav-menu button{
+    width: 300px;
+}
+/*HERO*/
+.hero-text{
+    width: 100%;
+    padding-top: 20px;
+}
+.hero-text h1{
+    justify-content: center;
+    display: inline-flex;
+    width: 100%;
+    color: #fff;
+    align-items: center;
+    font-size: 50px;
+    gap: 30px;
+    font-family: myFont;
+}
+.hero-text h1 ul li{
+    list-style: none;
+    font-family: 'Montserrat', sans-serif;
+    transition: 1s;
+}
+.hero-text h1 ul li{
+    font-size: 15px;
+    color: #ffffffb0;
+    line-height: 30px;
+}
+.hero-text h1 ul li:hover{
+    color: #fff;
+    cursor: pointer;
+    transition: 1s;
+}
+.ss{
+    display: flex;
+    margin-top: -30px;
+    justify-content: center;
+    left: -41%;
+    position: fixed;
+    width: 100%;
+    z-index: 99;
+}
+.socials div{
+    margin-top: 5px;
+}
+.socials i{
+    color: #fff;
+    cursor: pointer;
+}
+.socials i:hover{
+    color: #00A3FF;
+}
+/*DISCOVER*/
+.discover{
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    max-height: 100%;
+    height: 100%;
+    background-position: center;
+    background-position-y: bottom;
+    background-blend-mode: darken;
+}
+.discover-lists{
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+.discover-list{
+    width: fit-content;
+    cursor: pointer;
+}
+.discover-image{
+    margin: 0 auto;
+    column-gap: 10px;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+.discover-image img{
+    width: 100%;
+    height: 100%;
+}
+.discover-text{
+    text-align: center;
+}
+.discover-text h4{
+    color: #ffffff9c;
+    font-size: 13px;
+    margin-top: 10px;
+}
+.discover-text p{
+    font-size: 12px;
+    color: #ffffffaf;
+    margin-top: -15px;
+}
+/*ABOUT*/
+.about{
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    max-height: 100%;
+    height: 100%;
+    background-position: center;
+    background-position-y: bottom;
+    background-blend-mode: darken;
+}
+.about-header h1{
+    color: #fff;
+    padding-top: 10%;
+    font-size: 25px;
+    margin-left: 20%;
+    position: relative;
+}
+.about-header h1::after{
+    content: "";
+    position: absolute;
+    padding-bottom: 5px;
+    background: #ffffffb0;
+    width: 5%;
+    left: 0%;
+    height: -4px;
+    bottom: -6px;
+    border-radius: 20px;
+    transition: 0.3s;
+    color: #ffffffa0;
+}
+.about-img{
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+}
+.about-img img{
+    width: 100%;
+    height: 100%;
+}
+.abouts{
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+}
+.about-text h3{
+    font-size: 17px;
+    color: #fff;
+}
+.about-text p{
+    font-size: 12px;
+    line-height: 25px;
+    color: #fff;
+    text-transform: uppercase;
+}
+/*FOOTER*/
+.footer{
+    height: 6vh;
+    background: #000;
+    padding-bottom: 20px;
+    align-items: center;
+}
+.footer ul{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    align-items: center;
+}
+.footer ul li{
+    list-style: none;
+    text-align: none;
+}
+.footer ul li a{
+    font-size: 10px;
+    color: #fff;
+    text-decoration: none;
+}
+
+/*PARALLAX*/
+.h1{
+    opacity: 0;
+    transition: all 1.5s;
+    filter: blur(5px);
+    transform: translateX(-100%);
+}
+.h11{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+.h2{
+    opacity: 0;
+    transition: all 1s;
+    filter: blur(5px);
+    transform: translateY(-100%);
+}
+.h2:nth-child(2){
+    transition-delay: 300ms;
+}
+.h2:nth-child(3){
+    transition-delay: 400ms;
+}
+.h2:nth-child(4){
+    transition-delay: 500ms;
+}
+.h2:nth-child(5){
+    transition-delay: 600ms;
+}
+.h2:nth-child(6){
+    transition-delay: 700ms;
+}
+.h22{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+}
+
+.h3{
+    opacity: 0;
+    transition: all 1.5s;
+    filter: blur(5px);
+    transform: translateX(100%);
+}
+.h33{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+.b1{
+    opacity: 0;
+    transition: all .7s;
+    filter: blur(5px);
+    transform: translateX(-50%);
+}
+.b11{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+.d1{
+    opacity: 0;
+    transition: all 1s;
+    filter: blur(5px);
+    transform: translateX(-100%);
+}
+.d11{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+.d1:nth-child(2){
+    transition-delay: 300ms;
+}
+.d1:nth-child(3){
+    transition-delay: 500ms;
+}
+.a1{
+    opacity: 0;
+    transition: all 1s;
+    filter: blur(5px);
+    transform: translateY(-100%);
+}
+.a11{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+}
+.maxWidth{
+    display: none;
+}
+@media screen and (min-width:2100px) and (orientation:landscape)  {
+    .moon,.sun{
+        display: none;
+    }
+    .space{
+        display: none;
+    }
+    .maxWidth{
+        display: block;
+        font-family: 'Montserrat', sans-serif;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: fit-content;
+        color: #fff;
+    }
+    .maxWidth h1{
+        font-size: 70px;
+    }
+    .maxWidth p{
+        font-size: 40px;
+    }
+    .aboutMainContent{
+        display: none;
+    }
+    .footer{
+        display: none;
+    }
+}
+/*XL screen*/
+@media screen and (min-width:1600px) and (orientation:landscape) {
+    body{
+        overflow-x: hidden;
+    }
+    .sun{
+        height: 150px;
+        width: 150px;
+        top: 15%;
+    }
+    .moon{
+        height: 150px;
+        width: 150px;
+        top: 80%;
+    }
+    .navigation{
+        padding-top: 20px;
+        gap: 250px;
+    }
+    .container{
+        height: 200vh;
+    }
+    .logo img{
+        width: 90%;
+    }
+    /*NAV*/
+    .nav ul{
+        gap: 70px;
+        align-items: center;
+    }
+    .nav ul li a{
+        font-size: 20px;
+    }
+    .nav ul a button{
+        width: 170px;
+        height: 45px;
+        font-size: 18px;
+    }
+    .hero{
+        height: 100vh;
+    }
+    .hero-text{
+        padding-top: 10%;
+    }
+    .hero-text h1{
+        font-size: 80px;
+        overflow-x: hidden;
+    }
+    .hero h1 ul li{
+        font-size: 35px;
+        margin-bottom: 15px;
+    }
+    .socials div{
+        margin-bottom: 30px;
+    }
+    .socials i{
+        font-size: 35px;
+    }
+    /*DISCOVER*/
+    .discover{
+        margin-left: 1%;
+    }
+    .discover-image{
+        width: 380px;
+        height: 380px;
+    }
+    .discover-text h4{
+        color: #ffffff9c;
+        font-size: 35px;
+        margin-top: 18px;
+    }
+    .discover-text p{
+        font-size: 25px;
+        color: #ffffffaf;
+        margin-top: -35px;
+    }
+    /*ABOUT*/
+    .about{
+        padding-bottom: 200px;
+    }
+    .about-header h1{
+        font-size: 45px;
+    }
+    .about-img{
+        width: 250px;
+        height: 250px;
+    }
+    .about-text h3{
+        font-size: 30px;
+    }
+    .about-text p{
+        font-size: 20px;
+        line-height: 35px;
+    }
+    /*footer*/
+    .footer ul{
+        gap: 80px;
+    }
+    .footer ul li a{
+        font-size: 25px;
+    }
+}
+@media screen and (max-width:1599px) and (orientation:landscape){
+    body{
+        overflow-x: hidden;
+    }
+    .sun{
+        height: 150px;
+        width: 150px;
+        top: 15%;
+    }
+    .moon{
+        height: 150px;
+        width: 150px;
+        top: 80%;
+    }
+    .navigation{
+        padding-top: 20px;
+        gap: 250px;
+    }
+    .container{
+        height: 200vh;
+    }
+    .logo img{
+        width: 80%;
+    }
+    /*NAV*/
+    .nav ul{
+        gap: 70px;
+        align-items: center;
+    }
+    .nav ul li a{
+        font-size: 17px;
+    }
+    .nav ul a button{
+        width: 90px;
+        height: 35px;
+        font-size: 10px;
+    }
+    .hero{
+        height: 100vh;
+    }
+    .hero-text{
+        padding-top: 9%;
+    }
+    .hero-text h1{
+        font-size: 75px;
+        overflow-x: hidden;
+    }
+    .hero h1 ul li{
+        font-size: 30px;
+        margin-bottom: 8px;
+    }
+    .socials div{
+        margin-bottom: 20px;
+    }
+    .socials i{
+        font-size: 25px;
+    }
+    /*DISCOVER*/
+    .discover{
+        margin-left: 1%;
+    }
+    .discover-image{
+        width: 300px;
+        height: 300px;
+    }
+    .discover-text h4{
+        color: #ffffff9c;
+        font-size: 20px;
+        margin-top: 10px;
+    }
+    .discover-text p{
+        font-size: 15px;
+        color: #ffffffaf;
+        margin-top: -15px;
+    }
+    /*ABOUT*/
+    .about{
+        padding-bottom: 200px;
+    }
+    .about-header h1{
+        font-size: 35px;
+    }
+    .about-img{
+        width: 250px;
+        height: 250px;
+    }
+    .about-text h3{
+        font-size: 30px;
+    }
+    .about-text p{
+        font-size: 20px;
+        line-height: 35px;
+    }
+    /*footer*/
+    .footer ul{
+        gap: 80px;
+    }
+    .footer ul li a{
+        font-size: 18px;
+    }
+}
+@media screen and (max-width:1299px) and (orientation:landscape){
+    body{
+        overflow-x: hidden;
+    }
+    .sun{
+        height: 120px;
+        width: 120px;
+        top: 30%;
+        overflow-x: hidden;
+    }
+    .moon{
+        height: 120px;
+        width: 120px;
+        top: 100%;
+        overflow-x: hidden;
+    }
+    .logo img{
+        width: 70%;
+    }
+    .nav ul{
+        align-items: center;
+    }
+    .nav ul li a{
+        font-size: 15px;
+    }
+    .nav ul a button{
+        width: 90px;
+        height: 30px;
+    }
+
+    .socials div{
+        margin-bottom: 10px;
+    }
+    .socials i{
+        font-size: 20px;
+    }
+    /*hero*/
+    .hero{
+        height: 100vh;
+    }
+    .hero-text h1{
+        font-size: 60px;
+        margin-top: 1%;
+        overflow: hidden;
+    }
+    .hero-text h1 ul li{
+        font-size: 19px;
+        margin-bottom: 5px;
+    }
+    /*Discover*/
+    .discover-image{
+        width: 250px;
+        height: 250px;
+    }
+    .discover-text h4{
+        font-size: 18px;
+    }
+    .discover-text p{
+        font-size: 14px;
+    }
+    /*About*/
+    .about{
+        padding-bottom: 170px;
+    }
+    .about-header h1{
+        font-size: 30px;
+        margin-bottom: 30px;
+    }
+    .about-img{
+        width: 150px;
+        height: 150px;
+    }
+    .about-text h3{
+        font-size: 25px;
+    }
+    .about-text p{
+        font-size: 16px;
+    }
+    /*footer*/
+    .footer ul{
+        gap: 80px;
+    }
+    .footer ul li a{
+        font-size: 18px;
+    }
+}
+@media screen and (max-width:1024px) and (orientation:landscape){
+    .sun{
+        height: 120px;
+        width: 120px;
+        top: 20%;
+        overflow-x: hidden;
+    }
+    .moon{
+        height: 120px;
+        width: 120px;
+        top: 70%;
+        overflow-x: hidden;
+    }
+.logo img{
+    width: 50%;
+}
+body{
+    overflow-x: hidden;
+}
+
+.hero{
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    max-height: 100%;
+    height: 80vh;
+    background-position: center;
+    background-position-y: bottom;
+    background-blend-mode: darken;
+}
+.navigation {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    z-index: 99;
+    padding-top: 10px;
+}
+.nav ul{
+    display: flex;
+    gap: 50px;
+}
+.nav ul li{
+    list-style: none;
+}
+.nav ul li a{
+    font-size: 12px;
+    text-decoration: none;
+    color: #ffffffb7;
+}
+.nav ul li a:hover{
+    color: #00A3FF;
+}
+.nav ul li a:focus{
+    color: #00A3FF;
+}
+.nav ul li:nth-child(1){
+    display: none;
+}
+.nav ul a button{
+    width: 60px;
+    height: 20px;
+    border-radius: 30px;
+    border: 1px solid #fff;
+    font-size: 10px;
+    cursor: pointer;
+    background: transparent;
+    color: #fff;
+}
+.nav ul li .active{
+    color: #00A3FF;
+}
+/*HERO*/
+.hero-text{
+    width: 100%;
+    padding-top: 20px;
+}
+.hero-text h1{
+    justify-content: center;
+    display: inline-flex;
+    width: 100%;
+    color: #fff;
+    align-items: center;
+    font-size: 50px;
+    gap: 30px;
+    font-family: myFont;
+}
+.hero-text h1 ul li{
+    list-style: none;
+    font-family: 'Montserrat', sans-serif;
+    transition: 1s;
+}
+.hero-text h1 ul li{
+    font-size: 15px;
+    color: #ffffffb0;
+    line-height: 30px;
+}
+.hero-text h1 ul li:hover{
+    color: #fff;
+    cursor: pointer;
+    transition: 1s;
+}
+.socials div{
+    margin-top: 5px;
+}
+.socials i{
+    color: #fff;
+    cursor: pointer;
+}
+.socials i:hover{
+    color: #00A3FF;
+}
+/*DISCOVER*/
+.discover{
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    max-height: 100%;
+    height: 100%;
+    background-position: center;
+    background-position-y: bottom;
+    background-blend-mode: darken;
+}
+.discover-lists{
+    gap: 70px;
+}
+.discover-list{
+    width: fit-content;
+    cursor: pointer;
+}
+.discover-image{
+    margin: 0 auto;
+    column-gap: 10px;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+.discover-image img{
+    width: 100%;
+    height: 100%;
+}
+.discover-text{
+    text-align: center;
+}
+.discover-text h4{
+    color: #ffffff9c;
+    font-size: 13px;
+    margin-top: 10px;
+}
+.discover-text p{
+    font-size: 12px;
+    color: #ffffffaf;
+    margin-top: -15px;
+}
+/*ABOUT*/
+.about{
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    max-height: 100%;
+    margin-top: 5%;
+    height: 100%;
+    background-position: center;
+    background-position-y: bottom;
+    background-blend-mode: darken;
+    padding-bottom: 190px;
+}
+.about-header h1{
+    color: #fff;
+    padding-top: 10%;
+    font-size: 30px;
+    margin-left: 20%;
+    position: relative;
+}
+.about-header h1::after{
+    content: "";
+    position: absolute;
+    padding-bottom: 5px;
+    background: #ffffffb0;
+    width: 5%;
+    left: 0%;
+    height: -4px;
+    bottom: -6px;
+    border-radius: 20px;
+    transition: 0.3s;
+    color: #ffffffa0;
+}
+.about-img{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+.about-img img{
+    width: 100%;
+    height: 100%;
+}
+.abouts{
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+    align-items: center;
+}
+.about-text h3{
+    font-size: 25px;
+    color: #fff;
+}
+.about-text p{
+    font-size: 15px;
+    line-height: 25px;
+    color: #fff;
+    text-transform: uppercase;
+}
+/*FOOTER*/
+.footer{
+    height: 6vh;
+    background: #000;
+    margin-top: -20px;
+    align-items: center;
+}
+.footer ul{
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    align-items: center;
+}
+.footer ul li{
+    list-style: none;
+    text-align: none;
+}
+.footer ul li a{
+    font-size: 15px;
+    color: #fff;
+    text-decoration: none;
+}
+
+}
+@media screen and (min-width:1200px) and (orientation:portrait){
+    body{
+        overflow-y: hidden;
+        overflow-x: hidden;
+    }
+    .sun{
+        height: 150px;
+        width: 150px;
+        top:15%;
+        overflow-x: hidden;
+    }
+    .moon{
+        height: 150px;
+        width: 150px;
+        top: 50%;
+        overflow-x: hidden;
+    }
+    .logo img{
+        width: 70%;
+    }
+    .navigation{
+        padding-top: 30px;
+        justify-content: space-around;
+    }
+    .nav ul{
+        align-items: center;
+    }
+    .nav ul li a{
+        font-size: 20px;
+    }
+    .nav ul a button{
+        height: 35px;
+        font-size: 15px;
+        width: 90px;
+    }
+    .socials{
+        margin-top: 65%;
+    }
+    .socials i{
+        font-size: 35px;
+        margin-bottom: 15px;
+    }
+    /*hero*/
+    .hero-text h1{
+        font-size: 62px;
+        margin-top: 12%;
+    }
+    .hero-text h1 ul li{
+        font-size: 20px;
+        margin-bottom: 8px;
+    }
+    /*Discover*/
+    .discover-image{
+        height: 270px;
+        width: 270px;
+    }
+    .discover-text h4{
+        font-size: 25px;
+    }
+    .discover-text p{
+        font-size: 17px;
+    }
+    .active{
+        color: none;
+    }
+    /*ABOUT*/
+    .about-header h1{
+        font-size: 40px;
+    }
+    .about-img{
+        width: 250px;
+        height: 250px;
+    }
+    .about-text h3{
+        font-size: 25px;
+    }
+    .about-text p{
+        font-size: 18px;
+    }
+    .footer{
+        margin-top: 10%;
+    }
+    .footer ul li a{
+        font-size: 17px;
+    }
+}
+@media screen and (max-width: 1024px) and (orientation:portrait){
+    body{
+        overflow-y: hidden;
+        overflow-x: hidden;
+    }
+    .active{
+        color: none;
+    }
+    .sun{
+        height: 150px;
+        width: 150px;
+        top:15%;
+        overflow-x: hidden;
+    }
+    .moon{
+        height: 150px;
+        width: 150px;
+        top: 50%;
+        overflow-x: hidden;
+    }
+    .logo img{
+        width: 70%;
+    }
+    .navigation{
+        padding-top: 30px;
+        justify-content: space-around;
+    }
+    .nav ul{
+        align-items: center;
+    }
+    .nav ul li a{
+        font-size: 16px;
+    }
+    .nav ul a button{
+        height: 35px;
+        font-size: 15px;
+        width: 90px;
+    }
+    .socials{
+        margin-top: 65%;
+    }
+    .socials i{
+        font-size: 35px;
+        margin-bottom: 15px;
+    }
+    /*hero*/
+    .hero-text h1{
+        font-size: 50px;
+        margin-top: 12%;
+        overflow-x: hidden;
+    }
+    .hero-text h1 ul li{
+        font-size: 18px;
+        margin-bottom: 8px;
+    }
+    /*discover*/
+    .discover-lists{
+        gap: 60px;
+    }
+     /*ABOUT*/
+     .about-header h1{
+        font-size: 30px;
+    }
+    .about-img{
+        width: 170px;
+        height: 170px;
+    }
+    .about-text h3{
+        font-size: 20px;
+    }
+    .about-text p{
+        font-size: 15px;
+    }
+    .footer{
+        margin-top: 11%;
+    }
+    .footer ul li a{
+        font-size: 15px;
+    }
+    .socials i{
+        font-size: 20px;
+    }
+}
+@media screen and (max-width: 850px) and (orientation:portrait){
+    body{
+        overflow-x: hidden;
+    }
+    .active{
+        color: none;
+    }
+    .nav ul li a{
+        font-size: 15px;
+    }
+    .logo img{
+        width: 50%;
+    }
+    .hero-text h1{
+        font-size: 45px;
+        overflow-x: hidden;
+    }
+    .hero-text h1 ul li{
+        font-size: 15px;
+        margin-bottom: 1px;
+    }
+    .socials{
+        display: none;
+    }
+    /*discover*/
+    .discover-image{
+        width: 180px;
+        height: 180px;
+    } 
+    /*ABOUT*/
+    .about{
+        margin-top: -3%;
+    }
+    .abouts{
+        align-items: center;
+    }
+    .about-header h1{
+        font-size: 30px;
+        margin-left: 15%;
+    }
+    .about-img{
+        width: 120px;
+        height: 120px;
+    }
+    .about-text h3{
+        font-size: 17px;
+    }
+    .about-text p{
+        font-size: 12px;
+    }
+    /*footer*/
+    .footer{
+        margin-top: auto;
+        margin-top: 5%;
+    }
+}
+@media screen and (max-width: 950px) and (orientation:landscape){
+    .moon{
+        margin-top: 25%;
+    }
+    .hero{
+        height: 100vh;
+    }
+    .hero-text h1{
+        font-size: 45px;
+        overflow-x: hidden;
+    }
+    .hero-text ul li{
+        font-size: 16px;
+        margin-bottom: -2px;
+    }
+    .discover{
+        margin-top: 15%;
+    }
+    .discover-lists{
+        overflow-x: hidden;
+    }
+    .discover-image{
+        width: 180px;
+        height: 180px;
+    }
+    /*ABOUT*/
+    .about-header h1{
+        font-size: 25px;
+        margin-left: 15%;
+    }
+    .abouts{
+        align-items: center;
+    }
+    .about-img{
+        width: 120px;
+        height: 120px;
+    }
+    .about-text h3{
+        font-size: 18px;
+    }
+    .about-text p{
+        font-size: 11.5px;
+        line-height: 16px;
+    }
+    .socials{
+        display: block;
+        margin-top: -12%;
+    }
+    .socials i{
+        font-size: 15px;
+    }
+    /*FOOTER*/
+    .footer ul li a{
+        font-size: 13px;
+    }
+}
+@media screen and (max-width: 730px) and (orientation:landscape){
+    .hero-text h1{
+        font-size: 38px;
+        margin-top: 10%;
+        overflow-x: hidden;
+    }
+    .hero-text h1 ul li{
+        font-size: 15px;
+        margin-bottom: -5px;
+    }
+    .socials{
+        margin-top: -5%;
+        margin-left: -7%;
+    }
+    /*DISCOVER*/
+    .discover{
+        margin-top: 3%;
+    }
+    .discover-lists{
+        gap: 40px;
+    }
+    .discover-image{
+        width: 170px;
+        height: 170px;
+    }
+    /*ABOUT*/
+    .about{
+        padding-bottom: 70px;
+    }
+    .about-header h1{
+        font-size: 25px;
+    }
+    .about-text h3{
+        font-size: 18px;
+    }
+    .about-text p{
+        font-size: 11px;
+    }
+    /*FOOTER*/
+    .footer ul li a{
+        font-size: 10px;
+    }
+    .footer ul{
+        gap: 50px;
+    }
+}
+@media screen and (max-width: 450px) and (orientation:portrait){
+    .sun, .moon{
+        width: 50px;
+        height: 50px;
+    }
+    body{
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+    .nav_link{
+        display: none;
+    }
+    .ham-burg{
+        display: block;
+    }
+    .navigation{
+        justify-content: center;
+        gap: 15px;
+        margin-top: -5%;
+    }
+    .nav-menu{
+        display: block;
+    }
+    .logo img{
+        width: 30%;
+    }
+    /*HERO*/
+    .hero-text h1{
+        font-size: 18px;
+        gap: 10px;
+    }
+    .hero-text h1 ul li{
+        font-size: 7px;
+        margin-bottom: -15px;
+    }
+    .nav ul{
+        gap: 0px;
+    }
+    /*discover*/
+    .discover{
+        margin-top: 10%;
+    }
+    .discover-lists{
+        gap: 30px;
+    }
+    .discover-image{
+        width: 90px;
+        height: 90px;
+    }
+    .discover-text h4{
+        font-size: 9px;
+    }
+    .discover-text p{
+        font-size: 7px;
+    }
+    /*ABOUT*/
+    .about{
+        margin-top: 7%;
+    }
+    .about-header h1{
+        font-size: 13px;
+    }
+    .abouts{
+        gap: 30px;
+    }
+    .about-img{
+        width: 60px;
+        height: 60px;
+    }
+    .about-text h3{
+        font-size: 10px;
+    }
+    .about-text p{
+        font-size: 6px;
+        line-height: 15px;
+    }
+    .container{
+        height: 100vh;
+    }
+    /*FOOTER*/
+    .footer{
+        margin-top: 15%;
+        text-align: center;
+    }
+    .footer ul{
+        gap: 20px;
+        padding-left: 0;
+    }
+    .footer ul li a{
+        font-size: 7px;
+    }
+}

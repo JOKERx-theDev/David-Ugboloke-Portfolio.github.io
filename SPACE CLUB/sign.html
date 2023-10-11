@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="sign.css">
+    <title>Sign Up</title>
+</head>
+<body>
+        <!--NAVIGATION-->
+        <div class="maxWidth">
+            <h1>There is no design for the screen</h1>
+            <p>Please reduce your device width</p>
+        </div>
+        <div class="signHtml">
+            <div class="navigation">
+                <div class="logo">
+                    <a href="index.html"><img src="images/Typeface Logo Clickable.png" alt="DHRUVA'S LOGO"></a>
+                </div>
+                <div class="nav">
+                    <ul>
+                        <li><a href="" class="nav_link">Discover</a></li>
+                        <li><a href="index.html#discover" class="nav_link">Discover</a></li>
+                        <li><a href="quiz.html" class="nav_link">Quiz</a></li>
+                        <li><a href="index.html#about" class="nav_link">About</a></li>
+    
+                        <div class="ham-burg" id="ham">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </div>
+    
+                          
+                        <div class="nav-menu" id="menu">
+                            <li><a href="#hero">Discover</a></li>
+                            <li><a href="#discover">Discover</a></li>
+                            <li><a href="quiz.html">Quiz</a></li>
+                            <li><a href="#about">About</a></li>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+    
+        <!--SIGN/LOG--> 
+        <div class="main">
+            <div class="image">
+                <div class="a"><img src="images/Dhruva-Final-(2) 1.png" alt=""></div>
+                <div class="b"><img src="images/Typeface Logo Clickable.png" alt=""></div>
+            </div>
+            
+            <div class="sign-log">
+                <div class="sign-active sign-up" id="signup">
+                    <h3>Get started</h3>
+                    <p>Already have an ccount? <span id="click">Log In</span></p>
+        
+                    <form>
+                        <input type="text" name="name" id="name" placeholder="Name">
+                        <input type="text" name="email" id="email" placeholder="Email">
+                        <div class="wrapper">
+                            <input type="password" name="password" id="password" placeholder="Password">
+                            <span class="eye" id="eye"> <i class="fa-solid fa-eye"></i></span>
+                        </div>
+                        <br>
+                        <button type="submit">Sign Up</button>
+                    </form>
+                    <br>
+                    <div class="or">
+                        <input type="text" id="line" disabled>
+                        <p>Or Sign Up with</p>
+                        <input type="text" id="line" disabled>
+                    </div>
+        
+                    <div class="options">
+                        <div class="option1"><img src="images/google 1.png"></div>
+                        <div class="option2"><img src="images/Group.png" alt=""></div>
+                    </div>
+                </div>
+    
+    
+                <div class="login login-active" id="login">
+                    <h3>Welcome Back</h3>
+                    <p>Dont have an Account? <span id="click1">Sign Up</span></p>
+        
+                    <form>
+                        <input type="text" name="email" id="email" placeholder="Email">
+                        <div class="wrapper">
+                            <input type="password" name="password" id="password1" placeholder="Password">
+                            <span class="eye" id="eye1"> <i class="fa-solid fa-eye"></i></span>
+                        </div>
+                        <br>
+                        <button type="submit">Log In</button>
+                    </form>
+                    <br>
+                    <div class="or">
+                        <input type="text" id="line" disabled>
+                        <p>Or Log In with</p>
+                        <input type="text" id="line" disabled>
+                    </div>
+        
+                    <div class="options">
+                        <div class="option1"><img src="images/google 1.png"></div>
+                        <div class="option2"><img src="images/Group.png" alt=""></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        </div>
+
+
+
+    <script>
+        let eye = document.getElementById("eye")
+
+        state = false;
+        eye.onclick = function(){
+            if (state){
+                document.getElementById ("password").
+                setAttribute("type" , "password");
+                eye.style.color='#fff';
+                eye.innerHTML = `<i class="fa-solid fa-eye"></i>`
+                state = false;
+                ;
+            }else{
+                document.getElementById ("password").
+                setAttribute("type" , "text");
+                eye.style.color='#5887ef';
+                eye.innerHTML = `<i class="fa-solid fa-eye-slash"></i>`
+                state = true;
+                ;
+            }
+        }
+
+
+        let eye1 = document.getElementById("eye1")
+
+    state = false;
+    eye1.onclick = function(){
+    if (state){
+        document.getElementById ("password1").
+        setAttribute("type" , "password");
+        eye1.style.color='#fff';
+        eye1.innerHTML = `<i class="fa-solid fa-eye"></i>`
+        state = false;
+        ;
+    }else{
+        document.getElementById ("password1").
+        setAttribute("type" , "text");
+        eye1.style.color='#5887ef';
+        eye1.innerHTML = `<i class="fa-solid fa-eye-slash"></i>`
+        state = true;
+        ;
+    }
+}
+
+
+const click = document.getElementById("click")
+const click1 = document.getElementById("click1")
+const signUp = document.getElementById("signup")
+const logIn = document.getElementById("login")
+const navMenu = document.querySelector('.nav-menu')
+
+  click.addEventListener ("click" , () =>{
+    signUp.style.display = "none"
+    logIn.style.display = "block"
+
+});
+  click1.addEventListener ("click" , () =>{
+    logIn.style.display = "none"
+    signUp.style.display = "block"
+});
+
+  //HAM BURGER MENU//
+  const hamburger = document.querySelector('.ham-burg')
+  const navMenu1 = document.querySelector('.nav-menu')
+  const body = document.querySelector(".body")
+
+  hamburger.addEventListener ("click" , () =>{
+    hamburger.classList.toggle("active-nav");
+    navMenu1.classList.toggle("is-active");
+    body.classList.toggle("onscroll")
+});
+    </script>
+</body>
+</html>

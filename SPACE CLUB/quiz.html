@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="quiz.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <title>QUIZ SPACE CLUB</title>
+</head>
+<body class="body">
+    <div class="maxWidth">
+        <h1>There is no design for the screen</h1>
+        <p>Please reduce your device width</p>
+    </div>
+    <section class="hero section" id="hero">
+        <!--NAVIGATION-->
+        <div class="navigation">
+            <div class="logo">
+                <a href="index.html"><img src="images/Typeface Logo Clickable.png" alt="DHRUVA'S LOGO"></a>
+            </div>
+            <div class="nav">
+                <ul>
+                    <li><a href="" class="nav_link">Discover</a></li>
+                    <li><a href="index.html#discover" class="nav_link">Discover</a></li>
+                    <li><a href="#" class="nav_link active">Quiz</a></li>
+                    <li><a href="index.html#about" class="nav_link">About</a></li>
+                    <a href="sign.html"><button class="nav_link">Sign Up</button></a>
+
+                    <div class="ham-burg" id="ham">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                      </div>
+
+                      
+                    <div class="nav-menu" id="menu">
+                        <li><a href="#hero">Discover</a></li>
+                        <li><a href="#discover">Discover</a></li>
+                        <li><a href="quiz.html" class="active">Quiz</a></li>
+                        <li><a href="#about">About</a></li>
+                        <a href="sign.html"><button>Sign Up</button></a>
+                    </div>
+                </ul>
+            </div>
+        </div>
+        <!--QUIZ-->
+        <div class="quiz-container">
+            <p>Question Number : <span id="pageNo"></span></p>
+            <div class="quiz">
+                <h2 id="question">QUESTION HERE</h2>
+                <div id="answers-button">
+                        <button class="btn">Answer 1</button>
+                        <button class="btn">Answer 2</button>
+                        <button class="btn">Answer 3</button>
+                        <button class="btn">Answer 4</button>
+                </div>
+                <button id="next_btn"></button>
+            </div>
+        </div>
+        <div class="container">
+            <video autoplay muted loop plays-inline class="background">
+                <source src="images/Untitled.mp4" type="video/mp4">
+            </video>
+        </div>
+    </section>
+
+
+    <script src="quiz.js"></script>
+</body>
+</html>
