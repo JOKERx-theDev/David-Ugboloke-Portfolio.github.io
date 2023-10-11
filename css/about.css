@@ -1,0 +1,1858 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: #011627;
+    width: 100%;
+    caret-color: transparent;
+    overflow: hidden;
+}
+.body.onscroll{
+    overflow: hidden;
+}
+@font-face {
+    font-family: myFontRetina;
+    src: url(/fira-code/FiraCode-Retina.OTF);
+}
+@font-face {
+    font-family: myFontBold;
+    src: url(/fira-code/FiraCode-Bold.OTF);
+}
+@font-face {
+    font-family: myFontThin;
+    src: url(/fira-code/FiraCode-Light.OTF);
+}
+@font-face {
+    font-family: myFontRegular;
+    src: url(/fira-code/FiraCode-Regular.OTF);
+}
+.loading{
+    height: 100vh;
+    position: relative;
+    width: 100%;
+    background: #011221;
+    z-index: 200;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: wait;
+}
+.load{
+    width: 200px;
+    height: 200px;
+    border: 6px solid #fff;
+    border-color: #fff transparent #fff transparent;
+    border-radius: 50%;
+    animation: spinner 1.3s linear infinite;
+}
+@keyframes spinner {
+    to {
+        transform: rotate(360deg);
+    }
+}
+/*MAIN NAV*/
+.navigation ul{
+    display: flex;
+    padding: 0;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #1E2D3D;
+    padding: 0 0.5%;
+    position: relative;
+    z-index: 5;
+    background: #011627;
+}
+
+.navList ul{
+    display: flex;
+    align-items: center;
+    border: none;
+    z-index: 100;
+}
+.navList ul a{
+    padding: 3% 0;
+    width: 100px;
+    border-right: 1px solid #1E2D3D;
+    text-align: center;
+    text-decoration: none;
+    align-items: center;
+}
+.navList ul a:hover{
+    border-bottom: 2px solid #FEA55F;
+    opacity: 0.5;
+}
+.navActiveLink:hover{
+    border-bottom: 2px solid #FEA55F;
+}
+.navActiveLink{
+    border-bottom: 2px solid #FEA55F;
+}
+.navList ul a li{
+    list-style: none;
+    font-family: myFontBold;
+    font-size: 11px;
+    text-align: center;
+    text-decoration: none;
+    color: #607B96;
+}
+.navList ul a:nth-child(1){
+    padding-right: 99px;
+    border-bottom: none;
+    opacity: 1;
+}
+.navContact ul a:nth-child(1):hover{
+    opacity: 1;
+}
+.navContact ul a:nth-child(2):hover{
+    opacity: 1;
+}
+.navContact ul li:nth-child(1):hover{
+   border-bottom: transparent;
+}
+.navContact ul{
+    display: flex;
+    align-items: center;
+    border: none;
+}
+.navContact ul a li{
+    padding: 14.5% 0;
+    width: 100px;
+    border-left: 1px solid #1E2D3D;
+    text-align: center;
+    list-style: none;
+    font-family: myFontBold;
+    font-size: 11px;
+    text-align: center;
+    text-decoration: none;
+    color: #607B96;
+}
+.navContact ul a{
+    text-decoration: none;
+}
+.navContact ul a:hover{
+    border-bottom: 2px solid #FEA55F;
+    opacity: 0.5;
+}
+.navContact ul a li:hover{
+    opacity: 0.5;
+}
+/*NAV MOBILE*/
+.bar{
+    display: none;
+    cursor: pointer;
+    width: 20px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3 ease-in-out;
+    transition: all 0.3 ease-in-out;
+    background-color: #607B96;
+    z-index: 100;
+}
+.hamburg{
+    display: none;
+    color: #607B96;
+    z-index: 100;
+    cursor: pointer;
+    transition: 0.3s;
+    z-index: 100;
+}
+.active-nav .bar:nth-child(2){
+    opacity: 0;
+}
+.active-nav .bar:nth-child(1){
+    transform: translateY(8px) rotate(45deg);
+    transition: 0.3s;
+}
+.active-nav .bar:nth-child(3){
+    transform: translateY(-8px) rotate(-45deg);
+    transition: 0.3s;
+}
+.nav-menu{
+    position: fixed;
+    top: 0;
+    left: 99.99%;
+    width: 100%;
+    min-height: 100%;
+    z-index: 60;
+    background: #011627;
+    display: none;
+    padding-top: 9%;
+    transition: 0.9s;
+}
+.nav-menu.is-active{
+    left: 0%;
+}
+/*MOBILE MENU*/
+.mobileNav ul{
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    margin-top: 3%;
+    font-family: myFontRetina;
+}
+.mobileNav ul a{
+    width: 100%;
+    text-decoration: none;
+}
+.mobileNav ul a li{
+    width: 100%;
+    border: 1px solid #1E2D3D;
+    border-top: none;
+    padding: 4% 0;
+    padding-left: 9%;
+    font-size: 12px;
+    list-style: none;
+    color: #607B96;
+}
+/*ABOUT*/
+.aboutContents{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+.aboutHeader{
+    display: flex;
+    align-items: start;
+    font-family: myFontRegular;
+    overflow: hidden;
+    border-bottom: 1px solid #1E2D3D;
+}
+.aboutProfile{
+    display: flex;
+    align-items: center;
+    width: 195px;
+    border: 1px solid #1E2D3D;
+    border-bottom: none;
+    padding-left: 6%;
+    height: 30px;
+    gap: 10px;
+    cursor: pointer;
+    position: relative;
+    z-index: 5;
+    background: #011627;
+}
+.aboutHeaderTag{
+    display: flex;
+    align-items: center;
+    margin: 0;
+    margin-left: 11px;
+    position: relative;
+}
+.presonalInfo{
+    display: flex;
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    width: 170px;
+    border: 1px solid #1E2D3D;
+    border-left: none;
+    height: 30px;
+    cursor: pointer;
+    margin: 0;
+    padding: 0 3%;
+}
+.professionalInfo{
+    display: flex;
+    opacity: 0;
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    width: 170px;
+    border: 1px solid #1E2D3D;
+    border-left: none;
+    height: 30px;
+    cursor: pointer;
+    margin: 0;
+    padding: 0 3%;
+}
+.aboutProfile p{
+    margin: 0;
+    font-size: 11px;
+    color: #607B96;
+}
+.presonalInfo p{
+    margin: 0;
+    font-size: 11px;
+    color: #607B96;
+}
+.professionalInfo p{
+    margin: 0;
+    font-size: 11px;
+    color: #607B96;
+}
+.aboutProfile i{
+    font-size: 15px;
+    color: #607B96;
+}
+.presonalInfo i{
+    font-size: 15px;
+    color: #607B96;
+    padding: 5px;
+}
+.presonalInfo i:hover{
+    background: #1E2D3D;
+    border-radius: 20px;
+}
+.professionalInfo i{
+    font-size: 15px;
+    color: #607B96;
+    padding: 5px;
+}
+.professionalInfo i:hover{
+    background: #1E2D3D;
+    border-radius: 20px;
+}
+.professionalInfoP{
+    width: 150px;
+    height: 30px;
+    align-items: center;
+    padding-top: 15px;
+}
+.personalInfoP{
+    width: 130px;
+    height: 30px;
+    align-items: center;
+    padding-top: 15px;
+}
+/*CONTACT FILE*/
+.aboutProfileAll{
+    border-bottom: none;
+}
+.aboutProfileFiles{
+    margin-top: -100%;
+    transition: .6s;
+    overflow: hidden;
+    width: fit-content;
+    font-family: myFontRegular;
+}
+.aboutProfileFile{
+    display: flex;
+    align-items: center;
+    width: 207px;
+    margin-bottom: 5px;
+    height: 25px;
+    padding-left: 7%;
+    gap: 15px;
+    cursor: pointer;
+    overflow: hidden;
+}
+.aboutProfileFile i{
+    font-size: 13px;
+}
+.aboutProfileFile:nth-child(1){
+    color: #E99287;
+}
+.aboutProfileFile:nth-child(2){
+    color: #43D9AD;
+    border-bottom: 1px solid #1E2D3D;
+    padding-bottom: 10px;
+}
+.aboutProfileFile p{
+    margin: 0;
+    font-size: 11px;
+    color: #607B96;
+}
+/*CONTACT FILE Mobile*/
+.aboutProfileAll{
+    border-bottom: none;
+}
+.aboutProfileFilesMobile{
+    display: none;
+    margin-top: -100%;
+    transition: .6s;
+    overflow: hidden;
+    width: fit-content;
+    font-family: myFontRegular;
+}
+.aboutProfileFileMobile{
+    display: flex;
+    align-items: center;
+    width: 207px;
+    margin-bottom: 5px;
+    height: 25px;
+    padding-left: 7%;
+    gap: 15px;
+    cursor: pointer;
+    overflow: hidden;
+}
+.aboutProfileFileMobile i{
+    font-size: 13px;
+}
+.aboutProfileFileMobile:nth-child(1){
+    color: #E99287;
+}
+.aboutProfileFileMobile:nth-child(2){
+    color: #43D9AD;
+}
+.aboutProfileFileMobile p{
+    margin: 0;
+    font-size: 11px;
+    color: #607B96;
+}
+
+/*CONATCT JAVASCRIPT STYLE*/
+.aboutProfilefolderActive{
+    font-size: 15px;
+    color: #607B96;
+}
+#aboutProfilefolder.aboutProfilefolderActive::before{
+    content: "\f07c";  /* this is your text. You can also use UTF-8 character codes as I do here */
+    font-family: "Font Awesome 5 Free";
+}
+.aboutProfileFiles.aboutProfileFilesActive{
+    margin-top: 0%;
+}
+.presonalInfo.presonalInfoActive{
+    display: flex;
+}
+.professionalInfo.professionalInfoActive{
+    display: flex;
+    opacity: 1;
+    width:200px;
+}
+.presonalInfo.presonalInfoActiveBorder{
+    border-bottom: 1px solid lightskyblue;
+}
+.professionalInfo.professionalInfoActiveBorder{
+    border-bottom: 1px solid lightskyblue;
+}
+/*ABOUT MAIN CONTENT*/
+.aboutMainContent{
+    display: flex;
+}
+.AboutContent{
+    border: 1px solid #1E2D3D;
+    height: 100vh;
+    width: 54%;
+    border-top: none;
+}
+.personalInfoContent{
+    display: none;
+}
+.personalInfoContent ul{
+    padding: 0;
+    padding-left: 5%;
+    margin: 0;
+}
+.personalInfoContent ul li{
+    list-style: none;
+    font-family: myFontRetina;
+    font-size: 12px;
+    line-height: 24px;
+    color: #607B96;
+}
+.professionalInfoContent{
+    display: none;
+}
+.professionalInfoContent ul{
+    padding: 0;
+    padding-left: 5%;
+    margin: 0;
+}
+.professionalInfoContent ul li{
+    list-style: none;
+    font-family: myFontRetina;
+    font-size: 12px;
+    line-height: 24px;
+    color: #607B96;
+}
+.InfoContentNumber{
+    padding-right: 15px;
+    text-align: center;
+}
+.personalInfoContent.personalInfoContentActive{
+    display: block;
+}
+.professionalInfoContent.professionalInfoContentActive{
+    display: block;
+}
+/*RESUME*/
+.myResume{
+    margin: 0 auto;
+    margin-top: 1%;
+}
+.resume{
+    width: 300px;
+    height: 370px;
+    object-fit: contain;
+    border: 1px solid #1E2D3D;
+    border-radius: 10px;
+}
+.resume img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+.myResume a button{
+    text-align: center;
+    background: #1C2B3A;
+    border: 1px solid #1C2B3A;
+    outline: #1C2B3A;
+    width: 150px;
+    height: 35px;
+    margin-top: 10px;
+    font-family: myFontRetina;
+    color: #fff;
+    font-size: 13px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/*FOOTER*/
+.footer{
+    display: flex;
+    position: fixed;
+    bottom: 0%;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #1E2D3D;
+    padding: 0;
+    margin: 0 auto;
+    
+}
+.footer1,.footer2{
+    display: flex;
+    padding: 0 0.5%;
+}
+.footer1 ul ,.footer2 ul{
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0 auto;
+}
+.footer1 ul p{
+    margin: 0 auto;
+    width: 100px;
+    border-right: 1px solid #1E2D3D;
+    padding: 5% 0;
+    font-family: myFontRetina;
+    color: #607B96;
+    font-size: 10px;
+}
+.footer1 ul a{
+    padding: 4% 0;
+    width: 50px;
+    border-right: 1px solid #1E2D3D;
+    text-align: center;
+    text-decoration: none;
+    align-items: center;
+    color: #607B96;
+}
+.footer1 ul a li{
+    list-style: none;
+}
+.footer1 ul a li i{
+    font-size: 13px;
+}
+.footer2 ul a{
+    padding: 7% 0;
+    width: 120px;
+    border-left: 1px solid #1E2D3D;
+    text-align: center;
+    text-decoration: none;
+    align-items: center;
+    font-size: 12px;
+    color: #607B96;
+}
+.footer2 ul a li{
+    list-style: none;
+}
+.footer2 ul a li i{
+    font-size: 13px;
+}
+.maxWidth{
+    display: none;
+}
+
+@media screen and (min-width:2101px) and (orientation:landscape)  {
+    .aaa{
+        display: none;
+    }
+    .maxWidth{
+        display: block;
+        font-family: myFontBold;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: fit-content;
+        color: #fff;
+    }
+    .maxWidth h1{
+        font-size: 70px;
+    }
+    .maxWidth p{
+        font-size: 40px;
+    }
+    .aboutMainContent{
+        display: none;
+    }
+    .footer{
+        display: none;
+    }
+}
+@media screen and (max-width:2100px) and (orientation:landscape) {
+    .load{
+        width: 400px;
+        height: 400px;
+        border: 6px solid #fff;
+        border-color: #fff transparent #fff transparent;
+        border-radius: 50%;
+        animation: spinner 1.3s linear infinite;
+    }
+    .onLoadContent h1{
+        font-size: 80px;
+    }
+    .navList ul a{
+        width: 150px;
+        padding: 3% 0;
+    }
+    .navList ul a:nth-child(1){
+        width: 180px;
+    }
+    .navList ul a li{
+        font-size: 17px;
+    }
+    .navContact ul a{
+        width: 200px;
+        padding: 1% 0;
+    }
+    .navContact ul a li{
+        font-size: 17px;
+        width: 200px;
+        padding: 10.5% 0;
+    }
+    /*ABOUT*/
+    .aboutProfile{
+        width: 259px;
+        height: 50px;
+        padding-left: 12%;
+    }
+    .aboutProfile i{
+        font-size: 22px;
+    }
+    .aboutProfile p{
+        font-size: 18px;
+    }
+    .aboutHeaderTag{
+        margin-left: 30px;
+    }
+    .presonalInfo{
+        width: 220px;
+        height: 50px;
+        padding: 0 6%;
+    }
+    .presonalInfo p{
+        font-size: 15px;
+        padding-top:5%;
+    }
+    .presonalInfo i{
+        font-size: 22px;
+    }
+    .professionalInfo{
+        width: 250px;
+        height: 50px;
+        padding: 0 6%;
+    }
+    .professionalInfo p{
+        font-size: 15px;
+        padding-top:5%;
+        width: 250px;
+    }
+    .professionalInfo i{
+        font-size: 22px;
+    }
+    /*ABOUT fILES*/
+    .aboutProfileFiles{
+        width: 322px;
+        padding-left: 0.9%;
+    }
+    .aboutProfileFile{
+        margin-top: 20px;
+    }
+    .aboutProfileFile p{
+        font-size: 16px;
+    }
+    .aboutProfileFile i{
+        font-size: 20px;
+    }
+    .aboutProfileFile:nth-child(2){
+        border-bottom: 1px solid #1E2D3D;
+        padding-bottom: 25px;
+    }
+    /*ABOUT CONTENT*/
+    .personalInfoContent ul{
+        padding-top: 1%;
+    }
+    .personalInfoContent ul li{
+        line-height: 40px;
+        font-size: 17px;
+    }
+    .professionalInfoContent ul{
+        padding-top: 1%;
+    }
+    .professionalInfoContent ul li{
+        line-height: 40px;
+        font-size: 17px;
+    }
+    /*MY RESUME*/
+    .resume{
+        width: 400px;
+        height: 500px;
+    }
+    .myResume a button{
+        width: 250px;
+        height: 50px;
+        font-size: 16px;
+        margin-top: 20px;
+    }
+
+
+    /*FOOTER*/
+    .footer1 ul a{
+        width: 80px;
+    }
+    .footer1 ul a li i{
+        font-size: 22px;
+    }
+    .footer1 ul p{
+        font-size: 16px;
+        width: 150px;
+    }
+    .footer2 ul a{
+        font-size: 15px;
+        width: 170px;
+    }
+    .footer2 ul a li i{
+        font-size: 22px;
+    }
+}
+@media screen and (max-width:1600px) and (orientation:landscape) {
+    .load{
+        width: 350px;
+        height: 350px;
+        border: 6px solid #fff;
+        border-color: #fff transparent #fff transparent;
+        border-radius: 50%;
+        animation: spinner 1.3s linear infinite;
+    }
+    .onLoadContent h1{
+        font-size: 60px;
+    }
+    .navList ul a{
+        width: 120px;
+   }
+     .navList ul a:nth-child(1){
+        width: 120px;
+        padding-right: 100px;
+    }
+    .navList ul a li{
+        font-size: 14px;
+    }
+    .navContact ul a{
+        width: 150px;
+    }
+    .navContact ul a li{
+        font-size: 14px;
+        width: 150px;
+    }
+    /*ABOUT*/
+    .aboutProfile{
+        width: 211px;
+        padding-left: 8%;
+    }
+    .aboutProfile i{
+        font-size: 18px;
+    }
+    .aboutProfile p{
+        font-size: 15px;
+    }
+    .aboutHeaderTag{
+        margin-left: 17px;
+    }
+    .presonalInfo{
+        padding: 0 3%;
+    }
+    .presonalInfo p{
+        font-size: 15px;
+        width: 140px;
+        padding-top: 6%;
+    }
+    .presonalInfo i{
+        font-size: 20px;
+    }
+    /**/
+    .professionalInfo{
+        padding: 0 3%;
+        width: 230px;
+    }
+    .professionalInfo p{
+        font-size: 15px;
+        width: 160px;
+        padding-top: 6%;
+    }
+    .professionalInfo i{
+        font-size: 20px;
+    }
+    /**/
+    .aboutProfileFiles{
+        width: 273px;
+        padding-left: 0.1%;
+    }
+    .aboutProfileFile:nth-child(2){
+        border-bottom: 1px solid #1E2D3D;
+        padding-bottom: 20px;
+    }
+    .aboutProfileFile{
+        margin-bottom: 15px;
+        margin-top: 10px;
+    }
+    .aboutProfileFile i{
+        font-size: 18px;
+    }
+    .aboutProfileFile p{
+        font-size: 14px;
+    }
+    /*CONTENT*/
+    .personalInfoContent ul li{
+        font-size: 13.5px;
+        line-height: 30px;
+    }
+    .professionalInfoContent ul li{
+        font-size: 13.5px;
+        line-height: 30px;
+    }
+    /*RESUME*/
+    .resume{
+        width: 300px;
+        height: 370px;
+    }
+    .myResume a button{
+        width: 170px;
+        height: 35px;
+        border-radius: 5px;
+        font-size: 13px;
+    }
+    /*FOOTER*/
+    .footer1 ul a{
+        width: 60px;
+    }
+    .footer1 ul p{
+        font-size: 15px;
+        width: 150px;
+    }
+    .footer1 ul a li i{
+        font-size: 20px;
+    }
+    .footer2 ul li{
+        font-size: 15px;
+    }
+    .footer2 ul li i{
+        font-size: 20px;
+    }
+}
+@media screen and (max-width:1320px) and (orientation:landscape) {
+    .load{
+        width: 300px;
+        height: 300px;
+        border: 6px solid #fff;
+        border-color: #fff transparent #fff transparent;
+        border-radius: 50%;
+        animation: spinner 1.3s linear infinite;
+    }
+    /*MAIN NAV*/
+.navigation ul{
+    display: flex;
+    padding: 0;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #1E2D3D;
+    padding: 0 0.5%;
+}
+.navList ul a:nth-child(1){
+    padding-right: 79px;
+    border-bottom: none;
+    opacity: 1;
+}
+.navList ul{
+    display: flex;
+    align-items: center;
+    border: none;
+    z-index: 100;
+}
+.navList ul a{
+    padding: 3.5% 0;
+    width: 100px;
+    border-right: 1px solid #1E2D3D;
+    text-align: center;
+    text-decoration: none;
+    align-items: center;
+}
+.navList ul a:hover{
+    border-bottom: 2px solid #FEA55F;
+    opacity: 0.5;
+}
+.navActiveLink:hover{
+    border-bottom: 2px solid #FEA55F;
+}
+.navActiveLink{
+    border-bottom: 2px solid #FEA55F;
+}
+.navList ul a li{
+    list-style: none;
+    font-family: myFontBold;
+    font-size: 11px;
+    text-align: center;
+    text-decoration: none;
+    color: #607B96;
+}
+
+.navContact ul a:nth-child(1):hover{
+    opacity: 1;
+}
+.navContact ul a:nth-child(2):hover{
+    opacity: 1;
+}
+.navContact ul li:nth-child(1):hover{
+   border-bottom: transparent;
+}
+.navContact ul{
+    display: flex;
+    align-items: center;
+    border: none;
+}
+.navContact ul a li{
+    padding: 9% 0;
+    width: 100px;
+    border-left: 1px solid #1E2D3D;
+    text-align: center;
+    list-style: none;
+    font-family: myFontBold;
+    font-size: 11px;
+    text-align: center;
+    text-decoration: none;
+    color: #607B96;
+}
+.navContact ul a{
+    text-decoration: none;
+}
+.navContact ul a:hover{
+    border-bottom: 2px solid #FEA55F;
+    opacity: 0.5;
+}
+/*ABOUT*/
+.aboutHeader{
+    display: flex;
+    align-items: start;
+    font-family: myFontRegular;
+    overflow: hidden;
+    border-bottom: 1px solid #1E2D3D;
+}
+.aboutProfile{
+    display: flex;
+    align-items: center;
+    width: 195px;
+    border: 1px solid #1E2D3D;
+    border-bottom: none;
+    padding-left: 6%;
+    height: 30px;
+    gap: 10px;
+    cursor: pointer;
+    position: relative;
+    z-index: 5;
+    background: #011627;
+}
+.aboutHeaderTag{
+    display: flex;
+    align-items: center;
+    margin: 0;
+    margin-left: 11px;
+}
+.presonalInfo{
+    display: flex;
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    width: 170px;
+    border: 1px solid #1E2D3D;
+    border-left: none;
+    height: 30px;
+    cursor: pointer;
+    margin: 0;
+    padding: 0 3%;
+}
+.professionalInfo{
+    display: flex;
+    opacity: 0;
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    width: 170px;
+    border: 1px solid #1E2D3D;
+    border-left: none;
+    height: 30px;
+    cursor: pointer;
+    margin: 0;
+    padding: 0 3%;
+}
+.aboutProfile p{
+    margin: 0;
+    font-size: 11px;
+    color: #607B96;
+}
+.presonalInfo p{
+    margin: 0;
+    font-size: 11px;
+    color: #607B96;
+    padding-top: 8%;
+}
+.professionalInfo p{
+    margin: 0;
+    font-size: 11px;
+    color: #607B96;
+    padding-top: 8%;
+}
+.aboutProfile i{
+    font-size: 15px;
+    color: #607B96;
+}
+.presonalInfo i{
+    font-size: 15px;
+    color: #607B96;
+    padding: 5px;
+}
+.presonalInfo i:hover{
+    background: #1E2D3D;
+    border-radius: 20px;
+}
+.professionalInfo i{
+    font-size: 15px;
+    color: #607B96;
+    padding: 5px;
+}
+.professionalInfo i:hover{
+    background: #1E2D3D;
+    border-radius: 20px;
+}
+.professionalInfoP{
+    width: 150px;
+    height: 30px;
+    align-items: center;
+    padding-top: 15px;
+}
+.personalInfoP{
+    width: 130px;
+    height: 30px;
+    align-items: center;
+    padding-top: 15px;
+}
+/*CONTACT FILE*/
+.aboutProfileAll{
+    border-bottom: none;
+}
+.aboutProfileFiles{
+    margin-top: -100%;
+    transition: .6s;
+    overflow: hidden;
+    width: fit-content;
+    font-family: myFontRegular;
+}
+.aboutProfileFile{
+    display: flex;
+    align-items: center;
+    width: 246px;
+    margin-bottom: 5px;
+    height: 25px;
+    padding-left: 7%;
+    gap: 15px;
+    cursor: pointer;
+    overflow: hidden;
+}
+.aboutProfileFile i{
+    font-size: 13px;
+}
+.aboutProfileFile:nth-child(1){
+    color: #E99287;
+}
+.aboutProfileFile:nth-child(2){
+    color: #43D9AD;
+    border-bottom: 1px solid #1E2D3D;
+    padding-bottom: 10px;
+}
+.aboutProfileFile p{
+    margin: 0;
+    font-size: 11px;
+    color: #607B96;
+}
+/*CONTACT FILE Mobile*/
+.aboutProfileAll{
+    border-bottom: none;
+}
+.aboutProfileFilesMobile{
+    display: none;
+    margin-top: -100%;
+    transition: .6s;
+    overflow: hidden;
+    width: fit-content;
+    font-family: myFontRegular;
+}
+.aboutProfileFileMobile{
+    display: flex;
+    align-items: center;
+    width: 207px;
+    margin-bottom: 5px;
+    height: 25px;
+    padding-left: 7%;
+    gap: 15px;
+    cursor: pointer;
+    overflow: hidden;
+}
+.aboutProfileFileMobile i{
+    font-size: 13px;
+}
+.aboutProfileFileMobile:nth-child(1){
+    color: #E99287;
+}
+.aboutProfileFileMobile:nth-child(2){
+    color: #43D9AD;
+}
+.aboutProfileFileMobile p{
+    margin: 0;
+    font-size: 11px;
+    color: #607B96;
+}
+
+/*CONATCT JAVASCRIPT STYLE*/
+.aboutProfilefolderActive{
+    font-size: 15px;
+    color: #607B96;
+}
+#aboutProfilefolder.aboutProfilefolderActive::before{
+    content: "\f07c"; 
+    font-family: "Font Awesome 5 Free";
+}
+.aboutProfileFiles.aboutProfileFilesActive{
+    margin-top: 0%;
+}
+.presonalInfo.presonalInfoActive{
+    display: flex;
+}
+.professionalInfo.professionalInfoActive{
+    display: flex;
+    opacity: 1;
+    width:200px;
+}
+.presonalInfo.presonalInfoActiveBorder{
+    border-bottom: 1px solid lightskyblue;
+}
+.professionalInfo.professionalInfoActiveBorder{
+    border-bottom: 1px solid lightskyblue;
+}
+/*ABOUT MAIN CONTENT*/
+.aboutMainContent{
+    display: flex;
+}
+.AboutContent{
+    border: 1px solid #1E2D3D;
+    height: 100vh;
+    width: 54%;
+    border-top: none;
+}
+.personalInfoContent{
+    display: none;
+}
+.personalInfoContent ul{
+    padding: 0;
+    padding-left: 5%;
+    margin: 0;
+}
+.personalInfoContent ul li{
+    list-style: none;
+    font-family: myFontRetina;
+    font-size: 12px;
+    line-height: 24px;
+    color: #607B96;
+}
+.professionalInfoContent{
+    display: none;
+}
+.professionalInfoContent ul{
+    padding: 0;
+    padding-left: 5%;
+    margin: 0;
+}
+.professionalInfoContent ul li{
+    list-style: none;
+    font-family: myFontRetina;
+    font-size: 12px;
+    line-height: 24px;
+    color: #607B96;
+}
+.InfoContentNumber{
+    padding-right: 15px;
+    text-align: center;
+}
+.personalInfoContent.personalInfoContentActive{
+    display: block;
+}
+.professionalInfoContent.professionalInfoContentActive{
+    display: block;
+}
+/*RESUME*/
+.myResume{
+    margin: 0 auto;
+    margin-top: 1%;
+}
+.resume{
+    width: 300px;
+    height: 360px;
+    object-fit: contain;
+    border: 1px solid #1E2D3D;
+    border-radius: 10px;
+}
+.resume img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+.myResume a button{
+    text-align: center;
+    background: #1C2B3A;
+    border: 1px solid #1C2B3A;
+    outline: #1C2B3A;
+    width: 150px;
+    height: 35px;
+    margin-top: 10px;
+    font-family: myFontRetina;
+    color: #fff;
+    font-size: 13px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/*FOOTER*/
+.footer{
+    display: flex;
+    position: fixed;
+    bottom: 0%;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #1E2D3D;
+    padding: 0;
+    margin: 0 auto;
+    
+}
+.footer1,.footer2{
+    display: flex;
+    padding: 0 0.5%;
+}
+.footer1 ul ,.footer2 ul{
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0 auto;
+}
+.footer1 ul p{
+    margin: 0 auto;
+    width: 100px;
+    border-right: 1px solid #1E2D3D;
+    padding: 5% 0;
+    font-family: myFontRetina;
+    color: #607B96;
+    font-size: 10px;
+}
+.footer1 ul a{
+    padding: 4% 0;
+    width: 50px;
+    border-right: 1px solid #1E2D3D;
+    text-align: center;
+    text-decoration: none;
+    align-items: center;
+    color: #607B96;
+}
+.footer1 ul a li{
+    list-style: none;
+}
+.footer1 ul a li i{
+    font-size: 13px;
+}
+.footer2 ul a{
+    padding: 6% 0;
+    width: 140px;
+    border-left: 1px solid #1E2D3D;
+    text-align: center;
+    text-decoration: none;
+    align-items: center;
+    font-size: 10px;
+    color: #607B96;
+}
+.footer2 ul a li{
+    list-style: none;
+}
+.footer2 ul a li i{
+    font-size: 15px;
+}
+
+}
+@media screen and (max-width:1200px) and (orientation:landscape) {
+    
+    .aboutProfileFile{
+        display: flex;
+        align-items: center;
+        width: 237px;
+        margin-bottom: 5px;
+        height: 25px;
+        padding-left: 7%;
+        gap: 15px;
+        cursor: pointer;
+        overflow: hidden;
+    }
+}
+@media screen and (max-width:1100px) and (orientation:landscape) {
+    .load{
+        width: 250px;
+        height: 250px;
+        border: 6px solid #fff;
+        border-color: #fff transparent #fff transparent;
+        border-radius: 50%;
+        animation: spinner 1.3s linear infinite;
+    }
+    .navList ul a{
+        padding: 2.5% 0;
+        width: 80px;
+    }
+    .navList ul a:nth-child(1){
+        width: 100px;
+        padding-right: 50px;
+    }
+    .navList ul a li{
+        font-size: 10px;
+    }
+    .navContact ul a{
+        width: 100px;
+    }
+    .navContact ul a li{
+        font-size: 10px;
+        padding: 9% 0;
+    }
+    /*ABOUT*/
+    .aboutProfile{
+        width: 141.5px;
+        padding-left: 10%;
+        height: 25px;
+        align-items: first baseline;
+    }
+    .aboutProfile i{
+        font-size: 13px;
+    }
+    .aboutProfile p{
+        font-size: 10px;
+    }
+    /*ABOUT HEADER*/
+    .aboutHeaderTag{
+        height: 25px;
+        margin-left: 14.1px;
+    }
+    .presonalInfo{
+        width: 110px;
+        height: 25px;
+    }
+    .presonalInfo p{
+        font-size: 9px;
+        padding-top: 11%;
+    }
+    .presonalInfo i{
+        font-size: 13px;
+    }
+    .personalInfoP{
+        height: 25px;
+        width: 10px;
+    }
+    .professionalInfo{
+        width: 110px;
+        height: 25px;
+    }
+    .professionalInfo p{
+        font-size: 9px;
+        padding-top: 9%;
+    }
+    .professionalInfo i{
+        font-size: 13px;
+    }
+    .professionalInfoP{
+        height: 25px;
+        width: 70px;
+    }
+    .professionalInfo.professionalInfoActive {
+        width: 140px;
+    }
+    /*ABOUT FILE CONTENT*/
+    .aboutProfileFiles{
+        width: 184px;
+    }
+    .aboutProfileFile{
+        margin-top: 5px;
+        margin-bottom: 2px;
+        padding-left: 10%;
+    }
+    .aboutProfileFile i{
+        font-size: 13px;
+    }
+    .aboutProfileFile p{
+        font-size: 9px;
+    }
+    /*ABOUT CONTENT*/
+    .personalInfoContent ul{
+        padding-top: 1%;
+    }
+    .personalInfoContent ul li{
+        font-size: 9px;
+        line-height: 20px;
+    }
+    .professionalInfoContent ul{
+        padding-top: 1%;
+    }
+    .professionalInfoContent ul li{
+        font-size: 9px;
+        line-height: 20px;
+    }
+    /*RESUME*/
+    .resume{
+        width: 230px;
+        height: 260px;
+    }
+    .myResume a button{
+        width: 120px;
+        height: 25px;
+        font-size: 9px;
+        border-radius: 5px;
+    }
+    /*FOOTER*/
+    .footer2 ul a li{
+        font-size: 11px;
+    }
+}
+@media screen and (max-width:1100px) and (orientation:portrait) {
+    .load{
+        width: 300px;
+        height: 300px;
+        border: 6px solid #fff;
+        border-color: #fff transparent #fff transparent;
+        border-radius: 50%;
+        animation: spinner 1.3s linear infinite;
+    }
+    .aboutProfileFiles{
+        width: 260px;
+    }
+    .aboutContents{
+        display: block;
+        width: 100%;
+        height: 100vh;
+        border-left: 1px solid #1E2D3D;
+        border-right: 1px solid #1E2D3D;
+    }
+    .AboutContent{
+        height: 30vh;
+        overflow: hidden;
+        width: 99.8%;
+        border-left: none;
+        border-right: none;
+    }
+    .personalInfoContent ul{
+        padding-top: 1%;
+    }
+    .personalInfoContent ul li{
+        font-size: 14px;
+        line-height: 28px;
+    }
+    .professionalInfoContent ul{
+        padding-top: 1%;
+    }
+    .professionalInfoContent ul li{
+        font-size: 14px;
+        line-height: 28px;
+    }
+    .aboutProfileFile:nth-child(1){
+        margin-top: 5px;
+    }
+    .aboutProfileFile{
+        margin-bottom: 10px;
+    }
+    .aboutHeaderTag{
+        margin-left: 0px;
+    }
+    /*RESUME*/
+    .myResume{
+        margin-top: 5%;
+        margin-left: 25%;
+    }
+    .resume img{
+        width: 320px;
+        height: 400px;
+    }
+    .myResume a button{
+        width: 170px;
+        margin-top: 45px;
+        height: 40px;
+        font-size: 14px;
+    }
+}
+@media screen and (max-width:900px) and (orientation:portrait) {
+    .load{
+        width: 250px;
+        height: 250px;
+        border: 6px solid #fff;
+        border-color: #fff transparent #fff transparent;
+        border-radius: 50%;
+        animation: spinner 1.3s linear infinite;
+    }
+    .aboutProfile{
+        width: 192.5px;
+    }
+    .aboutProfileFiles{
+        width: 273px;
+    }
+    .AboutContent{
+        height: 35vh;
+    }
+    .aboutProfileFile:nth-child(1){
+        margin-top: 5px;
+    }
+    .aboutProfileFile{
+        margin-bottom: 10px;
+    }
+    .personalInfoContent ul li{
+        font-size: 13px;
+    }
+    .professionalInfoContent ul li{
+        font-size: 13px;
+    }
+    .myResume{
+        margin-left: 22%;
+    }
+}
+@media screen and (max-width:900px) and (orientation:portrait) {
+    .aboutProfile{
+        width: 192.5px;
+    }
+    .aboutProfileFiles{
+        width: 280px;
+    }
+    .AboutContent{
+        height: 35vh;
+    }
+    .aboutProfileFile:nth-child(1){
+        margin-top: 5px;
+    }
+    .aboutProfileFile{
+        margin-bottom: 10px;
+    }
+    .personalInfoContent ul li{
+        font-size: 12px;
+    }
+    .professionalInfoContent ul li{
+        font-size: 12px;
+    }
+    .myResume{
+        margin-left: 20%;
+    }
+}
+@media screen and (max-width:900px) and (orientation:landscape){
+    .load{
+        width: 200px;
+        height: 200px;
+        border: 6px solid #fff;
+        border-color: #fff transparent #fff transparent;
+        border-radius: 50%;
+        animation: spinner 1.3s linear infinite;
+    }
+    .aboutProfile{
+        width: 141px;
+    }
+    .aboutProfileFiles{
+        width: 190px;
+    }
+    .personalInfoContent ul li{
+        font-size: 8px;
+        line-height: 19px;
+    }
+    .professionalInfoContent ul li{
+        font-size: 8px;
+        line-height: 19px;
+    }
+    .resume{
+        width: 190px;
+        height: 230px;
+    }
+}
+@media screen and (max-width:750px) and (orientation:landscape){
+    body{
+        overflow: auto;
+    }
+    .aboutHeaderTag{
+        margin-left: 1px;
+    }
+    .AboutContent{
+        border-bottom: none;
+    }
+    .aboutProfile{
+        width: 140px;
+    }
+    .aboutProfileFile{
+        border: none;
+    }
+    .aboutProfileFiles{
+        width: 196.5px;
+    }
+    .personalInfoContent ul li{
+        font-size: 7.5px;
+        line-height: 17px;
+    }
+    .professionalInfoContent ul li{
+        font-size: 7.5px;
+        line-height: 17px;
+    }
+}
+@media screen and (max-width:700px) and (orientation:portrait) {
+    .load{
+        width: 200px;
+        height: 200px;
+        border: 6px solid #fff;
+        border-color: #fff transparent #fff transparent;
+        border-radius: 50%;
+        animation: spinner 1.3s linear infinite;
+    }
+    .body{
+        overflow-y: auto;
+    }
+    .body.onscroll{
+        overflow: hidden;
+    }
+    .navigation{
+        z-index: 100;
+        position: relative;
+    }
+    .navigation ul{
+        display:block;
+        padding: 1% 0;
+    }
+    .navList ul a{
+        display: none;
+    }
+    .navList ul a li{
+        font-size: 14px;
+        width: 150px;
+    }
+    .navList ul{
+        display: flex;
+        justify-content: space-between;
+        padding: 0% 4%;
+    }
+    .navList ul a:nth-child(1){
+        display: block;
+        border-right: none;
+    }
+    .navContact{
+        display: none;
+    }
+    .navContact ul{
+        display: none;
+    }
+    .navContact ul a{
+        display: none;
+    }
+    .nav-menu{
+        display: block;
+    }
+    .hamburg{
+        display: block;
+    }
+    .bar{
+        display: block;
+    }
+    .aboutProfileAll{
+        width: 195px;
+    }
+    .aboutProfile{
+        width: 183px;
+    }
+    .personalInfoContent ul li {
+        font-size: 10px;
+    }
+    .professionalInfoContent ul li {
+        font-size: 10px;
+    }
+    .myResume {
+        margin-left: 13%;
+    }
+}
+@media screen and (max-width:550px) and (orientation:portrait) {
+    .load{
+        width: 200px;
+        height: 200px;
+        border: 6px solid #fff;
+        border-color: #fff transparent #fff transparent;
+        border-radius: 50%;
+        animation: spinner 1.3s linear infinite;
+    }
+    .body{
+        overflow-y: auto;
+    }
+    .body.onscroll{
+        overflow: hidden;
+    }
+    .navigation{
+        z-index: 100;
+        position: relative;
+    }
+    .navigation ul{
+        display:block;
+        padding: 1% 0;
+    }
+    .navList ul a{
+        display: none;
+    }
+    .navList ul a li{
+        font-size: 14px;
+        width: 150px;
+    }
+    .navList ul{
+        display: flex;
+        justify-content: space-between;
+        padding: 0% 4%;
+    }
+    .navList ul a:nth-child(1){
+        display: block;
+        border-right: none;
+    }
+    .navContact{
+        display: none;
+    }
+    .navContact ul{
+        display: none;
+    }
+    .navContact ul a{
+        display: none;
+    }
+    .nav-menu{
+        display: block;
+    }
+    .hamburg{
+        display: block;
+    }
+    .bar{
+        display: block;
+    }
+    .aboutProfileFiles{
+        display: none;
+    }
+    .aboutHeader{
+        display: block;
+    }
+    .presonalInfo , .professionalInfo{
+        display: flex;
+        opacity: 1;
+    }
+    .aboutProfileAll{
+        width: 100%;
+        text-align: center;
+    }
+    .aboutProfile{
+        width: 100%;
+        text-align: center;
+    }
+    .aboutProfile i{
+        display: none;
+    }
+    .presonalInfo{
+        text-align: center;
+        height: 40px;
+        width: 250px;
+    }
+    .professionalInfo{
+        text-align: center;
+        height: 40px;
+        width: 250px;
+    }
+    .presonalInfo p{
+        font-size: 14px;
+        padding-top: 6.3%;
+        width: 150px;
+    }
+    .professionalInfo p{
+        font-size: 14px;
+        padding-top: 6.3%;
+        width: 150px;
+    }
+    .presonalInfo i{
+        display: none;
+    }
+    .professionalInfo i{
+        display: none;
+    }
+    .aboutProfile {
+        padding: 0;
+        width: 100%;
+        text-align: center;
+        display: block;
+        margin: 0;
+        padding-top: 10px;
+    }
+    .aboutProfile p{
+        font-size: 15px;
+    }
+    /*ABOUT CONTENT*/
+    .AboutContent{
+        height: 60vh;
+    }
+    .personalInfoContent ul li{
+        font-size: 9px;
+        line-height: 26px;
+    }
+    .professionalInfoContent ul li{
+        font-size: 9px;
+        line-height: 26px;
+    }
+    .myResume{
+        height: 80vh;
+        margin-left: 19%;
+    }
+    /*FOOTER*/
+    .footer{
+        display: flex;
+        background: #011627;
+    }
+    .footer1 ul {
+        margin: 0;
+    }
+    .footer2 ul a{
+        padding: 9% 0;
+    }
+    .personalInfoContent ul li {
+        font-size: 9.3px;
+    }
+    .professionalInfoContent ul li {
+        font-size: 9.3px;
+    }
+}
+@media screen and (max-width:450px) and (orientation:portrait) {
+    .myResume{
+        height: 80vh;
+        margin-left: 14%;
+    }
+}
+@media screen and (max-width:430px) and (orientation:portrait) {
+    .myResume{
+        height: 80vh;
+        margin-left: 11%;
+    }
+}
+@media screen and (max-width:400px) and (orientation:portrait) {
+    .myResume{
+        height: 80vh;
+        margin-left: 8%;
+    }
+}

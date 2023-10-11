@@ -1,0 +1,1697 @@
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    background: #011627;
+    overflow: none;
+    caret-color: transparent;
+}
+.html{
+    overflow-x: hidden;
+}
+.projectMobile{
+    display: none;
+    font-family: myFontRetina;
+}
+.body.onscroll{
+    overflow: hidden;
+}
+.html.scrolled{
+    overflow: hidden;
+}
+@font-face {
+    font-family: myFontRetina;
+    src: url(/fira-code/FiraCode-Retina.OTF);
+}
+@font-face {
+    font-family: myFontBold;
+    src: url(/fira-code/FiraCode-Bold.OTF);
+}
+@font-face {
+    font-family: myFontThin;
+    src: url(/fira-code/FiraCode-Light.OTF);
+}
+@font-face {
+    font-family: myFontRegular;
+    src: url(/fira-code/FiraCode-Regular.OTF);
+}
+.loading{
+    height: 100vh;
+    position: relative;
+    width: 100%;
+    background: #011221;
+    z-index: 200;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.load{
+    width: 200px;
+    height: 200px;
+    border: 6px solid #fff;
+    border-color: #fff transparent #fff transparent;
+    border-radius: 50%;
+    animation: spinner 1.3s linear infinite;
+}
+@keyframes spinner {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/*MAIN NAV*/
+.navigation{
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
+.navigation ul{
+    display: flex;
+    padding: 0;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #1E2D3D;
+    padding: 0 0.5%;
+    background: #011627;
+}
+
+.navList ul{
+    display: flex;
+    align-items: center;
+    border: none;
+    z-index: 100;
+}
+.navList ul a{
+    padding: 3% 0;
+    width: 100px;
+    border-right: 1px solid #1E2D3D;
+    text-align: center;
+    text-decoration: none;
+    align-items: center;
+}
+.navList ul a:hover{
+    border-bottom: 2px solid #FEA55F;
+    opacity: 0.5;
+}
+.navActiveLink:hover{
+    border-bottom: 2px solid #FEA55F;
+}
+.navActiveLink{
+    border-bottom: 2px solid #FEA55F;
+}
+.navList ul a li{
+    list-style: none;
+    font-family: myFontBold;
+    font-size: 11px;
+    text-align: center;
+    text-decoration: none;
+    color: #607B96;
+}
+.navList ul a:nth-child(1){
+    padding-right: 100px;
+    border-bottom: none;
+    opacity: 1;
+}
+.navList ul a:nth-child(4):hover{
+    opacity: 1;
+}
+.navList ul li:nth-child(4):hover{
+   border-bottom: transparent;
+}
+.navContact ul{
+    display: flex;
+    align-items: center;
+    border: none;
+}
+.navContact ul a li{
+    padding: 14.5% 0;
+    width: 100px;
+    border-left: 1px solid #1E2D3D;
+    text-align: center;
+    list-style: none;
+    font-family: myFontBold;
+    font-size: 11px;
+    text-align: center;
+    text-decoration: none;
+    color: #607B96;
+}
+.navContact ul a{
+    text-decoration: none;
+}
+.navContact ul a:hover{
+    border-bottom: 2px solid #FEA55F;
+    opacity: 0.5;
+}
+/*NAV MOBILE*/
+.bar{
+    display: none;
+    cursor: pointer;
+    width: 20px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3 ease-in-out;
+    transition: all 0.3 ease-in-out;
+    background-color: #607B96;
+    z-index: 100;
+}
+.hamburg{
+    display: none;
+    color: #607B96;
+    z-index: 100;
+    cursor: pointer;
+    transition: 0.3s;
+    z-index: 100;
+}
+.active-nav .bar:nth-child(2){
+    opacity: 0;
+}
+.active-nav .bar:nth-child(1){
+    transform: translateY(8px) rotate(45deg);
+    transition: 0.3s;
+}
+.active-nav .bar:nth-child(3){
+    transform: translateY(-8px) rotate(-45deg);
+    transition: 0.3s;
+}
+.nav-menu{
+    position: fixed;
+    top: 0;
+    left: 99.99%;
+    width: 100%;
+    min-height: 100%;
+    z-index: 60;
+    background: #011627;
+    display: none;
+    padding-top: 9%;
+    transition: 0.9s;
+}
+.nav-menu.is-active{
+    left: 0%;
+}
+/*MOBILE MENU*/
+.mobileNav ul{
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    margin-top: 3%;
+    font-family: myFontRetina;
+}
+.mobileNav ul a{
+    width: 100%;
+    text-decoration: none;
+}
+.mobileNav ul a li{
+    width: 100%;
+    border: 1px solid #1E2D3D;
+    border-top: none;
+    padding: 4% 0;
+    padding-left: 9%;
+    font-size: 12px;
+    list-style: none;
+    color: #607B96;
+}
+/*PROJECT*/
+.projectMain{
+    width: 100%;
+    border: 1px solid #1E2D3D;
+    height: 100vh;
+    border-bottom: none;
+}
+.projectLists{
+    margin-top: 3.6%;
+    position: fixed;
+    border: 1px solid #1E2D3D;
+    width: 16.15%;
+    height: 100vh;
+    border-top: none;
+    border: 1px solid #1E2D3D;
+    overflow: hidden;
+    align-items: center;
+}
+.projectListHeader{
+    display: flex;
+    align-items: first baseline;
+    width: 100%;
+    border: 1px solid #1E2D3D;
+    margin-bottom: 10px;
+    border-top: none;
+    height: 30px;
+    border-left: none;
+    padding-left: 4.6%;
+    gap: 7px;
+    font-family: myFontRegular;
+    color: #607B96;
+    cursor: pointer;
+    padding-top: 1.5%;
+    background: #011627;
+    z-index: 5;
+    position: relative;
+}
+.projectList{
+    padding-left: 5.3%;
+    font-family: myFontRegular;
+    margin-top: -200%;
+    transition: .7s;
+}
+.pl{
+    display: flex;
+    align-items: center;
+    width: 90%;
+    margin-bottom: 8px;
+    gap: 15px;
+    color: #607B96;
+}
+.projectListHeader p{
+    margin: 0;
+    padding: 0;
+    font-size: 11px;
+}
+.pl p{
+    margin: 0;
+    padding: 0;
+    font-size: 11px;
+}
+.pl i{
+    font-size: 14px;
+}
+.pl:hover{
+    color: #fff;
+    cursor: pointer;
+}
+.projectListHeader i{
+    font-size: 11px;
+}
+/*JAVA LIST*/
+.projectList.projectListActive{
+    margin-top: 0%;
+}
+.projectListHeader.projectListHeaderActive{
+    color: #fff;
+}
+#projectListHeaderi.projectListHeaderiActive::before{
+    content: "\f0d7";  /* this is your text. You can also use UTF-8 character codes as I do here */
+    font-family: "Font Awesome 5 Free";
+}
+.projectMain{
+    display: flex;
+    align-items: start;
+}
+.projectContent{
+    position: relative;
+    margin: 0 auto;
+    margin-top: 8%;
+    margin-left: 22%;
+    overflow-y: auto;
+    padding-bottom: 50px;
+}
+/*PROJECT*/
+.projectlists{
+    columns: 3;
+    width: 100%;
+    margin: 0 auto;
+    column-gap: 30px;
+}
+.project{
+    margin: 0;
+    page-break-inside: avoid;          
+    break-inside: avoid-column;
+    margin-bottom: 30px;
+}
+.projectMainContent{
+    width: fit-content;
+    height: fit-content;
+    border: 1.5px solid #1E2D3D;
+    border-radius: 10px;
+}
+.projectMainContentImg{
+    width: 280px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+    position: relative;
+}
+.projectMainContentImg img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+.projectTitle{
+    font-family: myFontBold;
+    color: #607B96;
+    margin-bottom: 10px;
+}
+.projectTitle p{
+    margin: 0;
+    padding: 0;
+    font-size: 11px;
+}
+.projectTitleNumber{
+    color: #5565E8;
+    opacity: 1;
+}
+.projectTitleText{
+    opacity: 0.7;
+}
+.projectMainContentImgLan i{
+    position: absolute;
+    top: 10%;
+    right: 6%;
+    width: 21px;
+    height: 17px;
+    background: #FFA500;
+    text-align: center;
+    align-items: center;
+    padding-top: 0.5%;
+    border-radius: 2px;
+    color: #000;
+}
+.projectMainContentImgLan i:nth-child(2){
+    top: 35%;
+    background: #00FFFF;
+}
+.projectMainContentImgLan i:nth-child(3){
+    top: 60%;
+    background: #F0DB4F;
+}
+.projectMainContentText{
+    font-family: myFontRetina;
+    padding: 0 5% 5% 5%;
+}
+.projectMainContentText p{
+    font-size: 11px;
+    line-height: 18px;
+    color: #607B96;
+}
+.projectMainContentText a{
+    text-decoration: none;
+}
+.projectMainContentText a button{
+    width: 100px;
+    height: 24px;
+    background: #1C2B3A;
+    color: #fff;
+    outline: #1C2B3A;
+    border: 1px solid #1C2B3A;
+    font-size: 11px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+#sass{
+    background-color: #CD6799;
+    color: #fff;
+}
+
+/*FOOTER*/
+.footer{
+    display: flex;
+    position: fixed;
+    bottom: 0%;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #1E2D3D;
+    padding: 0;
+    margin: 0 auto;
+    background: #011627;
+    
+}
+.footer1,.footer2{
+    display: flex;
+    padding: 0 0.5%;
+}
+.footer1 ul ,.footer2 ul{
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0 auto;
+}
+.footer1 ul p{
+    margin: 0 auto;
+    width: 100px;
+    border-right: 1px solid #1E2D3D;
+    padding: 5% 0;
+    font-family: myFontRetina;
+    color: #607B96;
+    font-size: 10px;
+}
+.footer1 ul a{
+    padding: 4% 0;
+    width: 50px;
+    border-right: 1px solid #1E2D3D;
+    text-align: center;
+    text-decoration: none;
+    align-items: center;
+    color: #607B96;
+}
+.footer1 ul a li{
+    list-style: none;
+}
+.footer1 ul a li i{
+    font-size: 13px;
+}
+.footer2 ul a{
+    padding: 7% 0;
+    width: 120px;
+    border-left: 1px solid #1E2D3D;
+    text-align: center;
+    text-decoration: none;
+    align-items: center;
+    font-size: 12px;
+    color: #607B96;
+}
+.footer2 ul a li{
+    list-style: none;
+}
+.footer2 ul a li i{
+    font-size: 13px;
+}
+.maxWidth{
+    display: none;
+}
+@media screen and (min-width:2101px) and (orientation:landscape)  {
+    .pro{
+        display: none;
+    }
+    .maxWidth{
+        display: block;
+        font-family: myFontBold;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: fit-content;
+        color: #fff;
+    }
+    .maxWidth h1{
+        font-size: 70px;
+    }
+    .maxWidth p{
+        font-size: 40px;
+    }
+    .aboutMainContent{
+        display: none;
+    }
+    .footer{
+        display: none;
+    }
+}
+@media screen and (max-width:2100px) and (orientation:landscape) {
+    .load{
+        width: 400px;
+        height: 400px;
+        border: 6px solid #fff;
+        border-color: #fff transparent #fff transparent;
+        border-radius: 50%;
+        animation: spinner 1.3s linear infinite;
+    }
+    .onLoadContent h1{
+        font-size: 80px;
+    }
+    .navList ul a{
+        width: 150px;
+        padding: 3% 0;
+    }
+    .navList ul a:nth-child(1){
+        width: 180px;
+    }
+    .navList ul a li{
+        font-size: 17px;
+    }
+    .navContact ul a{
+        width: 200px;
+        padding: 1% 0;
+    }
+    .navContact ul a li{
+        font-size: 17px;
+        width: 200px;
+        padding: 10.5% 0;
+    }
+    .projectLists{
+        width: 14.76%;
+        border-right: 1px solid #1E2D3D;
+    }
+    .projectListHeader{
+        padding-left: 10%;
+    }
+    .projectList{
+        padding-left: 11%;
+    }
+    .pl{
+        margin-bottom: 20px;
+    }
+    .projectList i{
+        font-size: 20px;
+    }
+    .projectList p{
+        font-size: 15px;
+    }
+    .projectListHeader i{
+        font-size: 18px;
+    }
+    .projectListHeader p{
+        font-size: 17px;
+    }
+    .projectMainContentText p{
+        font-size: 17px;
+        line-height: 28px;
+    }
+    .projectMainContentText a button{
+        width: 180px;
+        height: 35px;
+        font-size: 15px;
+    }
+    /*PROJECT*/
+    .projectContent{
+        margin-left: 23%;
+    }
+    .projectTitle p{
+        font-size: 18px;
+    }
+    .projectMainContentImg{
+        width: 400px;
+        height: 170px;
+    }
+    .projectMainContentImgLan i{
+        width: 30px;
+        height: 25px;
+        font-size: 23px;
+        padding-top: 0.55%;
+    }
+    /*FOOTER*/
+    .footer1 ul a{
+        width: 80px;
+    }
+    .footer1 ul a li i{
+        font-size: 22px;
+    }
+    .footer1 ul p{
+        font-size: 16px;
+        width: 150px;
+    }
+    .footer2 ul a{
+        font-size: 15px;
+        width: 170px;
+    }
+    .footer2 ul a li i{
+        font-size: 22px;
+    }
+}
+@media screen and (max-width:1900px) and (orientation:landscape){
+    .projectContent{
+        margin-left: 21.5%;
+    }
+    .projectLists{
+        width: 15.9%;
+    }
+}
+@media screen and (max-width:1800px) and (orientation:landscape){
+    .projectContent{
+        margin-left: 19.5%;
+    }
+    .projectLists{
+        width: 16.8%;
+    }
+}
+@media screen and (max-width:1650px) and (orientation:landscape) {
+    .load{
+        width: 350px;
+        height: 350px;
+        border: 6px solid #fff;
+        border-color: #fff transparent #fff transparent;
+        border-radius: 50%;
+        animation: spinner 1.3s linear infinite;
+    }
+    .onLoadContent h1{
+        font-size: 60px;
+    }
+    .navList ul a{
+        width: 120px;
+   }
+     .navList ul a:nth-child(1){
+        width: 120px;
+        padding-right: 100px;
+    }
+    .navList ul a li{
+        font-size: 14px;
+    }
+    .navContact ul a{
+        width: 150px;
+    }
+    .navContact ul a li{
+        font-size: 14px;
+        width: 150px;
+    }
+    .projectListHeader{
+        padding-left: 5%;
+    }
+    .projectListHeader i{
+        font-size: 16px;
+    }
+    .projectLists{
+        width: 14.3%;
+    }
+    .projectList i{
+        font-size: 18px;
+    }
+    .projectList p{
+        font-size: 13px;
+    }
+    .projectList{
+        padding-left: 5.5%;
+    }
+    .projectListHeader p{
+        font-size: 13px;
+    }
+    /*PROJECT*/
+    .projectTitle p{
+        font-size: 14px;
+    }
+    .projectMainContentImg{
+        width: 350px;
+        height: 140px;
+    }
+    .projectMainContentImgLan i{
+        height: 20px;
+        width: 23px;
+        font-size: 18px;
+    }
+    .projectMainContentText p{
+        font-size: 14px;
+        line-height: 22px;
+    }
+    .projectMainContentText a button{
+        width: 130px;
+        font-size: 12px;
+        height: 30px;
+    }
+    /*FOOTER*/
+    .footer1 ul a{
+        width: 60px;
+    }
+    .footer1 ul p{
+        font-size: 15px;
+        width: 150px;
+    }
+    .footer1 ul a li i{
+        font-size: 20px;
+    }
+    .footer2 ul li{
+        font-size: 15px;
+    }
+    .footer2 ul li i{
+        font-size: 20px;
+    }
+}
+@media screen and (max-width:1550px) and (orientation:landscape){
+    .projectContent{
+        margin-left: 20%;
+    }
+    .projectLists{
+        width: 14.8%;
+    }
+}
+@media screen and (max-width:1500px) and (orientation:landscape){
+    .projectContent{
+        margin-left: 19.5%;
+    }
+    .projectLists{
+        width: 15.4%;
+    }
+}
+@media screen and (max-width:1450px) and (orientation:landscape){
+    .projectContent{
+        margin-left: 23%;
+    }
+    .projectTitle p{
+        font-size: 13px;
+    }
+    .projectListHeader{
+        padding-top: 4%;
+    }
+    .projectLists{
+        width: 15.8%;
+    }
+    /*PROJECT*/
+    .projectMainContentImg{
+        width: 300px;
+        height: 120px;
+    }
+    .projectMainContentImgLan i{
+        width: 22px;
+        height: 18px;
+        font-size: 17px;
+        padding-top: 0.8%;
+    }
+    .projectMainContentText p{
+        font-size: 12px;
+        line-height: 20px;
+    }
+    .projectMainContentText a button{
+        width: 100px;
+        height: 28px;
+        font-size: 11px;
+    }
+}
+@media screen and (max-width:1380px) and (orientation:landscape){
+    .projectContent{
+        margin-left: 22%;
+    }
+    .projectLists{
+        width: 16.5%;
+    }
+}
+@media screen and (max-width:1320px) and (orientation:landscape) {
+    .load{
+        width: 300px;
+        height: 300px;
+        border: 6px solid #fff;
+        border-color: #fff transparent #fff transparent;
+        border-radius: 50%;
+        animation: spinner 1.3s linear infinite;
+    }
+    /*MAIN NAV*/
+    .navigation ul{
+        display: flex;
+        padding: 0;
+        margin: 0 auto;
+        align-items: center;
+        justify-content: space-between;
+        border: 1px solid #1E2D3D;
+        padding: 0 0.5%;
+    }
+
+    .navList ul{
+        display: flex;
+        align-items: center;
+        border: none;
+        z-index: 100;
+    }
+    .navList ul a{
+        padding: 3.5% 0;
+        width: 100px;
+        border-right: 1px solid #1E2D3D;
+        text-align: center;
+        text-decoration: none;
+        align-items: center;
+    }
+    .navList ul a:hover{
+        border-bottom: 2px solid #FEA55F;
+        opacity: 0.5;
+    }
+    .navActiveLink:hover{
+        border-bottom: 2px solid #FEA55F;
+    }
+    .navActiveLink{
+        border-bottom: 2px solid #FEA55F;
+    }
+    .navList ul a li{
+        list-style: none;
+        font-family: myFontBold;
+        font-size: 11px;
+        text-align: center;
+        text-decoration: none;
+        color: #607B96;
+    }
+    .navList ul a:nth-child(1){
+        padding-right: 79px;
+        border-bottom: none;
+        opacity: 1;
+    }
+    .navList ul a li:nth-child(1){
+        border-bottom: none;
+    }
+    .navContact ul a:nth-child(1):hover{
+        opacity: 0.5;
+    }
+    .navContact ul li:nth-child(1):hover{
+       border-bottom: none;
+    }
+    .navContact ul{
+        display: flex;
+        align-items: center;
+        border: none;
+    }
+    .navContact ul a li{
+        padding: 9% 0;
+        width: 100px;
+        border-left: 1px solid #1E2D3D;
+        text-align: center;
+        list-style: none;
+        font-family: myFontBold;
+        font-size: 11px;
+        text-align: center;
+        text-decoration: none;
+        color: #607B96;
+    }
+    .navContact ul a{
+        text-decoration: none;
+    }
+    .navContact ul a:hover{
+        border-bottom: 2px solid #FEA55F;
+        opacity: 0.5;
+    }
+/*PROJECT*/
+.projectMain{
+    width: 100%;
+    border: 1px solid #1E2D3D;
+    height: 100vh;
+    border-bottom: none;
+}
+.projectLists{
+    margin-top: 4%;
+    position: fixed;
+    border: 1px solid #1E2D3D;
+    width: 16.1%;
+    height: 100vh;
+    border-top: none;
+    border: 1px solid #1E2D3D;
+    overflow: hidden;
+    align-items: center;
+}
+.projectListHeader{
+    display: flex;
+    align-items: first baseline;
+    width: 100%;
+    border: 1px solid #1E2D3D;
+    margin-bottom: 10px;
+    border-top: none;
+    height: 30px;
+    border-left: none;
+    padding-left: 10.6%;
+    gap: 7px;
+    font-family: myFontRegular;
+    color: #607B96;
+    cursor: pointer;
+    padding-top: 1.5%;
+    background: #011627;
+    z-index: 5;
+    position: relative;
+}
+.projectList{
+    padding-left: 10.3%;
+    font-family: myFontRegular;
+    margin-top: -200%;
+    transition: .7s;
+}
+.pl{
+    display: flex;
+    align-items: center;
+    width: 90%;
+    margin-bottom: 8px;
+    gap: 15px;
+    color: #607B96;
+}
+.projectListHeader p{
+    margin: 0;
+    padding: 0;
+    font-size: 11px;
+}
+.pl p{
+    margin: 0;
+    padding: 0;
+    font-size: 11px;
+}
+.pl i{
+    font-size: 14px;
+}
+.pl:hover{
+    color: #fff;
+    cursor: pointer;
+}
+.projectListHeader i{
+    font-size: 11px;
+}
+/*JAVA LIST*/
+.projectList.projectListActive{
+    margin-top: 0%;
+}
+.projectListHeader.projectListHeaderActive{
+    color: #fff;
+}
+#projectListHeaderi.projectListHeaderiActive::before{
+    content: "\f0d7";  /* this is your text. You can also use UTF-8 character codes as I do here */
+    font-family: "Font Awesome 5 Free";
+}
+.projectMain{
+    display: flex;
+    align-items: start;
+}
+.projectContent{
+    position: relative;
+    margin: 0 auto;
+    margin-top: 8%;
+    margin-left: 22%;
+    overflow-y: auto;
+    padding-bottom: 50px;
+}
+/*PROJECT*/
+.projectlists{
+    columns: 3;
+    width: 100%;
+    margin: 0 auto;
+    column-gap: 30px;
+}
+.project{
+    margin: 0;
+    page-break-inside: avoid;          
+    break-inside: avoid-column;
+    margin-bottom: 30px;
+}
+.projectMainContent{
+    width: fit-content;
+    height: fit-content;
+    border: 1.5px solid #1E2D3D;
+    border-radius: 10px;
+}
+.projectMainContentImg{
+    width: 280px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+    position: relative;
+}
+.projectMainContentImg img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+.projectTitle{
+    font-family: myFontBold;
+    color: #607B96;
+    margin-bottom: 10px;
+}
+.projectTitle p{
+    margin: 0;
+    padding: 0;
+    font-size: 11px;
+}
+.projectTitleNumber{
+    color: #5565E8;
+    opacity: 1;
+}
+.projectTitleText{
+    opacity: 0.7;
+}
+.projectMainContentImgLan i{
+    position: absolute;
+    top: 10%;
+    right: 6%;
+    width: 21px;
+    height: 17px;
+    background: #FFA500;
+    text-align: center;
+    align-items: center;
+    padding-top: 0.5%;
+    border-radius: 2px;
+    color: #000;
+}
+.projectMainContentImgLan i:nth-child(2){
+    top: 35%;
+    background: #00FFFF;
+}
+.projectMainContentImgLan i:nth-child(3){
+    top: 60%;
+    background: #F0DB4F;
+}
+.projectMainContentText{
+    font-family: myFontRetina;
+    padding: 0 5% 5% 5%;
+}
+.projectMainContentText p{
+    font-size: 11px;
+    line-height: 18px;
+    color: #607B96;
+}
+.projectMainContentText a{
+    text-decoration: none;
+}
+.projectMainContentText a button{
+    width: 100px;
+    height: 24px;
+    background: #1C2B3A;
+    color: #fff;
+    outline: #1C2B3A;
+    border: 1px solid #1C2B3A;
+    font-size: 11px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+#sass{
+    background-color: #CD6799;
+    color: #fff;
+}
+/*FOOTER*/
+.footer{
+    display: flex;
+    position: fixed;
+    bottom: 0%;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #1E2D3D;
+    padding: 0;
+    margin: 0 auto;
+    
+}
+.footer1,.footer2{
+    display: flex;
+    padding: 0 0.5%;
+}
+.footer1 ul ,.footer2 ul{
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0 auto;
+}
+.footer1 ul p{
+    margin: 0 auto;
+    width: 100px;
+    border-right: 1px solid #1E2D3D;
+    padding: 5% 0;
+    font-family: myFontRetina;
+    color: #607B96;
+    font-size: 10px;
+}
+.footer1 ul a{
+    padding: 4% 0;
+    width: 50px;
+    border-right: 1px solid #1E2D3D;
+    text-align: center;
+    text-decoration: none;
+    align-items: center;
+    color: #607B96;
+}
+.footer1 ul a li{
+    list-style: none;
+}
+.footer1 ul a li i{
+    font-size: 13px;
+}
+.footer2 ul a{
+    padding: 6% 0;
+    width: 140px;
+    border-left: 1px solid #1E2D3D;
+    text-align: center;
+    text-decoration: none;
+    align-items: center;
+    font-size: 10px;
+    color: #607B96;
+}
+.footer2 ul a li{
+    list-style: none;
+}
+.footer2 ul a li i{
+    font-size: 15px;
+}
+
+}
+@media screen and (max-width:1250px) and (orientation:landscape){
+    .projectContent{
+        margin-left: 21%;
+    }
+    .projectLists{
+        width: 16.6%;
+    }
+}
+@media screen and (max-width:1180px) and (orientation:landscape){
+    .load{
+        width: 250px;
+        height: 250px;
+        border: 6px solid #fff;
+        border-color: #fff transparent #fff transparent;
+        border-radius: 50%;
+        animation: spinner 1.3s linear infinite;
+    }
+    .projectContent{
+        margin-left: 19.5%;
+    }
+    .projectLists{
+        width: 17.6%;
+    }
+}
+@media screen and (max-width:1150px) and (orientation:landscape){
+    
+    .navList ul a{
+        padding: 2.5% 0;
+        width: 80px;
+    }
+    .navList ul a:nth-child(1){
+        width: 100px;
+        padding-right: 50px;
+    }
+    .navList ul a li{
+        font-size: 10px;
+    }
+    .navContact ul a{
+        width: 100px;
+    }
+    .navContact ul a li{
+        font-size: 10px;
+        padding: 10% 0;
+    }
+    .projectLists{
+        width: 15.7%;
+        margin-top: 3.5%;
+    }
+    .projectListHeader{
+        height: 25px;
+        padding-top: 0.5%;
+        padding-left: 9%;
+        margin-bottom: 5px;
+    }
+    .projectListHeader i{
+        font-size: 10px;
+    }
+    .projectListHeader p{
+        font-size: 10px;
+    }
+    .pl{
+        margin-bottom: 1px;
+    }
+    .pl i{
+        font-size: 12px;
+    }
+    .pl p{
+        font-size: 9px;
+    }
+    /*PROJECT*/
+    .projectTitle p{
+        font-size: 9px;
+    }
+    .projectMainContentImg{
+        width: 200px;
+        height: 70px;
+    }
+    .projectMainContentImgLan i{
+        width: 13px;
+        font-size: 12px;
+        padding-top: 1%;
+        height: 12.5px;
+    }
+    .projectMainContentText p{
+        font-size: 9px;
+        line-height: 16px;
+    }
+    .projectMainContentText a button{
+        width: 100px;
+        height: 20px;
+        font-size: 10px;
+    }
+    .projectContent{
+        margin-left: 26%;
+    }
+    /*FOOTER*/
+    .footer2 ul a li{
+        font-size: 11px;
+    }
+}
+@media screen and (max-width:1150px) and (orientation:portrait){
+    .load{
+        width: 300px;
+        height: 300px;
+        border: 6px solid #fff;
+        border-color: #fff transparent #fff transparent;
+        border-radius: 50%;
+        animation: spinner 1.3s linear infinite;
+    }
+    .projectlists{
+        columns: 2;
+        width: 100%;
+        margin: 0 auto;
+        column-gap: 40px;
+    }
+    .projectLists{
+        width: 19%;
+    }
+    .projectContent{
+        margin-left: 29%;
+        margin-top: 9%;
+    }
+    .projectListHeader{
+        margin-top: 8%;
+    }
+}
+@media screen and (max-width:1150px) and (orientation:portrait){
+    .projectlists{
+        columns: 2;
+        width: 100%;
+        margin: 0 auto;
+        column-gap: 40px;
+    }
+    .projectLists{
+        width: 20.2%;
+    }
+    .projectContent{
+        margin-left: 27%;
+        margin-top: 9%;
+    }
+    .projectListHeader{
+        margin-top: 8%;
+    }
+}
+@media screen and (max-width:1000px) and (orientation:landscape) {
+    .projectContent{
+        margin-left: 23%;
+    }
+    .projectLists{
+        width: 18.3%;
+        margin-top: 4%;
+    }
+}
+@media screen and (max-width:950px) and (orientation:portrait){
+    .load{
+        width: 250px;
+        height: 250px;
+        border: 6px solid #fff;
+        border-color: #fff transparent #fff transparent;
+        border-radius: 50%;
+        animation: spinner 1.3s linear infinite;
+    }
+    .projectlists{
+        columns: 2;
+        width: 100%;
+        margin: 0 auto;
+        column-gap: 40px;
+    }
+    .projectLists{
+        width: 22%;
+    }
+    .projectContent{
+        margin-left: 32%;
+        margin-top: 9%;
+    }
+    .projectListHeader{
+        margin-top: 8%;
+    }
+    .projectMainContentImg{
+        width: 230px;
+        height: 90px;
+    }
+    .projectMainContentText p{
+        font-size: 10px;
+        line-height: 19px;
+    }
+}
+@media screen and (max-width:950px) and (orientation:portrait){
+    .projectlists{
+        columns: 2;
+        width: 100%;
+        margin: 0 auto;
+        column-gap: 40px;
+    }
+    .projectLists{
+        width: 24.6%;
+    }
+    .projectContent{
+        margin-left: 32%;
+        margin-top: 9%;
+    }
+    .projectListHeader{
+        margin-top: 8%;
+    }
+    .projectMainContentImg{
+        width: 230px;
+        height: 90px;
+    }
+    .projectMainContentText p{
+        font-size: 10px;
+        line-height: 19px;
+    }
+}
+@media screen and (max-width:950px) and (orientation:landscape) {
+    .load{
+        width: 200px;
+        height: 200px;
+        border: 6px solid #fff;
+        border-color: #fff transparent #fff transparent;
+        border-radius: 50%;
+        animation: spinner 1.3s linear infinite;
+    }
+    .projectContent{
+        margin-left: 21%;
+    }
+    .projectLists{
+        width: 16.9%;
+    }
+}
+@media screen and (max-width:900px) and (orientation:landscape) {
+    .projectContent{
+        margin-left: 28%;
+    }
+    .projectLists{
+        width: 18.3%;
+        margin-top: 4%;
+    }
+    .projectlists{
+        columns: 2;
+        width: 100%;
+        margin: 0 auto;
+        column-gap: 40px;
+    }
+    /*PROJECT*/
+    .projectTitle p{
+        font-size: 11px;
+    }
+    .projectMainContentImg{
+        width: 230px;
+        height: 90px;
+    }
+    .projectMainContentText p{
+        font-size: 10px;
+    }
+    .projectMainContentImgLan i{
+        width: 15px;
+        height: 14px;
+    }
+    .projectMainContentText a button{
+        height: 25px;
+    }
+}
+@media screen and (max-width:800px) and (orientation:portrait){
+    .projectlists{
+        columns: 1;
+        width: 100%;
+        margin: 0 auto;
+        column-gap: 40px;
+    }
+    .projectLists{
+        width: 26.6%;
+    }
+    .projectContent{
+        margin-left: 45%;
+        margin-top: 9%;
+    }
+    .projectListHeader{
+        margin-top: 8%;
+    }
+    .projectMainContentImg{
+        width: 230px;
+        height: 90px;
+    }
+    .projectMainContentText p{
+        font-size: 10px;
+        line-height: 19px;
+    }
+}
+@media screen and (max-width:780px) and (orientation:landscape) {
+    .projectContent{
+        margin-left: 28%;
+    }
+    .projectLists{
+        width: 20.6%;
+        margin-top: 4.5%;
+    }
+    .projectlists{
+        columns: 2;
+        width: 100%;
+        margin: 0 auto;
+        column-gap: 30px;
+    }
+ 
+}
+@media screen and (max-width:700px) and (orientation:landscape) {
+    .projectContent{
+        margin-left: 28%;
+    }
+    .projectLists{
+        width: 23%;
+        margin-top: 5%;
+    }
+    .projectlists{
+        columns: 2;
+        width: 100%;
+        margin: 0 auto;
+        column-gap: 30px;
+    }
+    /*PROJECT*/
+    .projectTitle p{
+        font-size: 10px;
+    }
+    .projectMainContentImg{
+        width: 200px;
+        height: 80px;
+    }
+    .projectMainContentText p{
+        font-size: 9px;
+        line-height: 16px;
+    }
+    .projectMainContentImgLan i{
+        width: 13px;
+        font-size: 10px;
+        height: 12px;
+    }
+    .projectMainContentText a button{
+        height: 20px;
+    }
+}
+@media screen and (max-width:650px) and (orientation:portrait){
+    .navigation{
+        z-index: 100;
+    }
+    .projectlists{
+        columns: 1;
+        width: 100%;
+        margin: 0 auto;
+        column-gap: 40px;
+    }
+    .projectLists{
+        width: 32.6%;
+    }
+    .projectContent{
+        margin-left: 45%;
+        margin-top: 17%;
+    }
+    .projectListHeader{
+        padding-top: 5px;
+        margin-top: 21%;
+        padding-left: 22%;
+    }
+    .projectListHeader i{
+        font-size: 14px;
+    }
+    .projectListHeader p{
+        font-size: 13px;
+    }
+    .projectList{
+        padding-left: 22%;
+    }
+    .projectMainContentImg{
+        width: 230px;
+        height: 90px;
+    }
+    .projectMainContentText p{
+        font-size: 10px;
+        line-height: 19px;
+    }
+    .navigation ul{
+        display:block;
+        padding: 1% 0;
+    }
+    .navList ul a{
+        display: none;
+    }
+    .navList ul a li{
+        font-size: 14px;
+        width: 150px;
+    }
+    .navList ul{
+        display: flex;
+        justify-content: space-between;
+        padding: 0% 4%;
+    }
+    .navList ul a:nth-child(1){
+        display: block;
+        border-right: none;
+    }
+    .navContact{
+        display: none;
+    }
+    .navContact ul{
+        display: none;
+    }
+    .navContact ul a{
+        display: none;
+    }
+    .nav-menu{
+        display: block;
+    }
+    .hamburg{
+        display: block;
+    }
+    .bar{
+        display: block;
+    }
+}
+@media screen and (max-width:550px) and (orientation:portrait) {
+    .load{
+        width: 200px;
+        height: 200px;
+        border: 6px solid #fff;
+        border-color: #fff transparent #fff transparent;
+        border-radius: 50%;
+        animation: spinner 1.3s linear infinite;
+    }
+    body{
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+    .body.onscroll{
+        overflow: hidden;
+    }
+    .navigation{
+        z-index: 100;
+        position: relative;
+    }
+    .navigation ul{
+        display:block;
+        padding: 1% 0;
+    }
+    .navList ul a{
+        display: none;
+    }
+    .navList ul a li{
+        font-size: 14px;
+        width: 150px;
+    }
+    .navList ul{
+        display: flex;
+        justify-content: space-between;
+        padding: 0% 4%;
+    }
+    .navList ul a:nth-child(1){
+        display: block;
+        border-right: none;
+    }
+    .navContact{
+        display: none;
+    }
+    .navContact ul{
+        display: none;
+    }
+    .navContact ul a{
+        display: none;
+    }
+    .nav-menu{
+        display: block;
+    }
+    .hamburg{
+        display: block;
+    }
+    .bar{
+        display: block;
+    }
+
+
+    /*PROJECT*/
+    .projectMobile{
+        display: block;
+        padding-left: 10%;
+        margin: 20px 0;
+    }
+    .projectMobile p{
+        font-size: 15px;
+        color: #fff;
+        margin: 0;
+    }
+    .projectMain{
+        display: block;
+    }
+    .projectLists{
+        width: 100%;
+        position: relative;
+        margin: 0;
+        border: none;
+        border-top: none;
+        height: 10vh;
+        
+    }
+    .projectLists.projectListsActive{
+        height: 35vh;
+    }
+    .projectListHeader{
+        margin-top: 0;
+        border: none;
+        background: #1E2D3D;
+        color: #fff;
+        padding-left: 10%;
+    }
+    .projectListHeader i{
+        font-size: 14px;
+    }
+    .projectListHeader p{
+        font-size: 14px;
+    }
+    .projectList{
+        padding-left: 10%;
+    }
+    .pl{
+        margin-bottom: 15px;
+    }
+    .pl i{
+        font-size: 20px;
+    }
+    .pl p{
+        font-size: 13px;
+    }
+    .projectTitle p{
+        font-size: 13px;
+    }
+    .projectContent{
+        margin: 20%;
+        margin-top: 8%;
+        width: 100%;
+    }
+    .projectMainContentImg{
+        width: 300px;
+        height: 110px;
+    }
+    .projectMainContentText p{
+        font-size: 12.5px;
+    }
+    .projectMainContentText a button{
+        width: 150px;
+        font-size: 13px;
+        height: 32px;
+    }
+
+
+
+    /*FOOTER*/
+    .footer{
+        display: flex;
+        background: #011627;
+    }
+    .footer1 ul {
+        margin: 0;
+    }
+    .footer2 ul a{
+        padding: 9% 0;
+    }
+}
+@media screen and (max-width:450px) and (orientation:portrait) {
+    .projectContent{
+        margin: 12%;
+        margin-top: 8%;
+        width: 100%;
+    }
+}
+@media screen and (max-width:380px) and (orientation:portrait) {
+    .projectContent{
+        margin: 10%;
+        margin-top: 8%;
+        width: 100%;
+    }
+    .projectLists.projectListsActive{
+        height: 40vh;
+    }
+    .projectMainContentImg{
+        width: 260px;
+        height: 110px;
+    }
+}

@@ -1,0 +1,2024 @@
+body{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    caret-color: transparent;
+    overflow-x: hidden;
+    background: #180F22;
+}
+.body{
+    overflow: none;
+}
+.body.onscroll{
+    overflow: hidden;
+}
+.header a{
+    text-decoration: none;
+}
+.header{
+    z-index: 100;
+}
+.header h1{
+    font-size: 30px;
+    text-transform: capitalize;
+    color: #fff;
+    font-weight: bolder;
+}
+.heros{
+    height: 100vh;
+    width: 100%;
+    background: #180F22;
+    padding-top: 30px;
+}
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    width: 100%;
+}
+.nav.scrolled{
+    background: #3f2899;
+    height: 60px;
+    transition: .1s ease-in;
+}
+.navLinks ul{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+.navLinks ul li{
+    list-style: none;
+}
+.link a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bolder;
+    text-transform: capitalize;
+}
+.link.active{
+    color: #C43A5B;
+}
+.navLinks ul button{
+    width: 140px;
+    height: 30px;
+    border-radius: 10px;
+    background: #C43A5B;
+    color: #fff;
+    border: 1px solid #C43A5B;
+    cursor: pointer;
+}
+.bar:nth-child(2){
+    width: 20px;
+}
+.bar{
+    display: block;
+    cursor: pointer;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3 ease-in-out;
+    transition: all 0.3 ease-in-out;
+    background-color: #fff;
+}
+.ham-burg{
+    display: none;
+    color: #fff;
+    z-index: 100;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.ham-burg.active-nav .bar:nth-child(2){
+    opacity: 0;
+}
+.ham-burg.active-nav .bar:nth-child(1){
+    transform: translateY(8px) rotate(45deg);
+    transition: 0.3s
+}
+.ham-burg.active-nav .bar:nth-child(3){
+    transform: translateY(-8px) rotate(-45deg);
+    transition: 0.3s;
+}
+.nav-menu{
+    position: fixed;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    min-height: 100%;
+    z-index: 98;
+    background: #180F22;
+    display: none;
+    padding-top: 27%;
+    text-align: center;
+    transition: 0.4s;
+}
+.nav-menu.is-active{
+    left: 0;
+}
+.nav-menu li a{
+    display: block;
+    padding: 9px 16px;
+    width: 100%;
+    max-width: 150px;
+    text-align: center;
+    margin: 0 auto 16px;
+    color: #fff;
+    font-size: 19px;
+    text-decoration: none;
+}
+.nav-menu li a:hover{
+    color: #3f2899;
+    transition: 0.3s ease-in;
+}
+.nav-menu li button{
+    width: 300px;
+}
+/*HERO*/
+.hero{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0 auto;
+    left: 50%;
+    top: 45%;
+    transform: translate(-50%,-50%);
+    position: relative;
+}
+.hero-img{
+    width: 400px;
+    height: 450px;
+    object-fit: cover;
+    animation-name: move;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    position: relative;
+}
+@keyframes move {
+    0%{
+        left: 0px;top: 0px;
+    }
+    25%{
+        left: 20px; top: 0px;
+    }
+    50%{
+        left: 0px; top: 20px; 
+    }
+    75%{
+        left: -20px; top: -20px;
+    }
+    100%{
+        right: 20px; left: 0px; top: 0px;
+    }
+}
+.hero-img img{
+    width: 100%;
+    height: 100%;
+}
+.new{
+    width: 70px;
+    height: 30px;
+    background: #DB8F1E;
+    border-radius: 30px;
+}
+.new p{
+    padding-top: 9%;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.heroHeader h1{
+    font-size: 35px;
+    font-weight: bolder;
+    text-transform: uppercase;
+    color: #fff;
+}
+.heroHeaderSpan{
+    color: #6942FF;
+    font-size: 30px;
+    margin-top: -5px;
+}
+.heroPara{
+    margin-top: -10px;
+}
+.heroPara p{
+    font-size: 11px;
+    font-weight: 300;
+    color: #fff;
+}
+.heroButton button{
+    height: 30px;
+    width: 150px;
+    background: #C43A5B;
+    border: 1px solid #C43A5B;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 12px;
+    cursor: pointer;
+    font-weight: bold;
+}
+/*ABOUT*/
+.about{
+    height: 100%;
+    padding-bottom: 100px;
+    width: 100%;
+    background: #241B2D;
+    display: flex;
+    padding-top: 100px;
+    justify-content: space-around;
+    align-items: first baseline;
+    margin-top: 0;
+    gap: 0;
+}
+.about-img{
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+    margin-left: 80px;
+}
+.AI{
+    background: #fff;
+    border-radius: 20px;
+    padding: 10px;
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    box-shadow: 0px 0px 100px 1px rgba(68, 45, 143, .8);
+}
+.AI:nth-child(3){
+    margin-top: 30px;
+    transform: rotate(10deg);
+    margin-left: 8%;
+    z-index: 1;
+}
+.AI:nth-child(1){
+    margin-top: 30px;
+    margin-left: -8%;
+    transform: rotate(-10deg);
+    z-index: 2;
+}
+.AI:nth-child(2){
+    z-index: 3;
+}
+.aiImage{
+    width: 190px;
+    height: 190px;
+    margin: auto;
+}
+.aiImage img{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+}
+.aiTitle p{
+    font-size: 15px;
+    color: #000;
+    font-weight: bolder;
+    padding-left: 10%;
+    margin-top: 8px;
+    
+}
+.aiPrice{
+    padding-left: 10%;    
+}
+.aiPrice p{
+    font-size: 10px;
+    color: #7A7A7A;
+    margin-top: -10px;
+}
+.aiPrice h3{
+    font-size: 13px;
+    margin-top: -5px;
+    height: fit-content;
+    color: #000;
+    font-weight: bolder;
+}
+.about-text{
+    z-index: 3;
+}
+.aboutHeader h1{
+    font-size: 35px;
+    text-decoration: underline 2px;
+    color: #6942FF;
+}
+.aboutPara p{
+    font-size: 15px;
+    color: #fff;
+}
+/*GALLERY*/
+.gallery{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    width: 100%;
+    background: #180F22;
+}
+.galleryHeader{
+    margin-left: 12%;
+}
+.galleryHeader h1{
+    font-size: 35px;
+    text-decoration: underline 2px #6942FF;
+    color: #6942FF;
+}
+.gallerySlider{
+    background: #180F22;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.swiper-wrapper{
+    padding-left: 12%;
+}
+.swiper-slide{
+    padding: 50px 0;
+    margin-right: 0px !important; 
+}
+.galSlide{
+    background: #fff;
+    border-radius: 20px;
+    padding: 10px;
+    width: fit-content;
+    height: fit-content;
+    box-shadow: 0px 0px 50px 3px rgba(68, 45, 143, 1);
+    cursor: pointer;
+}
+.galImage{
+    width: 250px;
+    height: 250px;
+    margin: auto;
+}
+.galImage img{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+.galTitle p{
+    font-size: 17px;
+    color: #000;
+    font-weight: bolder;
+    padding-left: 2%;
+    margin-top: 8px;
+}
+.galPrice{
+    padding-left: 2%;    
+}
+.galPrice p{
+    font-size: 13px;
+    color: #7A7A7A;
+    margin-top: -10px;
+}
+.galPrice h3{
+    font-size: 15px;
+    margin-top: -5px;
+    height: fit-content;
+    color: #000;
+    font-weight: bolder;
+}
+.galleryButton button{
+    height: 40px;
+    width: 150px;
+    background: #C43A5B;
+    border: 1px solid #C43A5B;
+    color: #fff;
+    border-radius: 10px;
+    font-size: 12px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-left: 80%;
+}
+/*TEAM*/
+.team{
+    background: #241B2D;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+.teamTitle{
+    text-align: center;
+    margin-top: -30px;
+}
+.teamTitle h1{
+    font-size: 35px;
+    color: #6942FF;
+    text-decoration: underline 2px;
+}
+.teamTitle p{
+    font-size: 13px;
+    margin-top: -20px;
+    color: #fff;
+}
+.teamMember{
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+.memberPic{
+    width: 350px;
+    height: 350px;
+    object-fit: cover;
+    margin: auto;
+    margin-top: -20px;
+}
+.memberPic img{
+    width: 100%;
+    height: 100%;
+}
+.member{
+    width: fit-content;
+    height: fit-content;
+    text-align: center;
+}
+.member h1{
+    margin-top: -50px;
+    color: #fff;
+    font-weight: bolder;
+    font-size: 25px;
+}
+.member p{
+    margin-top: -20px;
+    color: #DB8F1E;
+    text-transform: capitalize;
+    font-size: 15px;
+    font-weight: bolder;
+}
+
+/*FAQ*/
+.faq{
+    width: 100%;
+    height: fit-content;
+    background: #180F22;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+.faqTitle{
+    text-align: center;
+    margin-top: -40px;
+}
+.faqHeader h1{
+    font-size: 35px;
+    color: #6942FF;
+    text-decoration: underline 2px;
+}
+.faqPara p{
+    font-size: 15px;
+    margin-top: -20px;
+    color: #fff;
+}
+.faqContainer{
+    margin-top: 70px;
+}
+.questionOne{
+    width: 600px;
+    margin: auto;
+    height: fit-content;
+    border: 2px solid #DB8F1E;
+    padding: 5px 10px;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+.questionHeader p{
+    font-size: 15px;
+    color: #fff;
+    font-weight: bolder;
+}
+.questionAnswer{
+    margin: auto;
+    color: #fff;
+    width: 500px;
+    font-size: 13px;
+}
+.faqContainer .questionOne input{
+    appearance: none;
+    display: none;
+    -webkit-appearance: none;
+}
+.faqContainer .questionOne label{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: #fff;
+    margin: 0 auto;
+    width: 100%;
+}
+.faqContainer .questionOne label::after{
+    content: '+';
+    right: 20px;
+    position: absolute;
+    font-size: 30px;
+    color: #DB8F1E;
+    transition: transform 1s;
+}
+.faqContainer .questionOne input:checked ~ label::after{
+    transform: rotate(135deg);
+}
+.faqContainer .questionOne .questionAnswer{
+    max-height: 0;
+    overflow: hidden;
+    transition: 1s;
+}
+.faqContainer .questionOne input:checked ~ .questionAnswer{
+    max-height: 100vh;
+}
+.ap{
+    text-align: center;
+    background: #241B2D;
+    width: 100%;
+    padding-top: 40px;
+    border-bottom: 1px solid #DB8F1E;
+    padding-bottom: 70px;
+}
+.ap h1{
+    font-size: 35px;
+    color: #fff;
+}
+.ap p{
+    font-size: 15px;
+    color: #fff;
+    margin-top: -15px;
+}
+.apList{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+.social{
+    padding: 15px;
+    background: #fff;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.social i{
+    font-size: 30px;
+}
+.cr{
+    width: 100%;
+    text-align: center;
+    padding: 40px 0px;
+    background: #180F22;
+}
+.cr p{
+    font-size: 15px;
+    color: #fff;
+}
+.maxWidth{
+    display: none;
+}
+@media screen and (min-width:2100px) and (orientation:landscape)  {
+    .nftMain{
+        display: none;
+    }
+    .maxWidth{
+        display: block;
+        font-family: 'Poppins', sans-serif;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: fit-content;
+        color: #fff;
+    }
+    .maxWidth h1{
+        font-size: 70px;
+    }
+    .maxWidth p{
+        font-size: 40px;
+    }
+    .aboutMainContent{
+        display: none;
+    }
+    .footer{
+        display: none;
+    }
+}
+/*LARGE SCREEN*/
+@media screen and (min-width:1400px) and (orientation:landscape) {
+    .header h1{
+        font-size: 50px;
+    }
+    .navLinks ul{
+        gap: 80px;
+    }
+    .navLinks ul li a{
+        font-size: 20px;
+        text-decoration: none;
+        color: #fff;
+    }
+    .link.active{
+        font-size: 20px;
+    }
+    .navLinks ul button{
+        height: 45px;
+        width: 190px;
+        font-size: 17px;
+        border-radius: 10px;
+    }
+    /*HERO*/
+    .hero{
+        justify-content: space-evenly;
+    }
+    .new{
+        width: 120px;
+        height: 40px;
+    }
+    .new p{
+        font-size: 15px;
+        padding-top: 11px;
+    }
+    .hero-img{
+        width: 650px;
+        height: 700px;
+    }
+    .heroHeader h1{
+        font-size: 60px;
+        margin-top: 15px;
+        line-height: 60px;
+    }
+    .heroHeaderSpan{
+        font-size: 45px;
+        margin-top: -30px;
+    }
+    .heroPara p{
+        font-size: 20px;
+        margin-top: -25px;
+    }
+    .heroButton button{
+        height: 45px;
+        width: 200px;
+        font-size: 17px;
+        border-radius: 10px;
+    }
+    /*ABOUT*/
+    .about{
+        padding-bottom: 200px;
+        gap: 150px;
+    }
+    .AI{
+        border-radius: 20px;
+        padding: 0.7%;
+    }
+    .aiImage{
+        width: 320px;
+        height: 320px;
+    }
+    .about-img{
+        margin-top: -50px;
+        border-radius: 40px;
+    }
+    .aiTitle p{
+        font-size: 19px;
+        padding-left: 1%;
+    }
+    .aiPrice{
+        padding-left: 1%;
+    }
+    .aiPrice p{
+        font-size: 14px;
+        padding-left: 1%;
+    }
+    .aiPrice h3{
+        font-size: 18px;
+        padding-left: 1%;
+    }
+    .aboutHeader h1{
+        font-size: 60px;
+    }
+    .aboutPara p{
+        font-size: 25px;
+    }
+    /*gallery*/
+    .gallery{
+        padding-top: 50px;
+        padding-bottom: 100px;
+    }
+    .galleryHeader{
+        margin-left: 10%;
+    }
+    .galleryHeader h1{
+        font-size: 50px;
+    }
+    .galSlide{
+        padding: 15px;
+    }
+    .galImage{
+        width: 350px;
+        height: 350px;
+    }
+    .galTitle p{
+        font-size: 21px;
+    }
+    .galPrice p{
+        font-size: 15px;
+    }
+    .galPrice h3{
+        font-size: 20px;
+    }
+    .galleryButton button{
+        width: 220px;
+        font-size: 17px;
+        height: 55px;
+    }
+    .swiper-slide{
+        padding-left: 50px;
+    }
+    .swiper-wrapper{
+        padding-left: 6%;
+    }
+    /*TEAM*/
+    .team{
+        padding: 90px 0;
+    }
+    .teamHeader h1{
+        font-size: 50px;
+    }
+    .teamPara p{
+        font-size: 20px;
+        margin-top: -30px;
+    }
+    .memberPic{
+        width: 450px;
+        height: 450px;
+    }
+    .member h1{
+        font-size: 35px;
+    }
+    .member p{
+        font-size: 25px;
+    }
+    /*FAQ*/
+    .faq{
+        padding: 100px 0px;
+    }
+    .faqTitle h1{
+        font-size: 50px;
+    }
+    .faqPara p{
+        font-size: 20px;
+    }
+    .questionOne{
+        width: 800px;
+        padding: 7px 15px;
+    }
+    .questionOne label p{
+        font-size: 20px;
+    }
+    .faqContainer .questionOne label::after{
+        content: '+';
+        right: 20px;
+        position: absolute;
+        font-size: 40px;
+        color: #DB8F1E;
+        transition: transform 1s;
+    }
+    .questionAnswer{
+        width: 700px;
+        font-size: 19px;
+    }
+    /*Atreon Project*/
+    .ap h1{
+        font-size: 60px;
+    }
+    .ap p{
+        font-size: 25px;
+        margin-top: -30px;
+    }
+    .apList{
+        gap: 60px;
+    }
+    .social i{
+        font-size: 50px;
+    }
+    .cr p{
+        font-size: 20px;
+    }
+}
+@media screen and (max-width:1399px) and (orientation:landscape){
+    .header a{
+        text-decoration: none;
+    }
+    .header h1{
+        font-size: 30px;
+        text-transform: capitalize;
+        color: #fff;
+        font-weight: bolder;
+    }
+    .heros{
+        height: 100vh;
+        width: 100%;
+        background: #180F22;
+        padding-top: 30px;
+    }
+    .nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        position: fixed;
+        z-index: 5;
+        top: 0;
+        width: 100%;
+    }
+    .nav.scrolled{
+        background: #3f2899;
+        height: 60px;
+        transition: .1s ease-in;
+    }
+    .navLinks ul{
+        display: flex;
+        align-items: center;
+        gap: 40px;
+    }
+    .navLinks ul li{
+        list-style: none;
+    }
+    .navLinks ul li a{
+        text-decoration: none;
+        color: #fff;
+        font-size: 14px;
+        font-weight: bolder;
+        text-transform: capitalize;
+    }
+    .link.active{
+        color: #C43A5B;
+    }
+    .navLinks ul button{
+        width: 140px;
+        height: 30px;
+        border-radius: 10px;
+        background: #C43A5B;
+        color: #fff;
+        border: 1px solid #C43A5B;
+        cursor: pointer;
+    }
+    /*HERO*/
+    .hero{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        margin: 0 auto;
+        left: 50%;
+        top: 45%;
+        transform: translate(-50%,-50%);
+        position: relative;
+    }
+    .hero-img{
+        width: 400px;
+        height: 450px;
+        object-fit: cover;
+        animation-name: move;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
+        position: relative;
+    }
+    @keyframes move {
+        0%{
+            left: 0px;top: 0px;
+        }
+        25%{
+            left: 20px; top: 0px;
+        }
+        50%{
+            left: 0px; top: 20px; 
+        }
+        75%{
+            left: -20px; top: -20px;
+        }
+        100%{
+            right: 20px; left: 0px; top: 0px;
+        }
+    }
+    .hero-img img{
+        width: 100%;
+        height: 100%;
+    }
+    .new{
+        width: 70px;
+        height: 30px;
+        background: #DB8F1E;
+        border-radius: 30px;
+    }
+    .new p{
+        padding-top: 9%;
+        align-items: center;
+        text-align: center;
+        color: #fff;
+        font-size: 12px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    .heroHeader h1{
+        font-size: 35px;
+        font-weight: bolder;
+        text-transform: uppercase;
+        color: #fff;
+    }
+    .heroHeaderSpan{
+        color: #6942FF;
+        font-size: 30px;
+        margin-top: -5px;
+    }
+    .heroPara{
+        margin-top: -10px;
+    }
+    .heroPara p{
+        font-size: 11px;
+        font-weight: 300;
+        color: #fff;
+    }
+    .heroButton button{
+        height: 30px;
+        width: 150px;
+        background: #C43A5B;
+        border: 1px solid #C43A5B;
+        color: #fff;
+        border-radius: 5px;
+        font-size: 12px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+    /*ABOUT*/
+    .about{
+        height: 100%;
+        padding-bottom: 150px;
+        width: 100%;
+        background: #241B2D;
+        display: flex;
+        padding-top: 20px;
+        justify-content: space-around;
+        align-items: first baseline;
+        margin-top: 0;
+    }
+    .about-img{
+        display: flex;
+        width: fit-content;
+        height: fit-content;
+        margin-left: 80px;
+    }
+    .AI{
+        background: #fff;
+        border-radius: 20px;
+        padding: 10px;
+        width: fit-content;
+        height: fit-content;
+        position: absolute;
+        box-shadow: 0px 0px 100px 1px rgba(68, 45, 143, .8);
+    }
+    .AI:nth-child(3){
+        margin-top: 30px;
+        transform: rotate(10deg);
+        margin-left: 8%;
+        z-index: 1;
+    }
+    .AI:nth-child(1){
+        margin-top: 30px;
+        margin-left: -8%;
+        transform: rotate(-10deg);
+        z-index: 2;
+    }
+    .AI:nth-child(2){
+        z-index: 3;
+    }
+    .aiImage{
+        width: 190px;
+        height: 190px;
+        margin: auto;
+    }
+    .aiImage img{
+        width: 100%;
+        height: 100%;
+        border-radius: 15px;
+    }
+    .aiTitle p{
+        font-size: 15px;
+        color: #000;
+        font-weight: bolder;
+        padding-left: 10%;
+        margin-top: 8px;
+    }
+    .aiPrice{
+        padding-left: 10%;    
+    }
+    .aiPrice p{
+        font-size: 10px;
+        color: #7A7A7A;
+        margin-top: -10px;
+    }
+    .aiPrice h3{
+        font-size: 13px;
+        margin-top: -5px;
+        height: fit-content;
+        color: #000;
+        font-weight: bolder;
+    }
+    .about-text{
+        z-index: 3;
+    }
+    .aboutHeader h1{
+        font-size: 35px;
+        text-decoration: underline 2px;
+        color: #6942FF;
+    }
+    .aboutPara p{
+        font-size: 15px;
+        color: #fff;
+    }
+    /*GALLERY*/
+    .gallery{
+        padding-top: 50px;
+        padding-bottom: 50px;
+        width: 100%;
+        background: #180F22;
+    }
+    .galleryHeader{
+        margin-left: 12%;
+    }
+    .galleryHeader h1{
+        font-size: 35px;
+        text-decoration: underline 2px #6942FF;
+        color: #6942FF;
+    }
+    .gallerySlider{
+        background: #180F22;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .swiper-wrapper{
+        padding-left: 12%;
+    }
+    .swiper-slide{
+        padding: 50px 0;
+    }
+    .galSlide{
+        background: #fff;
+        border-radius: 20px;
+        padding: 10px;
+        width: fit-content;
+        height: fit-content;
+        box-shadow: 0px 0px 50px 3px rgba(68, 45, 143, 1);
+        cursor: pointer;
+    }
+    .galImage{
+        width: 250px;
+        height: 250px;
+        margin: auto;
+    }
+    .galImage img{
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+    }
+    .galTitle p{
+        font-size: 17px;
+        color: #000;
+        font-weight: bolder;
+        padding-left: 2%;
+        margin-top: 8px;
+    }
+    .galPrice{
+        padding-left: 2%;    
+    }
+    .galPrice p{
+        font-size: 13px;
+        color: #7A7A7A;
+        margin-top: -10px;
+    }
+    .galPrice h3{
+        font-size: 15px;
+        margin-top: -5px;
+        height: fit-content;
+        color: #000;
+        font-weight: bolder;
+    }
+    .galleryButton button{
+        height: 40px;
+        width: 150px;
+        background: #C43A5B;
+        border: 1px solid #C43A5B;
+        color: #fff;
+        border-radius: 10px;
+        font-size: 12px;
+        cursor: pointer;
+        font-weight: bold;
+        margin-left: 80%;
+    }
+    /*TEAM*/
+    .team{
+        background: #241B2D;
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    .teamTitle{
+        text-align: center;
+        margin-top: -30px;
+    }
+    .teamTitle h1{
+        font-size: 35px;
+        color: #6942FF;
+        text-decoration: underline 2px;
+    }
+    .teamTitle p{
+        font-size: 13px;
+        margin-top: -20px;
+        color: #fff;
+    }
+    .teamMember{
+        display: flex;
+        gap: 30px;
+        justify-content: center;
+    }
+    .memberPic{
+        width: 350px;
+        height: 350px;
+        object-fit: cover;
+        margin: auto;
+        margin-top: -20px;
+    }
+    .memberPic img{
+        width: 100%;
+        height: 100%;
+    }
+    .member{
+        width: fit-content;
+        height: fit-content;
+        text-align: center;
+    }
+    .member h1{
+        margin-top: -50px;
+        color: #fff;
+        font-weight: bolder;
+        font-size: 25px;
+    }
+    .member p{
+        margin-top: -15px;
+        color: #DB8F1E;
+        text-transform: capitalize;
+        font-size: 15px;
+        font-weight: bolder;
+    }
+    
+    /*FAQ*/
+    .faq{
+        width: 100%;
+        height: fit-content;
+        background: #180F22;
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+    .faqTitle{
+        text-align: center;
+        margin-top: -40px;
+    }
+    .faqHeader h1{
+        font-size: 35px;
+        color: #6942FF;
+        text-decoration: underline 2px;
+    }
+    .faqPara p{
+        font-size: 15px;
+        margin-top: -20px;
+        color: #fff;
+    }
+    .faqContainer{
+        margin-top: 70px;
+    }
+    .questionOne{
+        width: 600px;
+        margin: auto;
+        height: fit-content;
+        border: 2px solid #DB8F1E;
+        padding: 5px 10px;
+        position: relative;
+        align-items: center;
+        justify-content: space-between;
+        overflow: hidden;
+        cursor: pointer;
+        margin-bottom: 20px;
+    }
+    .questionHeader p{
+        font-size: 15px;
+        color: #fff;
+        font-weight: bolder;
+    }
+    .questionAnswer{
+        margin: auto;
+        color: #fff;
+        width: 500px;
+        font-size: 13px;
+    }
+    .faqContainer .questionOne input{
+        appearance: none;
+        display: none;
+        -webkit-appearance: none;
+    }
+    .faqContainer .questionOne label{
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        color: #fff;
+        margin: 0 auto;
+        width: 100%;
+    }
+    .faqContainer .questionOne label::after{
+        content: '+';
+        right: 20px;
+        position: absolute;
+        font-size: 30px;
+        color: #DB8F1E;
+        transition: transform 1s;
+    }
+    .faqContainer .questionOne input:checked ~ label::after{
+        transform: rotate(135deg);
+    }
+    .faqContainer .questionOne .questionAnswer{
+        max-height: 0;
+        overflow: hidden;
+        transition: 1s;
+    }
+    .faqContainer .questionOne input:checked ~ .questionAnswer{
+        max-height: 100vh;
+    }
+    .ap{
+        text-align: center;
+        background: #241B2D;
+        width: 100%;
+        padding-top: 40px;
+        border-bottom: 1px solid #DB8F1E;
+        padding-bottom: 70px;
+    }
+    .ap h1{
+        font-size: 35px;
+        color: #fff;
+    }
+    .ap p{
+        font-size: 15px;
+        color: #fff;
+        margin-top: -15px;
+    }
+    .apList{
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+    }
+    .social{
+        padding: 15px;
+        background: #fff;
+        border-radius: 15px;
+        cursor: pointer;
+    }
+    .social i{
+        font-size: 30px;
+    }
+    .cr{
+        width: 100%;
+        text-align: center;
+        padding: 40px 0px;
+        background: #180F22;
+    }
+    .cr p{
+        font-size: 15px;
+        color: #fff;
+    }
+} 
+@media screen and (max-width:1024px) and (orientation:landscape){
+    .header h1{
+        font-size: 25px;
+    }
+    .navLinks ul{
+        gap: 30px;
+    }
+    .navLinks ul button{
+        width: 100px;
+        font-size: 10px;
+        height: 30px;
+    }
+    .link{
+        font-size: 10px;
+        text-decoration: none;
+        color: #fff;
+    }
+    .link.active{
+        font-size: 10px;
+    }
+    .hero-img{
+        width: 350px;
+        height: 350px;
+    }
+    /*HERO*/
+    .new{
+        height: 20px;
+        width: 50px;
+        padding-top: -6px;
+    }
+    .new p{
+        font-size: 8px;
+    }
+    .heroHeader{
+        margin-top: -10px;
+    }
+    .heroHeader h1{
+        font-size: 30px;
+        line-height: 35px;
+    }
+    .heroHeaderSpan{
+        font-size: 25px;
+    }
+    .heroPara p{
+        font-size: 9px;
+    }
+    .heroButton button{
+        width: 120px;
+        font-size: 10px;
+        height: 25px;
+    }
+    /*ABOUT*/
+    .about{
+        padding-bottom: 90px;
+        padding-top: 20px;
+    }
+    .about-img{
+        padding-top: -40px;
+    }
+    .aboutHeader h1{
+        font-size: 25px;
+    }
+    .aboutPara p{
+        font-size: 10px;
+    }
+    .aiImage{
+        width: 140px;
+        height: 140px;
+    }
+    .AI{
+        padding: 8px;
+    }
+    .aiTitle{
+        margin-left: -6%;
+    }
+    .aiPrice{
+        margin-left: -6%;
+    }
+    .aiTitle p{
+        font-size: 11px;
+    }
+    .aiPrice p{
+        font-size: 6px;
+    }
+    .aiPrice h3{
+        font-size: 10px;
+    }
+    /*GALLERY*/
+    .gallery{
+        padding-top: 20px;
+        padding-bottom: 40px;
+    }
+    .galleryHeader h1{
+        font-size: 25px;
+    }
+    .galSlide{
+        padding: 8px;
+    }
+    .galImage{
+        width: 180px;
+        height: 180px;
+    }
+    .galTitle p{
+        font-size: 12px;
+    }
+    .galPrice p{
+        font-size: 7px;
+    }
+    .galPrice h3{
+        font-size: 11px;
+    }
+    .galleryButton button{
+        width: 120px;
+        height: 30px;
+        font-size: 9px;
+    }
+    .swiper-slide{
+        padding: 40px 0;
+    }
+    /*TEAM*/
+    .team{
+        padding: 40px 0;
+    }
+    .teamTitle h1{
+        font-size: 25px;
+    }
+    .teamPara p{
+        font-size: 9px;
+        margin-top: -15px;
+    }
+    .memberPic{
+        width: 270px;
+        height: 270px;
+    }
+    .member h1{
+        font-size: 15px;
+        margin-top: -40px;
+    }
+    .member p{
+        font-size: 13px;
+        margin-top: -15px;
+    }
+    /*FAQ*/
+    .faqHeader h1{
+        font-size: 25px;
+    }
+    .faqContainer{
+        margin-top: 25px;
+    }
+    .faqPara p{
+        font-size: 10px;
+        margin-top: -15px;
+    }
+    .questionOne{
+        width: 450px;
+        padding: 1px 10px;
+    }
+    .questionOne label p{
+        font-size: 12px;
+    }
+    .faqContainer .questionOne label::after{
+        content: '+';
+        right: 15px;
+        position: absolute;
+        font-size: 20px;
+        color: #DB8F1E;
+        transition: transform 1s;
+    }
+    .questionAnswer{
+        width: 350px;
+    }
+    .questionAnswer p{
+        font-size: 9px;
+    }
+    /*Atreon Project*/
+    .ap{
+        padding-top: 10px;
+        padding-bottom: 30px;
+    }
+    .ap h1{
+        font-size: 25px;
+    }
+    .ap p{
+        font-size: 10px;
+    }
+    .social{
+        padding: 10px;
+        gap: 20px;
+        border-radius: 8px;
+    }
+    .social i{
+        font-size: 25px;
+    }
+    .cr{
+        padding: 10px 0;
+    }
+    .cr p{
+        font-size: 10px;
+    }
+}
+@media screen and (max-width:1024px) and (orientation:portrait){
+    .heros{
+        height: 60vh;
+    }
+    .header h1{
+        font-size: 25px;
+    }
+    .link{
+        font-size: 11px;
+        text-decoration: none;
+        color: #fff;
+    }
+    .navLinks ul{
+        gap: 30px;
+        align-items: center;
+    }
+    .navLinks ul button{
+        width: 100px;
+        height: 30px;
+        font-size: 9px;
+    }
+    .link.active{
+        font-size: 10px;
+    }
+    /*HERO*/
+    .new{
+        height: 15px;
+        height: 30px;
+        padding: -3px;
+    }
+    .new p{
+        font-size: 10px;
+    }
+    .hero-img{
+        width: 350px;
+        height: 370px;
+    }
+    .heroHeader h1{
+        font-size: 30px;
+        line-height: 35px;
+    }
+    .heroHeaderSpan{
+        font-size: 25px;
+    }
+    .heroPara p{
+        font-size: 9px;
+    }
+    .heroButton button{
+        width: 120px;
+        height: 30px;
+        font-size: 9px;
+    }
+    /*ABOUT*/
+    .about{
+        justify-content: center;
+        gap: 320px;
+    }
+    .aiImage{
+        width: 170px;
+        height: 170px;
+    }
+    .aboutHeader h1{
+        font-size: 25px;
+    }
+    .aboutPara p{
+        font-size: 12px;
+    }
+    .aiTitle p{
+        font-size: 12px;
+    }
+    .aiPrice p{
+        font-size: 7px;
+    }
+    .aiPrice h3{
+        font-size: 12px;
+    }
+    /*GALLERY*/
+    .galleryHeader h1{
+        font-size: 25px;
+    }
+    .swiper-slide{
+        padding: 50px 0;
+        margin-left: 70px;
+    }
+    .swiper-wrapper{
+        padding-left: 3%;
+    }
+    .galImage{
+        width: 220px;
+        height: 220px;
+    }
+    .galTitle p{
+        font-size: 13px;
+    }
+    .galPrice p{
+        font-size: 8px;
+    }
+    .galPrice h3{
+        font-size: 12px;
+    }
+    .galleryButton button{
+        width: 140px;
+        font-size: 10px;
+        margin-left: 80%;
+    }
+    /*TEAM*/
+    .teamHeader  h1{
+        font-size: 25px;
+    }
+    .teamPara p{
+        font-size: 11px;
+    }
+    .memberPic{
+        width: 300px;
+        height: 300px;
+    }
+    .member h1{
+        font-size: 20px;
+    }
+    .member p{
+        font-size: 13px;
+        margin-top: -17px;
+    }
+    /*FAQ*/
+    .faqHeader h1{
+        font-size: 25px;
+    }
+    .faqPara p{
+        font-size: 11px;
+    }
+    .questionOne{
+        width: 500px;
+    }
+    .questionOne label p{
+        font-size: 13px;
+    }
+    .faqContainer{
+        margin-top: 30px;
+    }
+    .faqContainer .questionOne label::after{
+        content: '+';
+        right: 20px;
+        position: absolute;
+        font-size: 25px;
+        color: #DB8F1E;
+        transition: transform 1s;
+    }
+    .questionAnswer{
+        width: 400px;
+    }
+    .questionAnswer p{
+        font-size: 10px;
+    }
+    /*Atreon Project*/
+    .ap{
+        padding-top: 20px;
+        padding-bottom: 40px;
+    }
+    .apList{
+        gap: 30px;
+    }
+    .ap h1{
+        font-size: 25px;
+    }
+    .ap p{
+        font-size: 12px;
+    }
+    .social{
+        padding: 10px;
+    }
+    .social i{
+        font-size: 25px;
+    }
+    /*COPY RIGHT*/
+    .cr{
+        padding: 15px 0;
+    }
+    .cr p{
+        font-size: 10px;
+    }
+}
+@media screen and (max-width:800px) and (orientation:portrait){
+    .header h1{
+        font-size: 25px;
+    }
+    .navLinks ul li a{
+        font-size: 9px;
+    }
+    .navLinks ul{
+        gap: 30px;
+        align-items: center;
+    }
+    .navLinks ul button{
+        width: 90px;
+        height: 30px;
+        font-size: 8px;
+    }
+    .link.active{
+        font-size: 9px;
+    }
+    /*HERO*/
+    .new{
+        height: 15px;
+        height: 30px;
+        padding: -3px;
+    }
+    .new p{
+        font-size: 10px;
+    }
+    .hero-img{
+        width: 320px;
+        height: 350px;
+    }
+    .heroHeader h1{
+        font-size: 25px;
+        line-height: 30px;
+    }
+    .heroHeaderSpan{
+        font-size: 20px;
+    }
+    .heroPara p{
+        font-size: 8px;
+    }
+    .heroButton button{
+        width: 120px;
+        height: 30px;
+        font-size: 9px;
+    }
+    /*ABOUT*/
+    .about{
+        justify-content: center;
+        gap: 300px;
+        padding-top: 40px;
+        padding-bottom: 120px;
+    }
+    .aiImage{
+        width: 150px;
+        height: 150px;
+    }
+    .aboutHeader h1{
+        font-size: 25;
+    }
+    .aboutPara p{
+        font-size: 10px;
+    }
+    .aiTitle p{
+        font-size: 10px;
+    }
+    .aiPrice p{
+        font-size: 6px;
+    }
+    .aiPrice h3{
+        font-size: 12px;
+    }
+     /*GALLERY*/
+     .galleryHeader h1{
+        font-size: 25px;
+    }
+    .swiper-slide{
+        padding: 50px 0;
+        margin-left: 50px;
+    }
+    .swiper-wrapper{
+        padding-left: 3%;
+    }
+    .galImage{
+        width: 200px;
+        height: 200px;
+    }
+    .galTitle p{
+        font-size: 13px;
+    }
+    .galPrice p{
+        font-size: 8px;
+    }
+    .galPrice h3{
+        font-size: 12px;
+    }
+    .galleryButton button{
+        width: 140px;
+        font-size: 10px;
+        margin-left: 75%;
+    }
+}
+@media screen and (max-width:800px) and (orientation:landscape){
+    .header h1{
+        font-size: 20px;
+    }
+    .navLinks ul{
+        gap: 25px;
+    }
+    .navLinks ul button{
+        width: 100px;
+        font-size: 9px;
+        height: 25px;
+    }
+    .navLinks ul li a{
+        font-size: 9px;
+    }
+    /*HERO*/
+    .hero-img{
+        width: 250px;
+        height: 250px;
+    }
+    .heroHeader h1{
+        font-size: 25px;
+        line-height: 25px;
+    }
+    .heroHeaderSpan{
+        font-size: 20px;
+    }
+    .heroPara p{
+        font-size: 8px;
+    }
+    .heroButton button{
+        width: 120px;
+        font-size: 8px;
+        height: 25px;
+    }
+    /*ABOUT*/
+    .about{
+        gap: 250px;
+        justify-content: center;
+    }
+    .AI{
+        padding: 7px;
+    }
+    .aiImage{
+        width: 120px;
+        height: 120px;
+    }
+    .aiTitle p{
+        font-size: 10px;
+    }
+    .aiPrice p{
+        font-size: 6px;
+    }
+    .aiPrice h3{
+        font-size: 9px;
+    }
+    .aboutPara p{
+        font-size: 9px;
+    }
+    /*GALLERY*/
+    .swiper-wrapper{
+        padding-left: 9%;
+    }
+    .swiper-slide{
+        margin-left: 20px;
+    }
+    .galImage{
+        width: 150px;
+        height: 150px;
+    }
+    .galleryButton button{
+        width: 120px;
+        font-size: 8px;
+        height: 30px;
+    }
+    /*TEAM*/
+    .teamMember{
+        gap: 50px;
+    }
+    .memberPic{
+        width: 200px;
+        height: 200px;
+    }
+    .member h1{
+        font-size: 13px;
+        margin-top: -35px;
+    }
+    .member p{
+        font-size: 11px;
+        margin-top: -15px;
+    }
+    .questionAnswer p{
+        font-size: 10px;
+    }
+    .cr p{
+        font-size: 8px;
+    }
+}
+@media screen and (max-width:500px) and (orientation:portrait){
+    .btn2{
+        display: block;
+        width: 300px;
+    }
+    .link{
+        display: none;
+    }
+    .btn{
+        display: none;
+    }
+    .ham-burg{
+        display: block;
+    }
+    .nav-menu{
+        display: block;
+    }
+    .navLinks ul{
+        justify-content: center;
+        gap: 0;
+    }
+    .nav{
+        justify-content: space-around;
+    }
+    /*HERO*/
+    .heros{
+        height: 100vh;
+    }.new{
+        margin: 0 auto;
+    }
+    .hero-text{
+        text-align: center;
+    }
+    .hero{
+        display: block;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        position: absolute;
+        padding-top: 60px;
+    }
+    .heroHeader h1{
+        font-size: 28px;
+    }
+    .heroHeaderSpan{
+        font-size: 23px;
+    }
+    .heroPara p{
+        font-size: 10px;
+    }
+    .heroButton button{
+        height: 40px;
+        font-size: 10px;
+        width: 150px;
+    }
+    /*ABOUT*/
+    .about-img{
+        width: 100%;
+        margin-left: 0px;
+        justify-content: center;
+        padding-top: 90px;
+    }
+    .aiImage{
+        width: 180px;
+        height: 180px;
+    }
+    .about{
+        height: fit-content;
+    }
+    .aboutPara{
+        z-index: 4;
+    }
+    .about{
+        display: block;
+        margin: 0 auto;
+        position: relative;
+    }
+    .about-text{
+        margin-top: 90%;
+        text-align: center;
+    }
+    .aboutHeader h1{
+        font-size: 28px;
+    }
+    .aboutPara p{
+        font-size: 11px;
+    }
+    /*GALLERY*/
+    .gallery{
+        width: 100%;
+    }
+    .galleryHeader h1{
+        font-size: 28px;
+        text-align: center;
+        margin: 0;
+        padding-left: 0%;
+    }
+    .galleryHeader{
+        margin-left: 0%;
+    }
+    .swiper-wrapper{
+        padding-left: 0%;
+    }
+    .swiper-slide{
+        margin-left: 20px;
+    }
+    .galSlide{
+        padding: 8px;
+    }
+    .galImage{
+        width: 170px;
+        height: 170px;
+    }
+    .galleryButton{
+        width: 100%;
+    }
+    .galleryButton button{
+        text-align: center;
+        width: 150px;
+        margin-left: 30%;
+        font-size: 10px;
+        height: 40px;
+        border-radius: 5px;
+    }
+    /*TEAM*/
+    .teamPara p{
+        font-size: 8px;
+        margin-top: -19px;
+    }
+    .teamMember{
+        display: block;
+        gap: 0;
+        text-align: center;
+        margin: 0 auto;
+    }
+    .member{
+        margin: 0 auto;
+    }
+    .memberPic{
+        margin: 0 auto;
+    }
+    /*FAQ*/
+    .questionOne{
+        width: 300px;
+    }
+    .questionAnswer{
+        width: 200px;
+    }
+    .questionAnswer p{
+        font-size: 5p,x;
+    }
+}

@@ -1,0 +1,40 @@
+body{
+    width: 100%;
+    caret-color: transparent;
+}
+.calculator{
+    position: absolute;
+    width: 250px;
+    background: #000;
+    height: 439px;
+    margin: 0 auto;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+form .display input{
+    display: flex;
+    text-align: end;
+    justify-content: flex-end;
+    width: 210px;
+    height: 90px;
+    background: #000;
+    color: #fff;
+    border: none;
+    outline: none;
+    font-size: 35px;
+    font-family: 'Calculator', sans-serif;
+}
+section input{
+    width: 50.5px;
+    height: 50.5px;
+    border-radius: 30px;
+    box-shadow: inset 0 0 30px #3f3f3f;
+    color: #fff;
+    background: #000;
+    margin-top: 10px;
+    margin-left: 5px;
+}
+section span input{
+    width: 111px;
+}

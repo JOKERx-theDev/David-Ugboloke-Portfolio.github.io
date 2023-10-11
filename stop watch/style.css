@@ -1,0 +1,71 @@
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh
+}
+.stopwatch{
+    width: 500px;
+    height: 300px;
+    background-color: #000;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    padding-top: 40px;
+    border-radius: 20px;
+}
+#stopwatchdisplay{
+    color: #fff;
+    text-align: center;
+    justify-content: space-around;
+    font-size: 55px;
+    gap: 10px;
+    font-family: 'Calculator', sans-serif;
+}
+.buttons{
+    color: #fff;
+    display: flex;
+    text-align: center;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+.pause button , .reset button{
+    width: 50px;
+    height: 30px;
+    background: darkorange;
+    border: orange;
+    outline: orange;
+    border-radius: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    color: #000;
+}
+.pause button:hover , .reset button:hover{
+    background: rgb(216, 120, 1);
+}
+.start button{
+    width: 80px;
+    height: 50px;
+    background: darkred;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    color: #b9b9b9;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+}
+.start button:hover{
+    background: rgb(108, 1, 1);
+}
+@media screen and (max-width:500px) and (orientation:portrait) {
+    .pause button , .reset button{
+        font-size: 11px;
+    }
+}
+@media screen and (max-width:800px) and (orientation:landscape) {
+    .pause button , .reset button{
+        font-size: 12px;
+    }
+}

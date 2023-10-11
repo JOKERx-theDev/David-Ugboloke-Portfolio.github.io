@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <script  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+           emailjs.init("KL6-KUFOAYO0EDlr9");
+        })();
+     </script>
+    <title>CONTACT ME</title>
+</head>
+<body class="body">
+    <!--NAVIGATION-->
+    <div class="loading">
+        <div class="load"></div>
+    </div>
+    <div class="maxWidth">
+        <h1>There is no design for the screen</h1>
+        <p>Please reduce your device width</p>
+    </div>
+    <div class="cc">
+        <div class="navigation">
+            <ul>
+            <div class="navList">
+                 <ul>
+                     <a href="main.html"><li>Ugboloke-David</li></a>
+                     <a href="main.html"><li>_hello</li></a>
+                     <a href="about.html"><li>_about-me</li></a>
+                     <a href="project.html"><li>_projects</li></a>
+                     <div class="hamburger">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                 </ul>
+            </div>
+            <div class="navContact">
+                <ul>
+                    <a href="contact.html" class="navActiveLink"><li>_contact-me</li></a>
+                </ul>
+            </div>
+            </ul>
+        </div>
+    
+        <div class="nav-menu" id="menu">
+            <div class="mobileNav">
+                <ul>
+                    <a href="main.html"><li>_hello</li></a>
+                    <a href="about.html"><li>_about-me</li></a>
+                    <a href="project.html"><li>_projects</li></a>
+                    <a href="/contact.html"><li>_contact-me</li></a>
+                </ul>
+            </div>
+        </div>
+    
+    
+        <div class="contactMeNav">
+            <div class="contactMeNavButton">
+                <p><span class="contactMeNavMobile">_</span><span>contact</span><span class="contactMeNavMobile">-me</span></p>
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+        </div>
+    
+        <div class="contactMeMainContent">
+            <div class="contactMeContent">
+                <form id="form">
+                    <div>
+                        <p>_name:</p>
+                        <input type="text" name="Name" id="Name" required maxlength="35">
+                    </div>
+    
+                    <div>
+                        <p>_email:</p>
+                        <input type="email" name="Email" id="Email" required maxlength="40">
+                    </div>
+    
+                    <div>
+                        <p>_message:</p>
+                       <textarea name="Message" id="Message" required></textarea>
+                    </div>
+                    <button type="submit" id="contactMeContentButton" onclick="sendMail()">submit-message</button>
+                </form>
+    
+                
+                <div class="contactMeContentSuccess" id="contactMeContentSuccess">
+                    <h1>Thank you! 🙏</h1>
+                    <p>Your Message has been delivered. You <br>
+                        will recieve reply really soon!
+                    </p>
+                    <a href="contact.html"><button>send-new-message</button></a>
+                </div>
+            </div>
+    
+    
+            <div class="contactMeMainOutput">
+                <div class="contactMeOutput">
+                    <ul>
+                        <li>
+                            <span class="contactMeOutputNumber">1</span>
+                            <span class="contactMeOutputText">
+                                <span class="contactMeOutputTextPurple">Const</span>
+                                <span class="contactMeOutputTextBlue">button</span>
+                                <span class="contactMeOutputTextPurple">=</span>
+                                <span class="contactMeOutputTextBlue">document.querySelector</span>
+                                (<span class="contactMeOutputTextOrange">'#sendBtn'</span>);
+                            </span>
+                        </li>
+    
+                        <li>
+                            <span class="contactMeOutputNumber">2</span>
+                            <span class="contactMeOutputText">
+                            </span>
+                        </li>
+    
+                        <li>
+                            <span class="contactMeOutputNumber">3</span>
+                            <span class="contactMeOutputText">
+                                <span class="contactMeOutputTextPurple">Const</span>
+                                <span class="contactMeOutputTextBlue">message</span>
+                                <span class="contactMeOutputTextPurple">=</span>
+                                {
+                                <span class="contactMeOutputMove">
+                                        <br>
+                                        <span class="contactMeOutputNumber">4</span>
+                                        <span class="contactMeOutputTextBlue" id="move">name</span>:
+                                        <span class="contactMeOutputTextOrange" id="contactMeOutputTextName">""</span>,
+                                        <br>
+                                        <span class="contactMeOutputNumber">5</span>
+                                        <span class="contactMeOutputTextBlue" id="move">email</span>:
+                                        <span class="contactMeOutputTextOrange" id="contactMeOutputTextEmail">""</span>,
+                                        <br>
+                                        <span class="contactMeOutputNumber">6</span>
+                                        <span class="contactMeOutputTextBlue" id="move">message</span>:
+                                        <span class="contactMeOutputTextOrange" id="contactMeOutputTextMessage">""</span>,
+                                        <br>
+                                        <span class="contactMeOutputNumber">7</span>
+                                        <span id="move">date :</span>  <span class="contactMeOutputTextOrange" id="contactMeOutputDate">""</span>
+                                </span>
+                                <br>
+                                <span class="contactMeOutputNumber">8</span>
+                                }
+                            </span>
+                        </li>
+    
+                        <li>
+                            <span class="contactMeOutputNumber">9</span>
+                            <span class="contactMeOutputText"></span>
+                        </li>
+    
+                        <li>
+                            <span class="contactMeOutputNumber">10</span>
+                            <span class="contactMeOutputText">
+                                <span class="contactMeOutputTextBlue">
+                                    button.addEventListener
+                                </span>
+                                (<span class="contactMeOutputTextOrange">'click'</span> , ()
+                                <span class="contactMeOutputTextPurple">
+                                    =>
+                                </span>
+    
+                                {
+                                    <span class="contactMeOutputMove">
+                                    <br>
+                                    <span class="contactMeOutputNumber">11</span>
+                                    <span class="contactMeOutputTextBlue"  id="move">form.send(message);</span>
+                                    </span>
+                                    <br>
+                                    <span class="contactMeOutputNumber">12</span>
+                                });
+    
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    
+    
+        
+        <footer>
+            <div class="footer">
+                <div class="footer1">
+                    <ul>
+                        <p>Find Me On:</p>
+                        <a href="https://www.linkedin.com/in/david-ugboloke-828384267/" target="_blank"><li><i class="fa-brands fa-linkedin-in"></i></li></a>
+                        <a href="https://twitter.com/DUgboloke91472" target="_blank"><li><i class="fa-brands fa-x-twitter"></i></li></a>
+                    </ul>
+                </div>
+                <div class="footer2">
+                    <ul>
+                        <a href="https://github.com/JOKERx-theDev" target="_blank"><li>@JOKERx-theDev <i class="fa-brands fa-github"></i></li></a>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+<script defer src="js/contact.js"></script>
+
+</body>
+</html>
