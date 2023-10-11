@@ -1,0 +1,6054 @@
+body{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+    background: #fff;
+    font-family: myFont;
+    caret-color: transparent;
+    overflow: none;
+
+}
+.body.onscroll{
+    overflow: hidden;
+    height: 100%;
+}
+.TW{
+    width: 80%;
+    margin: 0 auto;
+}
+@font-face{
+    font-family: myFontBold;
+    src: url(Helvetica-Font/Helvetica-Bold.ttf);
+}
+@font-face{
+    font-family: myFont;
+    src: url(Helvetica-Font/Helvetica.ttf);
+}
+@font-face{
+    font-family: netflix;
+    src: url(netflix-sans-font/NetflixSans-Regular.otf);
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="datetime-local"]::-webkit-inner-spin-button,
+input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+    color-scheme: dark;
+    cursor: pointer;
+}
+input[type="datetime-local"]{
+    width: 170px;
+    height: 40px;
+    background: transparent;
+    border: 0.01px solid #EAECEF;
+    outline: none;
+    color: #EAECEF;
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 2%;
+    border-top: none;
+    border-bottom: none;
+}
+.header h1{
+    font-size: 30px;
+    font-family: myFontBold;
+    color: #fff;
+}
+.heros{
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/image\ 1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.heros::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 95%;
+    width: 100%;
+    height: 13%;
+    background: #fff;
+    filter: blur(20px);
+    border-radius: 0;
+}
+.nav{
+    display: flex;
+    align-items: center;
+    width: 90%;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+.navList ul{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+.navList ul li{
+    list-style: none;
+}
+.Links{
+    text-decoration: none;
+    color: #ffffffc5;
+    font-size: 14px;
+    position: relative;
+}
+.bar{
+    display: none;
+    cursor: pointer;
+    width: 20px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3 ease-in-out;
+    transition: all 0.3 ease-in-out;
+    background-color: #fff;
+    z-index: 100;
+}
+.hamburg{
+    display: none;
+    color: #fff;
+    z-index: 100;
+    cursor: pointer;
+    transition: 0.3s;
+    z-index: 100;
+}
+.active-nav .bar:nth-child(2){
+    opacity: 0;
+}
+.active-nav .bar:nth-child(1){
+    transform: translateY(8px) rotate(45deg);
+    transition: 0.3s;
+    width: 25px;
+}
+.active-nav .bar:nth-child(3){
+    transform: translateY(-8px) rotate(-45deg);
+    transition: 0.3s;
+    width: 25px;
+}
+.bar:nth-child(2){
+    width: 27px;
+    margin-left: 7px;
+}
+.nav-menu{
+    position: fixed;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    min-height: 100%;
+    z-index: 80;
+    background: #3d3d3d;
+    display: block;
+    padding-top: 29%;
+    text-align: center;
+    transition: 0.4s;
+}
+.nav-menu.is-active{
+    left: 0;
+}
+.nav-menu li a{
+    display: block;
+    padding: 9px 16px;
+    width: 100%;
+    max-width: 150px;
+    text-align: center;
+    margin: 0 auto 16px;
+    color: #000;
+    list-style: none;
+}
+.nav-menu li a:hover{
+    color: #fff;
+    transition: 0.3s ease-in;
+}
+.nav-menu button{
+    width: 300px;
+    height: 50px;
+    margin-bottom: 40px;
+    font-size: 17px;
+    border-radius: 30px;
+    color: #fff;
+    background: #2659C3;
+    border: 1px solid #2659C3;
+    outline: #2659C3;
+}
+.Links.active{
+    color: #fff;
+    position: relative;
+}
+.Links::after{
+    content: "";
+    position: absolute;
+    padding-bottom: 5px;
+    background: #fff;
+    width: 0%;
+    left: -25%;
+    height: -5px;
+    bottom: -7px;
+    border-radius: 20px;
+    transition: 0.1s;
+    color: #fff;
+}
+.Links:hover:after{
+    content: "";
+    position: absolute;
+    padding-bottom: 5px;
+    background: #fff;
+    width: 150%;
+    left: -25%;
+    height: -5px;
+    bottom: -7px;
+    border-radius: 20px;
+    transition: 0.1s;
+    color: #fff;
+}
+.Links.active::after{
+    content: "";
+    position: absolute;
+    padding-bottom: 5px;
+    background: #fff;
+    width: 150%;
+    left: -25%;
+    height: -5px;
+    bottom: -7px;
+    border-radius: 20px;
+    transition: 0.1s;
+    color: #fff;
+}
+.androidMenu{
+    overflow-x: hidden;
+    position: fixed;
+    bottom: -3%;
+    width: 100%;
+    display: none;
+}
+.androidMenu ul{
+    display: flex;
+    width: 100%;
+    background-color: #fff;
+    align-items: center;
+    justify-content: space-around;
+}
+.androidMenu ul li{
+    list-style: none;
+    text-align: center;
+    align-items: center;
+}
+.androidMenu li a{
+    text-decoration: none;
+    text-align: center;
+    align-items: center;
+    color: #999999
+}
+.androidMenu li a.amActive{
+    color: #2659C3;
+}
+/*HERO*/
+.hero{
+    width: 80%;
+    margin: 0 auto;
+}
+.heroHeader h1{
+    font-size: 60px;
+    font-family: myFontBold;
+    color: #fff;
+}
+.heroSearchBox{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    backdrop-filter: blur(20px);
+    border-radius: 10px;
+    background: transparent;
+    gap: 0;
+}
+.CheckInOut{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #EAECEF;
+}
+.RP{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.search{
+    width: 250px;
+    height: 40px;
+    align-items: center;
+    padding: 0 10px;
+    display: flex;
+    gap: 8px;
+    background: transparent;
+    color: #EAECEF;
+}
+.search i{
+    color: #EAECEF;
+    font-size: 13px;
+}
+.search input{
+    height: 40px;
+    width: 250px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #EAECEF;
+    caret-color: #fff;
+}
+.search input::placeholder{
+    color: #EAECEF;
+}
+.searchRooms{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #EAECEF;
+}
+.searchPeople{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #EAECEF;
+}
+.searchRooms::placeholder{
+    color: #EAECEF;
+}
+.searchPeople::placeholder{
+    color: #EAECEF;
+}
+#searchPerson,#searchRoom{
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #EAECEF;
+    caret-color: #fff;
+}
+.searchButton button{
+    width: 120px;
+    height: 40px;
+    font-size: 13px;
+    color: #2659C3;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: #fff;
+}
+/*CART*/
+.categoriesMobile{
+    display: none;
+}
+.categories{
+    position: absolute;
+    width: 80%;
+    margin-top: 10px;
+}
+.carts{
+    display: flex;
+    justify-content: space-between;
+}
+.cart{
+    width: fit-content;
+    height: fit-content;
+    text-align: center;
+    align-items: center;
+    padding-top: 10px;
+    cursor: pointer;
+}
+.categoriesHeader h1{
+    font-size: 30px;
+    color: #fff;
+    font-family: myFontBold;
+}
+.cart p{
+    color: #7d7d7d;
+    font-size: 13px;
+    text-align: center;
+}
+.cart i{
+    font-size: 22px;
+    color: #7d7d7d;
+}
+.cart:hover.cart p{
+    color: #fff;
+}
+.cart:hover.cart i{
+    color: #fff;
+}
+/*TVD*/
+.tvdHeader h1{
+    font-size: 30px;
+    color: #000;
+    font-family: myFontBold;
+    margin-top: 50px;
+}
+.destination{
+    width: fit-content;
+    height: fit-content;
+}
+.destination:hover{
+    transform: scale(1.1);
+}
+.desImg:hover > .desLoc p{
+    border-radius: 8px;
+}
+.desImg{
+    width: 250px;
+    height: 170px;
+    position: relative;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.desImg img{
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+.desImg img:hover{
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+.desLoc{
+    position: absolute;
+    margin-top: -60px;
+    margin-left: 1%;
+}
+.desLoc p{
+    font-size: 17px;
+    color: #fff;
+    margin-left: 10px;
+    cursor: pointer;
+    font-family: netflix;
+}
+
+/*OFFERS*/
+.offersHeader{
+    padding-top: 10px;
+}
+.offersHeader h1{
+    font-size: 30px;
+    color: #000;
+    font-family: myFontBold;
+    margin-top: 50px;
+}
+.offerList{
+    background: #fff;
+    display: flex;
+    align-items: top;
+    height: fit-content;
+    width: fit-content;
+    gap: 20px;
+    padding: 1.5%;
+    box-shadow: 0px 0px 6px #EAECEF inset;
+    border-radius: 10px;
+}
+.offerImg{
+    width: 270px;
+    height: 180px;
+    object-fit: cover;
+}
+.offerImg img{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+.offerText{
+    font-family: netflix;
+    font-weight: normal;
+}
+.offerText h3{
+    font-size: 15px;
+    color: #808080;
+    font-weight: normal;
+    margin-top: 1px;
+}
+.offerText h2{
+    font-size: 22px;
+    color: #000;
+    margin-top: -5px;
+}
+.offerText p{
+    font-size: 13px;
+    margin-top: -5px;
+}
+.offerText button{
+    width: 120px;
+    height: 40px;
+    border-radius: 20px;
+    outline: #2659C3;
+    border: 1px solid #2659C3;
+    color: #fff;
+    font-size: 13px;
+    background-color: #2659C3;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.swiper-slide{
+    margin-right: 0px;
+    width: fit-content;
+    height: fit-content;
+}
+
+/*BBPT*/
+.bbptHeader{
+    padding-top: 10px;
+}
+.bbptHeader h1{
+    font-size: 30px;
+    color: #000;
+    font-family: myFontBold;
+    margin-top: 50px;
+}
+.bbpt{
+    padding-top: 10px;
+}
+.bbptList:hover{
+    transform: scale(1.05);
+}
+.bbptImg{
+    width: 270px;
+    height: 160px;
+    object-fit: cover;
+    position: relative;
+}
+.bbptImg img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+.bbptText{
+    position: absolute;
+    margin-top: -60px;
+    margin-left: 30px;
+    font-family: netflix;
+}
+.bbptText p{
+    font-size: 20px;
+    font-weight: normal;
+    color: #fff;
+}
+.bbptList{
+    width: fit-content;
+    height: fit-content;
+    cursor: pointer;
+}
+/*PLAN TRIP*/
+.planTrip{
+    border-radius: 20px;
+    width: 80%;
+    margin-top: 70px;
+    height: 100%;
+    padding: 4%;
+    background-image: url(images/image\ 20\ \(2\).png);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+.planTrip h1{
+    font-size: 40px;
+    color: #fff;
+    font-family: myFontBold;
+}
+.planTrip p{
+    font-size: 25px;
+    font-family: netflix;
+    color: #fff;
+}
+/*COMMUNITY*/
+.communityHeader{
+    padding-top: 10px;
+}
+.communityHeader h1{
+    font-size: 30px;
+    color: #000;
+    font-family: myFontBold;
+    margin-top: 50px;
+}
+.communityList{
+    width: fit-content;
+    padding: 3%;
+    height: fit-content;
+    box-shadow: 0px 0px 6px #EAECEF inset;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.communityImg{
+    width: 270px;
+    height: 180px;
+    object-fit: cover;
+}
+.communityImg img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+.communityText{
+    font-family: netflix;
+    font-weight: normal;
+}
+.communityText h1{
+    font-size: 20px;
+}
+.communityText h3{
+    font-size: 15px;
+    margin-top: -5px;
+    color: #808080;
+}
+.communityText p{
+    font-size: 13px;
+    margin-top: -5px;
+    color: #808080;
+}
+/*DOWNLOAD APP*/
+.downloadApp{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: top;
+    background-image: url(images/image\ 21.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 5%;
+    margin-top: 80px;
+}
+.downloadImg{
+    height: 350px;
+    width: 250px;
+}
+.downloadImg img{
+    width: 100%;
+    height: 100%;
+}
+.downloadText h1{
+    margin-top: 0px;
+    font-size: 35px;
+    font-family: myFontBold;
+    color: #fff;
+}
+.downloadText p{
+    margin-top: -10px;
+    font-size: 17px;
+    font-family: myFont;
+    color: #fff;
+}
+.wtdta{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 10px;
+    gap: 20px;
+}
+.neButtons{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.neButton{
+    width: 70px;
+    height: 30px;
+    border-radius: 20px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    color: #fff;
+    cursor: pointer;
+} 
+.neButton.neActive{
+    background: #ffffff63;
+    border: none;
+    outline: none;
+    backdrop-filter: blur(30px);
+    color: #fff;
+    font-family: myFont;
+}
+.neText{
+    padding-top: 23px;
+    font-size: 1px;
+    font-family: myFont;
+}
+.NE p{
+    font-size: 13px;
+}
+/*--INPUT EMAIL OR TEXT*/
+.neInputs{
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+}
+.neInput1{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    display: block;
+    margin-left: 0%;
+    width: fit-content;
+    height: fit-content;
+    padding: 2%;
+    display: flex;
+    border-radius: 15px;
+    background: #ffffff69;
+    backdrop-filter: blur(20px);
+    margin-top: 5px;
+    transition: 0.1s;
+}
+
+.neInput1 select{
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #D1DEE9;
+    font-family: myFont;
+}
+.neInput1 input{
+    width: 200px;
+    height: 30px;
+    border: none;
+    outline: none;
+    background: transparent;
+    caret-color: #D1DEE9;
+    color: #D1DEE9;
+}
+.neInput1 input::placeholder{
+    color: #D1DEE9;
+}
+.neInput1 button{
+    width: 150px;
+    height: 30px;
+    border-radius: 20px;
+    color: #2659C3;
+    font-size: 12px;
+    background: #fff;
+    font-family: myFontBold;
+    border: 1px solid #fff;
+    background: #fff;
+    outline: #fff;
+    cursor: pointer;
+}
+.neInput2.emailIsActive{
+    margin-left: 0%;
+    display: flex;
+    transition: 0.1s;
+}
+.neInput1.phoneIsActive{
+    margin-left: -100%;
+    display: none;
+    transition: 0.1s;
+}
+.vm{
+    display: flex;
+}
+.hide{
+    display: 0;
+}
+#validMsg{
+    display: flex;
+    align-items: first baseline;
+    color: #9aeabc;
+}
+#errorMsg{
+    color: #ff9393;
+}
+/*EMAIL ADRESS*/
+.neInput2{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 100%;
+    overflow-x: hidden;
+    width: fit-content;
+    height: fit-content;
+    padding: 2%;
+    display: flex;
+    border-radius: 15px;
+    background: #ffffff69;
+    backdrop-filter: blur(20px);
+    margin-top: 5px;
+    display: none;
+    transition: 0.1s;
+}
+.neInput2 input{
+    width: 200px;
+    height: 30px;
+    border: none;
+    outline: none;
+    background: transparent;
+    caret-color: #D1DEE9;
+    color: #D1DEE9;
+}
+.neInput2 input::placeholder{
+    color: #D1DEE9;
+}
+.neInput2 button{
+    width: 150px;
+    height: 30px;
+    border-radius: 20px;
+    color: #2659C3;
+    font-size: 12px;
+    background: #fff;
+    font-family: myFontBold;
+    border: 1px solid #fff;
+    background: #fff;
+    outline: #fff;
+    cursor: pointer;
+}
+/*END OF INPUT*/
+.orLine p{
+    font-size: 14px;
+}
+.googlePlay{
+    width: 150px;
+    height: 40px;
+    object-fit: cover;
+}
+.appStore{
+    width: 150px;
+    height: 40px;
+    object-fit: cover;
+    margin-top: 20px;
+}
+.googlePlay img,.appStore img{
+    width: 100%;
+    height: 100%;
+}
+/*FOOTER*/
+.footers{
+    padding: 0 10%;
+    margin: 0 auto;
+    background: #141414;
+}
+.footer{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    background: #141414;
+    padding-top: 20px;
+}
+.footerHeader h1{
+    font-size: 30px;
+    font-family: myFontBold;
+    color: #fff;
+}
+.footerList ul li{
+    list-style: none;
+    margin-bottom: 10px;
+}
+.footerList ul li a{
+    text-decoration: none;
+    color: #808080;
+    font-size: 13px;
+}
+.footerList ul button{
+    width: 120px;
+    height: 30px;
+    background: transparent;
+    border: 1px solid #808080;
+    outline: #808080;
+    font-size: 13px;
+    color: #808080;
+    cursor: pointer;
+}
+.footerList ul p{
+    font-size: 12px;
+    color: #808080;
+}
+.footerList{
+    align-items: center;
+}
+.socialList{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+.socialList i{
+    font-size: 22px;
+    color: #808080;
+    cursor: pointer;
+}
+.maxWidth{
+    display: none;
+}
+@media screen and (min-width:2100px) and (orientation:landscape)  {
+    body{
+        background: #000
+    }
+    .trxvl{
+        display: none;
+    }
+    .maxWidth{
+        display: block;
+        font-family: 'Poppins', sans-serif;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: fit-content;
+        color: #fff;
+    }
+    .maxWidth h1{
+        font-size: 70px;
+    }
+    .maxWidth p{
+        font-size: 40px;
+    }
+    .aboutMainContent{
+        display: none;
+    }
+    .footer{
+        display: none;
+    }
+}
+@media screen and (min-width:1600px) and (orientation:landscape) {
+    .bar{
+        display: none;
+    }
+    .hamburger{
+        display: none;
+    }
+    .header h1{
+        font-size: 50px;
+    }
+    .nav{
+        justify-content: space-between;
+    }
+    .navList ul{
+        gap: 60px;
+    }
+    .navList ul li a{
+        font-size: 22px;
+    }
+    .heroHeader{
+        margin-top: -20px;
+    }
+    .heroHeader h1{
+        font-size: 80px;
+    }
+    .heroSearchBox{
+        justify-content: space-between;
+        padding: 0 2%;
+        border-radius: 30px;
+    }
+    .search{
+        height: 70px;
+    }
+    .search i{
+        font-size: 20px;
+    }
+    .search input{
+        width: 320px;
+        font-size: 20px;
+    }
+    .search input::placeholder{
+        font-size: 20px;
+    }
+    .CheckInOut{
+        gap: 20px;
+    }
+    .CheckInOut p{
+        font-size: 20px;
+    }
+    input[type="datetime-local"]{
+        width: 200px;
+        height: 70px;
+        background: transparent;
+        border: 1.6px solid #EAECEF;
+        outline: none;
+        color: #EAECEF;
+        cursor: pointer;
+        border-radius: 40px;
+        padding: 2%;
+        border-top: none;
+        border-bottom: none;
+        font-size: 20px;
+    }
+    .RP{
+        justify-content: space-between;
+        gap: 50px;
+    }
+    .searchRooms,.searchPeople{
+        width: 80px;
+        gap: 5px;
+    }
+    #searchRoom,#searchPerson{
+        font-size: 20px;
+    }
+    .SR i{
+        font-size: 30px;
+    }
+    .searchButton button{
+        width: 200px;
+        height: 60px;
+        border-radius: 30px;
+        font-size: 20px;
+    }
+    /*CART*/
+    .categoriesHeader h1{
+        font-size: 45px;
+    }
+    .cartImg i{
+        font-size: 35px;
+    }
+    .cart p{
+        font-size: 25px;
+    }
+    /*TVD*/
+    .tvdHeader h1{
+        font-size: 45px;
+        margin-top: 5%;
+    }
+    .desImg{
+        width: 350px;
+        height: 200px;
+    }
+    .desLoc{
+        margin-top: -70px;
+        margin-left: 3%;
+        position: absolute;
+    }
+    .desLoc p{
+        font-size: 20px;
+    }
+    /*OFFERS*/
+    .offersHeader h1{
+        font-size: 45px;
+    }
+    .offerImg{
+        width: 350px;
+        height: 230px;
+    }
+    .offerText h3{
+        font-size: 20px;
+    }
+    .offerText h2{
+        font-size: 28px;
+    }
+    .offerText p{
+        font-size: 18px;
+        margin-top: -5px;
+    }
+    .offerText button{
+        width: 170px;
+        height: 50px;
+        margin-top: 0px;
+        font-size: 19px;
+    }
+    /*BBPT*/
+    .bbptHeader h1{
+        font-size: 45px;
+    }
+    .bbptImg{
+        width: 350px;
+        height: 200px;
+    }
+    .bbptText{
+        margin-top: -75px;
+        margin-left: 10%;
+        position: absolute;
+    }
+    .bbptText p{
+        font-size: 22px;
+    }
+    /*PLAN*/
+    .planTrip h1{
+        font-size: 50px;
+    }
+    .planTrip p{
+        font-size: 30px;
+    }
+    /*COMMUNITY*/
+    .communityHeader h1{
+        font-size: 45px;
+    }
+    .communityImg{
+        width: 320px;
+        height: 250px;
+    }
+    .communityText h1{
+        font-size: 25px;
+    }
+    .communityText h3{
+        font-size: 22px;
+    }
+    .communityText p{
+        font-size: 18px;
+    }
+    /*CONTACT*/
+    .downloadImg{
+        width: 350px;
+        height: 450px;
+    }
+    .downloadText h1{
+        font-size: 40px;
+    }
+    .downloadText p{
+        font-size: 20px;
+    }
+    .neButton{
+        width: 150px;
+        height: 40px;
+        font-size: 18px;
+    }
+    .neInput1 input{
+        width: 300px;
+        height: 40px;
+        font-size: 20px;
+    }
+    .neInput1 button{
+        width: 200px;
+        height: 40px;
+        font-size: 15px;
+    }
+    .neInput2 input{
+        width: 300px;
+        height: 40px;
+        font-size: 20px;
+    }
+    .neInput2 button{
+        width: 200px;
+        height: 40px;
+        font-size: 15px;
+    }
+    .googlePlay , .appStore{
+        width: 200px;
+        height: 60px;
+    }
+    /*FOOTER*/
+    .footerHeader h1{
+        font-size: 60px;
+    }
+    .footerList ul li{
+        margin-bottom: 30px;
+    }
+    .footerList ul li a{
+        font-size: 20px;
+    }
+    .footerList ul button{
+        width: 150px;
+        height: 45px;
+        font-size: 20px;
+    }
+    .footerList ul p{
+        font-size: 18px;
+    }
+    .socialList{
+        width: 250px;
+    }
+    .socialList i{
+        font-size: 35px;
+    }
+}
+@media screen and (max-width:1599px) and (min-height:1000px) and (orientation:landscape){
+    .bar{
+        display: none;
+    }
+    .hamburger{
+        display: none;
+    }
+    .heroSearchBox{
+        border: 1px solid #EAECEF;
+    }
+    .header h1{
+        font-size: 40px;
+        font-family: myFontBold;
+        color: #fff;
+    }
+    .Links{
+        text-decoration: none;
+        color: #ffffffc5;
+        font-size: 16px;
+        position: relative;
+    }
+    /*hero*/
+    .heroHeader h1{
+        font-size: 75px;
+        font-family: myFontBold;
+        color: #fff;
+    }
+    /*herosearch*/
+    .search{
+        height: 70px;
+    }
+    .search{
+        width: 250px;
+        height: 70px;
+        align-items: center;
+        padding: 0 10px;
+        display: flex;
+        gap: 8px;
+        background: transparent;
+        color: #EAECEF;
+    }
+    .search i{
+        color: #EAECEF;
+        font-size: 18px;
+    }
+    .search input{
+        height: 70px;
+        width: 250px;
+        background: transparent;
+        border: none;
+        outline: none;
+        color: #EAECEF;
+        caret-color: #fff;
+        font-size: 15px;
+    }
+    .search input::placeholder{
+        color: #EAECEF;
+        font-size: 15px;
+    }
+    .searchRooms{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: #EAECEF;
+    }
+    .searchPeople{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: #EAECEF;
+    }
+    .searchRooms::placeholder{
+        color: #EAECEF;
+        font-size: 14px;
+    }
+    .searchPeople::placeholder{
+        color: #EAECEF;
+        font-size: 14px;
+    }
+    #searchPerson,#searchRoom{
+        background: transparent;
+        border: none;
+        outline: none;
+        color: #EAECEF;
+        caret-color: #fff;
+        font-size: 14px;
+    }
+    .searchButton button{
+        width: 150px;
+        height: 55px;
+        font-size: 15px;
+        color: #2659C3;
+        border-radius: 50px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+    }
+    input[type="datetime-local"]{
+        width: 170px;
+        height: 40px;
+        background: transparent;
+        border: 0.01px solid #EAECEF;
+        outline: none;
+        color: #EAECEF;
+        cursor: pointer;
+        border-radius: 10px;
+        padding: 2%;
+        border-top: none;
+        border-bottom: none;
+    }
+    .SR i{
+        font-size: 17px;
+    }
+    /*CART*/
+    .categoriesHeader h1{
+        font-size: 40px;
+    }
+    .cart p{
+    color: #7d7d7d;
+    font-size: 15px;
+    text-align: center;
+    }
+    .cart i{
+    font-size: 27px;
+    color: #7d7d7d;
+    }
+    .cart:hover.cart p{
+    color: #fff;
+    }
+    .cart:hover.cart i{
+    color: #fff;
+    }
+    /*TVD*/
+    .tvd{
+        position: relative;
+        z-index: 4;
+        margin-top: -30%;
+    }
+.tvdHeader h1{
+    font-size: 40px;
+    color: #fff;
+    font-family: myFontBold;
+    margin-top: 50px;
+}
+.desImg{
+    width: 300px;
+    height: 170px;
+    position: relative;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.desImg img{
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+}
+.desImg img:hover{
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+.desLoc{
+    position: absolute;
+    margin-top: -60px;
+    margin-left: 2%;
+}
+.desLoc p{
+    font-size: 20px;
+    color: #fff;
+    margin-left: 10px;
+    cursor: pointer;
+    font-family: netflix;
+}
+/*OFFERS*/
+.offersHeader{
+    padding-top: 15px;
+}
+.offersHeader h1{
+    font-size: 40px;
+    color: #000;
+    font-family: myFontBold;
+    margin-top: 70px;
+}
+.offerList{
+    background: #fff;
+    display: flex;
+    align-items: top;
+    height: fit-content;
+    width: fit-content;
+    gap: 20px;
+    padding: 2%;
+    box-shadow: 0px 0px 6px #EAECEF inset;
+    border-radius: 10px;
+}
+.offerImg{
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+}
+.offerText h3{
+    font-size: 17px;
+    color: #808080;
+    font-weight: normal;
+    margin-top: 1px;
+}
+.offerText h2{
+    font-size: 25px;
+    color: #000;
+    margin-top: -10px;
+}
+.offerText p{
+    font-size: 15px;
+    margin-top: -5px;
+}
+.offerText button{
+    width: 150px;
+    height: 40px;
+    border-radius: 20px;
+    outline: #2659C3;
+    border: 1px solid #2659C3;
+    color: #fff;
+    font-size: 13px;
+    background-color: #2659C3;
+    margin-top: 3px;
+    cursor: pointer;
+}
+.swiper-slide{
+    margin-right: 0px;
+    width: fit-content;
+    height: fit-content;
+}
+/*BBPT*/
+.bbptHeader{
+    padding-top: 15px;
+}
+.bbptHeader h1{
+    font-size: 40px;
+    color: #000;
+    font-family: myFontBold;
+    margin-top: 50px;
+}
+.bbpt{
+    padding-top: 15px;
+}
+.bbptImg{
+    width: 300px;
+    height: 180px;
+    object-fit: cover;
+    position: relative;
+}
+.bbptText{
+    position: absolute;
+    margin-top: -80px;
+    margin-left: 30px;
+    font-family: netflix;
+}
+.bbptText p{
+    font-size: 25px;
+    font-weight: normal;
+    color: #fff;
+}
+/*PLAN TRIP*/
+.planTrip{
+    border-radius: 20px;
+    width: 80%;
+    margin-top: 90px;
+    height: 100%;
+    padding: 6%;
+    background-image: url(images/image\ 20\ \(2\).png);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+.planTrip h1{
+    font-size: 50px;
+    color: #fff;
+    font-family: myFontBold;
+}
+.planTrip p{
+    font-size: 30px;
+    font-family: netflix;
+    color: #fff;
+}
+/*COMMUNITY*/
+.communityHeader{
+    padding-top: 15px;
+}
+.communityHeader h1{
+    font-size: 40px;
+    color: #000;
+    font-family: myFontBold;
+    margin-top: 50px;
+}
+.communityList{
+    width: fit-content;
+    padding: 6%;
+    height: fit-content;
+    box-shadow: 0px 0px 6px #EAECEF inset;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.communityImg{
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+}
+.communityImg img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+.communityText h1{
+    font-size: 25px;
+}
+.communityText h3{
+    font-size: 17px;
+    margin-top: -5px;
+    color: #808080;
+}
+.communityText p{
+    font-size: 15px;
+    margin-top: -5px;
+    color: #808080;
+}
+/*DOWNLOAD APP*/
+.downloadApp{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: top;
+    background-image: url(images/image\ 21.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 5%;
+    margin-top: 80px;
+}
+.downloadImg{
+    height: 400px;
+    width: 300px;
+}
+.downloadText h1{
+    margin-top: 0px;
+    font-size: 45px;
+    font-family: myFontBold;
+    color: #fff;
+}
+.downloadText p{
+    margin-top: -10px;
+    font-size: 20px;
+    font-family: myFont;
+    color: #fff;
+}
+.wtdta{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 10px;
+    gap: 20px;
+}
+.neButtons{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.neButton{
+    width: 90px;
+    height: 35px;
+    border-radius: 20px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    color: #fff;
+    cursor: pointer;
+} 
+.neText{
+    padding-top: 23px;
+    font-size: 1px;
+    font-family: myFont;
+}
+.NE p{
+    font-size: 14px;
+}
+/*--INPUT EMAIL OR TEXT*/
+.neInputs{
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+}
+.neInput1{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    display: block;
+    margin-left: 0%;
+    width: fit-content;
+    height: fit-content;
+    padding: 2%;
+    display: flex;
+    border-radius: 15px;
+    background: #ffffff69;
+    backdrop-filter: blur(20px);
+    margin-top: 5px;
+    transition: 0.1s;
+}
+.neInput1 input{
+    width: 250px;
+    height: 40px;
+    border: none;
+    outline: none;
+    background: transparent;
+    caret-color: #D1DEE9;
+    color: #D1DEE9;
+    font-size: 13px;
+}
+.neInput1 input::placeholder{
+    color: #D1DEE9;
+}
+.neInput1 button{
+    width: 170px;
+    height: 40px;
+    border-radius: 20px;
+    color: #2659C3;
+    font-size: 14px;
+    background: #fff;
+    font-family: myFontBold;
+    border: 1px solid #fff;
+    background: #fff;
+    outline: #fff;
+    cursor: pointer;
+}
+/*EMAIL ADRESS*/
+.neInput2{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 100%;
+    overflow-x: hidden;
+    width: fit-content;
+    height: fit-content;
+    padding: 2.5%;
+    display: flex;
+    border-radius: 15px;
+    background: #ffffff69;
+    backdrop-filter: blur(20px);
+    margin-top: 5px;
+    display: none;
+    transition: 0.1s;
+}
+.neInput2 input{
+    width: 250px;
+    height: 40px;
+    border: none;
+    outline: none;
+    background: transparent;
+    caret-color: #D1DEE9;
+    color: #D1DEE9;
+    font-size: 14px;
+}
+.neInput2 input::placeholder{
+    color: #D1DEE9;
+}
+.neInput2 button{
+    width: 170px;
+    height: 40px;
+    border-radius: 20px;
+    color: #2659C3;
+    font-size: 12px;
+    background: #fff;
+    font-family: myFontBold;
+    border: 1px solid #fff;
+    background: #fff;
+    outline: #fff;
+    cursor: pointer;
+}
+/*END OF INPUT*/
+.orLine p{
+    font-size: 16px;
+}
+.googlePlay{
+    width: 180px;
+    height: 50px;
+    object-fit: cover;
+}
+.appStore{
+    width: 180px;
+    height: 50px;
+    object-fit: cover;
+    margin-top: 20px;
+}
+.googlePlay img,.appStore img{
+    width: 100%;
+    height: 100%;
+}
+/*FOOTER*/
+.footer{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    background: #141414;
+    padding-top: 20px;
+}
+.footerHeader h1{
+    font-size: 40px;
+    font-family: myFontBold;
+    color: #fff;
+}
+.footerList ul li{
+    list-style: none;
+    margin-bottom: 15px;
+}
+.footerList ul li a{
+    text-decoration: none;
+    color: #808080;
+    font-size: 15px;
+}
+.footerList ul button{
+    width: 150px;
+    height: 35px;
+    background: transparent;
+    border: 1px solid #808080;
+    outline: #808080;
+    font-size: 13px;
+    color: #808080;
+}
+.footerList ul p{
+    font-size: 14px;
+    color: #808080;
+}
+.socialList{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+.socialList i{
+    font-size: 24px;
+    color: #808080;
+    cursor: pointer;
+}
+}
+@media screen and (max-width:1599px) and (max-height:999px) and (orientation:landscape){
+    .bar{
+        display: none;
+    }
+    .hamburger{
+        display: none;
+    }
+    .tvd{
+        position: relative;
+        z-index: 4;
+        margin-top: -25%;
+    }
+    .tvdHeader h1{
+        color: #fff;
+    }
+    .offers{
+        position: relative;
+        z-index: 4;
+    }
+    .offersHeader h1{
+        color: #fff;
+    }
+}
+@media screen and (max-width:1599px) and (max-height:750px) and (orientation:landscape){
+    .bar{
+        display: none;
+    }
+    .hamburger{
+        display: none;
+    }
+    .tvd{
+        position: relative;
+        z-index: 4;
+        margin-top: 1%;
+    }
+    .tvdHeader h1{
+        color: #000;
+    }
+    .offers{
+        position: relative;
+        z-index: 4;
+    }
+    .offersHeader h1{
+        color: #000;
+    }
+}
+@media screen and (max-width:1299px) and (orientation:landscape){
+    .bar{
+        display: none;
+    }
+    .hamburger{
+        display: none;
+    }
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+    input[type="datetime-local"]::-webkit-inner-spin-button,
+    input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+        color-scheme: dark;
+        cursor: pointer;
+    }
+    input[type="datetime-local"]{
+        width: 150px;
+        height: 40px;
+        background:transparent;
+        border: 0.01px solid #EAECEF;
+        outline: none;
+        color: #EAECEF;
+        cursor: pointer;
+        border-radius: 10px;
+        padding: 2%;
+        border-top: none;
+        border-bottom: none;
+    }
+    .header h1{
+        font-size: 30px;
+        font-family: myFontBold;
+        color: #fff;
+    }
+    .heros{
+        width: 100%;
+        height: 100vh;
+        background-image: url(images/image\ 1.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+    }
+    .heros::after{
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 95%;
+        width: 100%;
+        height: 13%;
+        background: #fff;
+        filter: blur(20px);
+        border-radius: 0;
+    }
+    .nav{
+        display: flex;
+        align-items: center;
+        width: 90%;
+        justify-content: space-between;
+        margin: 0 auto;
+    }
+    .navList ul{
+        display: flex;
+        align-items: center;
+        gap: 50px;
+    }
+    .navList ul li{
+        list-style: none;
+    }
+    .Links{
+        text-decoration: none;
+        color: #ffffffc5;
+        font-size: 14px;
+        position: relative;
+    }
+    .hamburger{
+        display: none;
+    }
+    .Links.active{
+        color: #fff;
+        position: relative;
+    }
+    .Links::after{
+        content: "";
+        position: absolute;
+        padding-bottom: 5px;
+        background: #fff;
+        width: 0%;
+        left: -25%;
+        height: -5px;
+        bottom: -7px;
+        border-radius: 20px;
+        transition: 0.1s;
+        color: #fff;
+    }
+    .Links:hover:after{
+        content: "";
+        position: absolute;
+        padding-bottom: 5px;
+        background: #fff;
+        width: 150%;
+        left: -25%;
+        height: -5px;
+        bottom: -7px;
+        border-radius: 20px;
+        transition: 0.1s;
+        color: #fff;
+    }
+    .Links.active::after{
+        content: "";
+        position: absolute;
+        padding-bottom: 5px;
+        background: #fff;
+        width: 150%;
+        left: -25%;
+        height: -5px;
+        bottom: -7px;
+        border-radius: 20px;
+        transition: 0.1s;
+        color: #fff;
+    }
+    .androidMenu{
+        overflow-x: hidden;
+        position: fixed;
+        bottom: -3%;
+        width: 100%;
+        display: none;
+    }
+    .androidMenu ul{
+        display: flex;
+        width: 100%;
+        background-color: #fff;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .androidMenu ul li{
+        list-style: none;
+        text-align: center;
+        align-items: center;
+    }
+    .androidMenu li a{
+        text-decoration: none;
+        text-align: center;
+        align-items: center;
+        color: #999999
+    }
+    .androidMenu li a.amActive{
+        color: #2659C3;
+    }
+    /*HERO*/
+    .hero{
+        width: 80%;
+        margin: 0 auto;
+    }
+    .heroHeader h1{
+        font-size: 60px;
+        font-family: myFontBold;
+        color: #fff;
+    }
+    .heroSearchBox{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        backdrop-filter: blur(20px);
+        border-radius: 10px;
+        background: transparent;
+        border: 1px solid #EAECEF;
+    }
+    .CheckInOut{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: #EAECEF;
+    }
+    .RP{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    .search{
+        width: 250px;
+        height: 40px;
+        align-items: center;
+        padding: 0 10px;
+        display: flex;
+        gap: 8px;
+        background: transparent;
+        color: #EAECEF;
+    }
+    .search i{
+        color: #EAECEF;
+        font-size: 13px;
+    }
+    .search input{
+        height: 40px;
+        width: 250px;
+        background: transparent;
+        border: none;
+        outline: none;
+        color: #EAECEF;
+        caret-color: #fff;
+    }
+    .search input::placeholder{
+        color: #EAECEF;
+    }
+    .searchRooms{
+        display: flex;
+        align-items: center;
+        gap: 1px;
+        color: #EAECEF;
+    }
+    .searchPeople{
+        display: flex;
+        align-items: center;
+        gap: 1px;
+        color: #EAECEF;
+    }
+    .searchRooms::placeholder{
+        color: #EAECEF;
+        font-size: 5px;
+    }
+    .searchPeople::placeholder{
+        color: #EAECEF;
+        font-size: 5px;
+    }
+    #searchPerson,#searchRoom{
+        background: transparent;
+        outline: none;
+        color: #EAECEF;
+        caret-color: #fff;
+        width: 35px;
+    }
+    .searchButton button{
+        width: 120px;
+        height: 40px;
+        font-size: 13px;
+        color: #2659C3;
+        border-radius: 20px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        background: #fff;
+    }
+    /*CART*/
+    .categories{
+        position: absolute;
+        width: 80%;
+        margin-top: 10px;
+    }
+    .carts{
+        display: flex;
+        justify-content: space-between;
+    }
+    .cart{
+        width: fit-content;
+        height: fit-content;
+        text-align: center;
+        align-items: center;
+        padding-top: 10px;
+        cursor: pointer;
+    }
+    .categoriesHeader h1{
+        font-size: 30px;
+        color: #fff;
+        font-family: myFontBold;
+    }
+    .cart p{
+        color: #7d7d7d;
+        font-size: 13px;
+        text-align: center;
+    }
+    .cart i{
+        font-size: 22px;
+        color: #7d7d7d;
+    }
+    .cart:hover.cart p{
+        color: #fff;
+    }
+    .cart:hover.cart i{
+        color: #fff;
+    }
+    /*TVD*/
+    .tvdHeader h1{
+        font-size: 30px;
+        color: #fff;
+        font-family: myFontBold;
+        margin-top: 50px;
+    }
+    .destination{
+        width: fit-content;
+        height: fit-content;
+    }
+    .destination:hover{
+        transform: scale(1.1);
+    }
+    .desImg:hover > .desLoc p{
+        border-radius: 8px;
+    }
+    .desImg{
+        width: 250px;
+        height: 170px;
+        position: relative;
+        border-radius: 20px;
+        cursor: pointer;
+    }
+    .desImg img{
+        width: 100%;
+        height: 100%;
+        border-radius: 8px;
+    }
+    .desImg img:hover{
+        width: 100%;
+        height: 100%;
+        border-radius: 8px;
+    }
+    .desLoc{
+        position: absolute;
+        margin-top: -60px;
+        margin-left: 1%;
+    }
+    .desLoc p{
+        font-size: 17px;
+        color: #fff;
+        margin-left: 10px;
+        cursor: pointer;
+        font-family: netflix;
+    }
+    
+    /*OFFERS*/
+    .offersHeader{
+        padding-top: 10px;
+    }
+    .offersHeader h1{
+        font-size: 30px;
+        color: #000;
+        font-family: myFontBold;
+        margin-top: 50px;
+    }
+    .offerList{
+        background: #fff;
+        display: flex;
+        align-items: top;
+        height: fit-content;
+        width: fit-content;
+        gap: 20px;
+        padding: 1.5%;
+        box-shadow: 0px 0px 6px #EAECEF inset;
+        border-radius: 10px;
+    }
+    .offerImg{
+        width: 270px;
+        height: 180px;
+        object-fit: cover;
+    }
+    .offerImg img{
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+    }
+    .offerText{
+        font-family: netflix;
+        font-weight: normal;
+    }
+    .offerText h3{
+        font-size: 15px;
+        color: #808080;
+        font-weight: normal;
+        margin-top: 1px;
+    }
+    .offerText h2{
+        font-size: 22px;
+        color: #000;
+        margin-top: -5px;
+    }
+    .offerText p{
+        font-size: 13px;
+        margin-top: -5px;
+    }
+    .offerText button{
+        width: 120px;
+        height: 40px;
+        border-radius: 20px;
+        outline: #2659C3;
+        border: 1px solid #2659C3;
+        color: #fff;
+        font-size: 13px;
+        background-color: #2659C3;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+    .swiper-slide{
+        margin-right: 0px;
+        width: fit-content;
+        height: fit-content;
+    }
+    
+    /*BBPT*/
+    .bbptHeader{
+        padding-top: 10px;
+    }
+    .bbptHeader h1{
+        font-size: 30px;
+        color: #000;
+        font-family: myFontBold;
+        margin-top: 50px;
+    }
+    .bbpt{
+        padding-top: 10px;
+    }
+    .bbptList:hover{
+        transform: scale(1.05);
+    }
+    .bbptImg{
+        width: 270px;
+        height: 160px;
+        object-fit: cover;
+        position: relative;
+    }
+    .bbptImg img{
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+    }
+    .bbptText{
+        position: absolute;
+        margin-top: -60px;
+        margin-left: 30px;
+        font-family: netflix;
+    }
+    .bbptText p{
+        font-size: 20px;
+        font-weight: normal;
+        color: #fff;
+    }
+    .bbptList{
+        width: fit-content;
+        height: fit-content;
+        cursor: pointer;
+    }
+    /*PLAN TRIP*/
+    .planTrip{
+        border-radius: 20px;
+        width: 80%;
+        margin-top: 70px;
+        height: 100%;
+        padding: 4%;
+        background-image: url(images/image\ 20\ \(2\).png);
+        background-size: cover;
+        background-repeat: no-repeat;
+    
+    }
+    .planTrip h1{
+        font-size: 40px;
+        color: #fff;
+        font-family: myFontBold;
+    }
+    .planTrip p{
+        font-size: 25px;
+        font-family: netflix;
+        color: #fff;
+    }
+    /*COMMUNITY*/
+    .communityHeader{
+        padding-top: 10px;
+    }
+    .communityHeader h1{
+        font-size: 30px;
+        color: #000;
+        font-family: myFontBold;
+        margin-top: 50px;
+    }
+    .communityList{
+        width: fit-content;
+        padding: 3%;
+        height: fit-content;
+        box-shadow: 0px 0px 6px #EAECEF inset;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+    .communityImg{
+        width: 270px;
+        height: 180px;
+        object-fit: cover;
+    }
+    .communityImg img{
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+    }
+    .communityText{
+        font-family: netflix;
+        font-weight: normal;
+    }
+    .communityText h1{
+        font-size: 20px;
+    }
+    .communityText h3{
+        font-size: 15px;
+        margin-top: -5px;
+        color: #808080;
+    }
+    .communityText p{
+        font-size: 13px;
+        margin-top: -5px;
+        color: #808080;
+    }
+    /*DOWNLOAD APP*/
+    .downloadApp{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: top;
+        background-image: url(images/image\ 21.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding-top: 5%;
+        margin-top: 80px;
+    }
+    .downloadImg{
+        height: 350px;
+        width: 250px;
+    }
+    .downloadImg img{
+        width: 100%;
+        height: 100%;
+    }
+    .downloadText h1{
+        margin-top: 0px;
+        font-size: 35px;
+        font-family: myFontBold;
+        color: #fff;
+    }
+    .downloadText p{
+        margin-top: -10px;
+        font-size: 17px;
+        font-family: myFont;
+        color: #fff;
+    }
+    .wtdta{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding-top: 10px;
+        gap: 20px;
+    }
+    .neButtons{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    .neButton{
+        width: 70px;
+        height: 30px;
+        border-radius: 20px;
+        background: transparent;
+        border: none;
+        outline: none;
+        font-size: 15px;
+        color: #fff;
+        cursor: pointer;
+    } 
+    .neButton.neActive{
+        background: #ffffff63;
+        border: none;
+        outline: none;
+        backdrop-filter: blur(30px);
+        color: #fff;
+        font-family: myFont;
+    }
+    .neText{
+        padding-top: 23px;
+        font-size: 1px;
+        font-family: myFont;
+    }
+    .NE p{
+        font-size: 13px;
+    }
+    /*--INPUT EMAIL OR TEXT*/
+    .neInputs{
+        width: fit-content;
+        height: fit-content;
+        display: flex;
+    }
+    .neInput1{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        display: block;
+        margin-left: 0%;
+        width: fit-content;
+        height: fit-content;
+        padding: 2%;
+        display: flex;
+        border-radius: 15px;
+        background: #ffffff69;
+        backdrop-filter: blur(20px);
+        margin-top: 5px;
+        transition: 0.1s;
+    }
+    
+    .neInput1 select{
+        border: none;
+        outline: none;
+        background: transparent;
+        color: #D1DEE9;
+        font-family: myFont;
+    }
+    .neInput1 input{
+        width: 200px;
+        height: 30px;
+        border: none;
+        outline: none;
+        background: transparent;
+        caret-color: #D1DEE9;
+        color: #D1DEE9;
+    }
+    .neInput1 input::placeholder{
+        color: #D1DEE9;
+    }
+    .neInput1 button{
+        width: 150px;
+        height: 30px;
+        border-radius: 20px;
+        color: #2659C3;
+        font-size: 12px;
+        background: #fff;
+        font-family: myFontBold;
+        border: 1px solid #fff;
+        background: #fff;
+        outline: #fff;
+        cursor: pointer;
+    }
+    .neInput2.emailIsActive{
+        margin-left: 0%;
+        display: flex;
+        transition: 0.1s;
+    }
+    .neInput1.phoneIsActive{
+        margin-left: -100%;
+        display: none;
+        transition: 0.1s;
+    }
+    .vm{
+        display: flex;
+    }
+    .hide{
+        display: 0;
+    }
+    #validMsg{
+        display: flex;
+        align-items: first baseline;
+        color: #9aeabc;
+    }
+    #errorMsg{
+        color: #ff9393;
+    }
+    /*EMAIL ADRESS*/
+    .neInput2{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-left: 100%;
+        overflow-x: hidden;
+        width: fit-content;
+        height: fit-content;
+        padding: 2%;
+        display: flex;
+        border-radius: 15px;
+        background: #ffffff69;
+        backdrop-filter: blur(20px);
+        margin-top: 5px;
+        display: none;
+        transition: 0.1s;
+    }
+    .neInput2 input{
+        width: 200px;
+        height: 30px;
+        border: none;
+        outline: none;
+        background: transparent;
+        caret-color: #D1DEE9;
+        color: #D1DEE9;
+    }
+    .neInput2 input::placeholder{
+        color: #D1DEE9;
+    }
+    .neInput2 button{
+        width: 150px;
+        height: 30px;
+        border-radius: 20px;
+        color: #2659C3;
+        font-size: 12px;
+        background: #fff;
+        font-family: myFontBold;
+        border: 1px solid #fff;
+        background: #fff;
+        outline: #fff;
+        cursor: pointer;
+    }
+    /*END OF INPUT*/
+    .orLine p{
+        font-size: 14px;
+    }
+    .googlePlay{
+        width: 150px;
+        height: 40px;
+        object-fit: cover;
+    }
+    .appStore{
+        width: 150px;
+        height: 40px;
+        object-fit: cover;
+        margin-top: 20px;
+    }
+    .googlePlay img,.appStore img{
+        width: 100%;
+        height: 100%;
+    }
+    /*FOOTER*/
+    .footers{
+        padding: 0 10%;
+        margin: 0 auto;
+        background: #141414;
+    }
+    .footer{
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        background: #141414;
+        padding-top: 20px;
+    }
+    .footerHeader h1{
+        font-size: 30px;
+        font-family: myFontBold;
+        color: #fff;
+    }
+    .footerList ul li{
+        list-style: none;
+        margin-bottom: 10px;
+    }
+    .footerList ul li a{
+        text-decoration: none;
+        color: #808080;
+        font-size: 13px;
+    }
+    .footerList ul button{
+        width: 120px;
+        height: 30px;
+        background: transparent;
+        border: 1px solid #808080;
+        outline: #808080;
+        font-size: 13px;
+        color: #808080;
+    }
+    .footerList ul p{
+        font-size: 12px;
+        color: #808080;
+    }
+    .footerList{
+        align-items: center;
+    }
+    .socialList{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 50px;
+    }
+    .socialList i{
+        font-size: 22px;
+        color: #808080;
+        cursor: pointer;
+    }
+    
+}
+@media screen and (max-width:1299px) and (min-height:850px) and (orientation:landscape){
+    .bar{
+        display: none;
+    }
+    .hamburger{
+        display: none;
+    }
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+    input[type="datetime-local"]::-webkit-inner-spin-button,
+    input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+        color-scheme: dark;
+        cursor: pointer;
+    }
+    input[type="datetime-local"]{
+        width: 170px;
+        height: 40px;
+        background: transparent;
+        border: none;
+        outline: none;
+        color: #EAECEF;
+        cursor: pointer;
+    }
+    .header h1{
+        font-size: 30px;
+        font-family: myFontBold;
+        color: #fff;
+    }
+    .heros{
+        width: 100%;
+        height: 100vh;
+        background-image: url(images/image\ 1.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+    }
+    .heros::after{
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 95%;
+        width: 100%;
+        height: 13%;
+        background: #fff;
+        filter: blur(20px);
+        border-radius: 0;
+    }
+    .nav{
+        display: flex;
+        align-items: center;
+        width: 90%;
+        justify-content: space-between;
+        margin: 0 auto;
+    }
+    .navList ul{
+        display: flex;
+        align-items: center;
+        gap: 50px;
+    }
+    .navList ul li{
+        list-style: none;
+    }
+    .Links{
+        text-decoration: none;
+        color: #ffffffc5;
+        font-size: 14px;
+        position: relative;
+    }
+    .hamburger{
+        display: none;
+    }
+    .Links.active{
+        color: #fff;
+        position: relative;
+    }
+    .Links::after{
+        content: "";
+        position: absolute;
+        padding-bottom: 5px;
+        background: #fff;
+        width: 0%;
+        left: -25%;
+        height: -5px;
+        bottom: -7px;
+        border-radius: 20px;
+        transition: 0.1s;
+        color: #fff;
+    }
+    .Links:hover:after{
+        content: "";
+        position: absolute;
+        padding-bottom: 5px;
+        background: #fff;
+        width: 150%;
+        left: -25%;
+        height: -5px;
+        bottom: -7px;
+        border-radius: 20px;
+        transition: 0.1s;
+        color: #fff;
+    }
+    .Links.active::after{
+        content: "";
+        position: absolute;
+        padding-bottom: 5px;
+        background: #fff;
+        width: 150%;
+        left: -25%;
+        height: -5px;
+        bottom: -7px;
+        border-radius: 20px;
+        transition: 0.1s;
+        color: #fff;
+    }
+    .androidMenu{
+        overflow-x: hidden;
+        position: fixed;
+        bottom: -3%;
+        width: 100%;
+        display: none;
+    }
+    .androidMenu ul{
+        display: flex;
+        width: 100%;
+        background-color: #fff;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .androidMenu ul li{
+        list-style: none;
+        text-align: center;
+        align-items: center;
+    }
+    .androidMenu li a{
+        text-decoration: none;
+        text-align: center;
+        align-items: center;
+        color: #999999
+    }
+    .androidMenu li a.amActive{
+        color: #2659C3;
+    }
+    /*HERO*/
+    .hero{
+        width: 80%;
+        margin: 0 auto;
+    }
+    .heroHeader h1{
+        font-size: 60px;
+        font-family: myFontBold;
+        color: #fff;
+    }
+    .heroSearchBox{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        backdrop-filter: blur(20px);
+        border-radius: 10px;
+        background: transparent;
+    }
+    .CheckInOut{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: #EAECEF;
+    }
+    .RP{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    .search{
+        width: 250px;
+        height: 40px;
+        align-items: center;
+        padding: 0 10px;
+        display: flex;
+        gap: 8px;
+        background: transparent;
+        color: #EAECEF;
+    }
+    .search i{
+        color: #EAECEF;
+        font-size: 13px;
+    }
+    .search input{
+        height: 40px;
+        width: 250px;
+        background: transparent;
+        border: none;
+        outline: none;
+        color: #EAECEF;
+        caret-color: #fff;
+    }
+    .search input::placeholder{
+        color: #EAECEF;
+    }
+    .searchRooms{
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        color: #EAECEF;
+    }
+    .searchPeople{
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        color: #EAECEF;
+    }
+    .searchRooms::placeholder{
+        color: #EAECEF;
+    }
+    .searchPeople::placeholder{
+        color: #EAECEF;
+    }
+    #searchPerson,#searchRoom{
+        background: transparent;
+        border: none;
+        outline: none;
+        color: #EAECEF;
+        caret-color: #fff;
+    }
+    .searchButton button{
+        width: 120px;
+        height: 40px;
+        font-size: 13px;
+        color: #2659C3;
+        border-radius: 20px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+    }
+    /*CART*/
+    .categories{
+        position: absolute;
+        width: 80%;
+        margin-top: 10px;
+    }
+    .carts{
+        display: flex;
+        justify-content: space-between;
+    }
+    .cart{
+        width: fit-content;
+        height: fit-content;
+        text-align: center;
+        align-items: center;
+        padding-top: 10px;
+        cursor: pointer;
+    }
+    .categoriesHeader h1{
+        font-size: 30px;
+        color: #fff;
+        font-family: myFontBold;
+    }
+    .cart p{
+        color: #7d7d7d;
+        font-size: 13px;
+        text-align: center;
+    }
+    .cart i{
+        font-size: 22px;
+        color: #7d7d7d;
+    }
+    .cart:hover.cart p{
+        color: #fff;
+    }
+    .cart:hover.cart i{
+        color: #fff;
+    }
+    /*TVD*/
+    .tvdHeader h1{
+        font-size: 30px;
+        color: #fff;
+        font-family: myFontBold;
+        margin-top: 50px;
+    }
+    .destination{
+        width: fit-content;
+        height: fit-content;
+    }
+    .destination:hover{
+        transform: scale(1.1);
+    }
+    .desImg:hover > .desLoc p{
+        border-radius: 8px;
+    }
+    .desImg{
+        width: 250px;
+        height: 170px;
+        position: relative;
+        border-radius: 20px;
+        cursor: pointer;
+    }
+    .desImg img{
+        width: 100%;
+        height: 100%;
+        border-radius: 8px;
+    }
+    .desImg img:hover{
+        width: 100%;
+        height: 100%;
+        border-radius: 8px;
+    }
+    .desLoc{
+        position: absolute;
+        margin-top: -60px;
+        margin-left: 1%;
+    }
+    .desLoc p{
+        font-size: 17px;
+        color: #fff;
+        margin-left: 10px;
+        cursor: pointer;
+        font-family: netflix;
+    }
+    
+    /*OFFERS*/
+    .offersHeader{
+        padding-top: 10px;
+    }
+    .offersHeader h1{
+        font-size: 30px;
+        color: #000;
+        font-family: myFontBold;
+        margin-top: 50px;
+    }
+    .offerList{
+        background: #fff;
+        display: flex;
+        align-items: top;
+        height: fit-content;
+        width: fit-content;
+        gap: 20px;
+        padding: 1.5%;
+        box-shadow: 0px 0px 6px #EAECEF inset;
+        border-radius: 10px;
+    }
+    .offerImg{
+        width: 270px;
+        height: 180px;
+        object-fit: cover;
+    }
+    .offerImg img{
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+    }
+    .offerText{
+        font-family: netflix;
+        font-weight: normal;
+    }
+    .offerText h3{
+        font-size: 15px;
+        color: #808080;
+        font-weight: normal;
+        margin-top: 1px;
+    }
+    .offerText h2{
+        font-size: 22px;
+        color: #000;
+        margin-top: -5px;
+    }
+    .offerText p{
+        font-size: 13px;
+        margin-top: -5px;
+    }
+    .offerText button{
+        width: 120px;
+        height: 40px;
+        border-radius: 20px;
+        outline: #2659C3;
+        border: 1px solid #2659C3;
+        color: #fff;
+        font-size: 13px;
+        background-color: #2659C3;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+    .swiper-slide{
+        margin-right: 0px;
+        width: fit-content;
+        height: fit-content;
+    }
+    
+    /*BBPT*/
+    .bbptHeader{
+        padding-top: 10px;
+    }
+    .bbptHeader h1{
+        font-size: 30px;
+        color: #000;
+        font-family: myFontBold;
+        margin-top: 50px;
+    }
+    .bbpt{
+        padding-top: 10px;
+    }
+    .bbptList:hover{
+        transform: scale(1.05);
+    }
+    .bbptImg{
+        width: 270px;
+        height: 160px;
+        object-fit: cover;
+        position: relative;
+    }
+    .bbptImg img{
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+    }
+    .bbptText{
+        position: absolute;
+        margin-top: -60px;
+        margin-left: 30px;
+        font-family: netflix;
+    }
+    .bbptText p{
+        font-size: 20px;
+        font-weight: normal;
+        color: #fff;
+    }
+    .bbptList{
+        width: fit-content;
+        height: fit-content;
+        cursor: pointer;
+    }
+    /*PLAN TRIP*/
+    .planTrip{
+        border-radius: 20px;
+        width: 80%;
+        margin-top: 70px;
+        height: 100%;
+        padding: 4%;
+        background-image: url(images/image\ 20\ \(2\).png);
+        background-size: cover;
+        background-repeat: no-repeat;
+    
+    }
+    .planTrip h1{
+        font-size: 40px;
+        color: #fff;
+        font-family: myFontBold;
+    }
+    .planTrip p{
+        font-size: 25px;
+        font-family: netflix;
+        color: #fff;
+    }
+    /*COMMUNITY*/
+    .communityHeader{
+        padding-top: 10px;
+    }
+    .communityHeader h1{
+        font-size: 30px;
+        color: #000;
+        font-family: myFontBold;
+        margin-top: 50px;
+    }
+    .communityList{
+        width: fit-content;
+        padding: 3%;
+        height: fit-content;
+        box-shadow: 0px 0px 6px #EAECEF inset;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+    .communityImg{
+        width: 270px;
+        height: 180px;
+        object-fit: cover;
+    }
+    .communityImg img{
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+    }
+    .communityText{
+        font-family: netflix;
+        font-weight: normal;
+    }
+    .communityText h1{
+        font-size: 20px;
+    }
+    .communityText h3{
+        font-size: 15px;
+        margin-top: -5px;
+        color: #808080;
+    }
+    .communityText p{
+        font-size: 13px;
+        margin-top: -5px;
+        color: #808080;
+    }
+    /*DOWNLOAD APP*/
+    .downloadApp{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: top;
+        background-image: url(images/image\ 21.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding-top: 5%;
+        margin-top: 80px;
+    }
+    .downloadImg{
+        height: 350px;
+        width: 250px;
+    }
+    .downloadImg img{
+        width: 100%;
+        height: 100%;
+    }
+    .downloadText h1{
+        margin-top: 0px;
+        font-size: 35px;
+        font-family: myFontBold;
+        color: #fff;
+    }
+    .downloadText p{
+        margin-top: -10px;
+        font-size: 17px;
+        font-family: myFont;
+        color: #fff;
+    }
+    .wtdta{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding-top: 10px;
+        gap: 20px;
+    }
+    .neButtons{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    .neButton{
+        width: 70px;
+        height: 30px;
+        border-radius: 20px;
+        background: transparent;
+        border: none;
+        outline: none;
+        font-size: 15px;
+        color: #fff;
+        cursor: pointer;
+    } 
+    .neButton.neActive{
+        background: #ffffff63;
+        border: none;
+        outline: none;
+        backdrop-filter: blur(30px);
+        color: #fff;
+        font-family: myFont;
+    }
+    .neText{
+        padding-top: 23px;
+        font-size: 1px;
+        font-family: myFont;
+    }
+    .NE p{
+        font-size: 13px;
+    }
+    /*--INPUT EMAIL OR TEXT*/
+    .neInputs{
+        width: fit-content;
+        height: fit-content;
+        display: flex;
+    }
+    .neInput1{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        display: block;
+        margin-left: 0%;
+        width: fit-content;
+        height: fit-content;
+        padding: 2%;
+        display: flex;
+        border-radius: 15px;
+        background: #ffffff69;
+        backdrop-filter: blur(20px);
+        margin-top: 5px;
+        transition: 0.1s;
+    }
+    
+    .neInput1 select{
+        border: none;
+        outline: none;
+        background: transparent;
+        color: #D1DEE9;
+        font-family: myFont;
+    }
+    .neInput1 input{
+        width: 200px;
+        height: 30px;
+        border: none;
+        outline: none;
+        background: transparent;
+        caret-color: #D1DEE9;
+        color: #D1DEE9;
+    }
+    .neInput1 input::placeholder{
+        color: #D1DEE9;
+    }
+    .neInput1 button{
+        width: 150px;
+        height: 30px;
+        border-radius: 20px;
+        color: #2659C3;
+        font-size: 12px;
+        background: #fff;
+        font-family: myFontBold;
+        border: 1px solid #fff;
+        background: #fff;
+        outline: #fff;
+        cursor: pointer;
+    }
+    .neInput2.emailIsActive{
+        margin-left: 0%;
+        display: flex;
+        transition: 0.1s;
+    }
+    .neInput1.phoneIsActive{
+        margin-left: -100%;
+        display: none;
+        transition: 0.1s;
+    }
+    .vm{
+        display: flex;
+    }
+    .hide{
+        display: 0;
+    }
+    #validMsg{
+        display: flex;
+        align-items: first baseline;
+        color: #9aeabc;
+    }
+    #errorMsg{
+        color: #ff9393;
+    }
+    /*EMAIL ADRESS*/
+    .neInput2{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-left: 100%;
+        overflow-x: hidden;
+        width: fit-content;
+        height: fit-content;
+        padding: 2%;
+        display: flex;
+        border-radius: 15px;
+        background: #ffffff69;
+        backdrop-filter: blur(20px);
+        margin-top: 5px;
+        display: none;
+        transition: 0.1s;
+    }
+    .neInput2 input{
+        width: 200px;
+        height: 30px;
+        border: none;
+        outline: none;
+        background: transparent;
+        caret-color: #D1DEE9;
+        color: #D1DEE9;
+    }
+    .neInput2 input::placeholder{
+        color: #D1DEE9;
+    }
+    .neInput2 button{
+        width: 150px;
+        height: 30px;
+        border-radius: 20px;
+        color: #2659C3;
+        font-size: 12px;
+        background: #fff;
+        font-family: myFontBold;
+        border: 1px solid #fff;
+        background: #fff;
+        outline: #fff;
+        cursor: pointer;
+    }
+    /*END OF INPUT*/
+    .orLine p{
+        font-size: 14px;
+    }
+    .googlePlay{
+        width: 150px;
+        height: 40px;
+        object-fit: cover;
+    }
+    .appStore{
+        width: 150px;
+        height: 40px;
+        object-fit: cover;
+        margin-top: 20px;
+    }
+    .googlePlay img,.appStore img{
+        width: 100%;
+        height: 100%;
+    }
+    /*FOOTER*/
+    .footers{
+        padding: 0 10%;
+        margin: 0 auto;
+        background: #141414;
+    }
+    .footer{
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        background: #141414;
+        padding-top: 20px;
+    }
+    .footerHeader h1{
+        font-size: 30px;
+        font-family: myFontBold;
+        color: #fff;
+    }
+    .footerList ul li{
+        list-style: none;
+        margin-bottom: 10px;
+    }
+    .footerList ul li a{
+        text-decoration: none;
+        color: #808080;
+        font-size: 13px;
+    }
+    .footerList ul button{
+        width: 120px;
+        height: 30px;
+        background: transparent;
+        border: 1px solid #808080;
+        outline: #808080;
+        font-size: 13px;
+        color: #808080;
+    }
+    .footerList ul p{
+        font-size: 12px;
+        color: #808080;
+    }
+    .footerList{
+        align-items: center;
+    }
+    .socialList{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 50px;
+    }
+    .socialList i{
+        font-size: 22px;
+        color: #808080;
+        cursor: pointer;
+    }
+    .tvd{
+        position: relative;
+        z-index: 4;
+        margin-top: -40%;
+    }
+    .tvdHeader h1{
+        color: #fff;
+    }
+    .offers{
+        position: relative;
+        z-index: 4;
+    }
+    .offersHeader h1{
+        color: #fff;
+    }
+}
+@media screen and (max-width:1299px) and (min-height:650px) and (orientation:landscape){
+    .bar{
+        display: none;
+    }
+    .hamburger{
+        display: none;
+    }
+    .tvd{
+        position: relative;
+        z-index: 4;
+        margin-top: -25%;
+    }
+    .tvdHeader h1{
+        color: #fff;
+    }
+    .offers{
+        position: relative;
+        z-index: 4;
+    }
+    .offersHeader h1{
+        color: #000;
+    }
+}
+@media screen and (max-width:1299px) and (max-height:649px) and (orientation:landscape){
+    .bar{
+        display: none;
+    }
+    .hamburger{
+        display: none;
+    }
+    .tvd{
+        position: none;
+        z-index: 4;
+        margin-top: 5%;
+    }
+    .tvdHeader h1{
+        color: #000;
+    }
+    .offers{
+        position: none;
+        z-index: 4;
+    }
+    .offersHeader h1{
+        color: #000;
+    }
+}
+@media screen and (max-width:1024px) and (orientation:landscape){
+    .bar{
+        display: none;
+    }
+    .hamburger{
+        display: none;
+    }
+    .heroSearchBox{
+        border: 1px solid #EAECEF;
+    }
+    .header h1{
+        font-size: 25px;
+        font-family: myFontBold;
+        color: #fff;
+    }
+    .navList ul{
+        gap: 40px;
+    }
+    .Links{
+        text-decoration: none;
+        color: #ffffffc5;
+        font-size: 13px;
+        position: relative;
+    }
+    .Links.active::after{
+        content: "";
+        position: absolute;
+        padding-bottom: 5px;
+        background: #fff;
+        width: 150%;
+        left: -25%;
+        height: -100%;
+        bottom: -7px;
+        border-radius: 20px;
+        transition: 0.1s;
+        color: #fff;
+    }
+    /*HERO*/
+    .heroHeader h1{
+        font-size: 43px;
+    }
+    .heroSearch{
+        margin-top: -15px;
+    }
+    .search{
+        width: 200px;
+        height: 30px;
+        align-items: center;
+        padding: 1%;
+        display: flex;
+        gap: 8px;
+        background: transparent;
+        color: #EAECEF;
+    }
+    .search i{
+        color: #EAECEF;
+        font-size: 10px;
+    }
+    .search input{
+        height: 30px;
+        width: 200px;
+        background: transparent;
+        border: none;
+        outline: none;
+        color: #EAECEF;
+        caret-color: #fff;
+        font-size: 10px;
+    }
+    .search input::placeholder{
+        color: #EAECEF;
+    }
+    .searchRooms{
+        display: flex;
+        align-items: center;
+        gap: 2px;
+        color: #EAECEF;
+        font-size: 10px;
+    }
+    .searchPeople{
+        display: flex;
+        align-items: center;
+        gap: 2px;
+        color: #EAECEF;
+        font-size: 10px;
+    }
+    .searchRooms::placeholder{
+        color: #EAECEF;
+        font-size: 5px;
+    }
+    .searchPeople input ,.searchRooms input{
+        font-size: 10px;
+    }
+    .searchPeople::placeholder{
+        color: #EAECEF;
+        font-size: 5px;
+    }
+    .searchButton button{
+        width: 100px;
+        height: 30px;
+        color: #2659C3;
+        border-radius: 20px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        font-size: 11px;
+    }
+    input[type="datetime-local"]{
+        width: 130px;
+        height: 20px;
+        background: transparent;
+        border: 0.01px solid #EAECEF;
+        outline: none;
+        color: #EAECEF;
+        cursor: pointer;
+        border-radius: 10px;
+        padding: 2%;
+        border-top: none;
+        border-bottom: none;
+    }
+    .CheckInOut{
+        height: 30px;
+    }
+    .SR i{
+        font-size: 10px;
+    }
+    .CheckInOut p{
+        font-size: 10px;
+    }
+    /*CART*/
+.categories{
+    position: absolute;
+    width: 80%;
+    margin-top: 10px;
+}
+.cart{
+    width: fit-content;
+    height: fit-content;
+    text-align: center;
+    align-items: center;
+    padding-top: 10px;
+    cursor: pointer;
+}
+.categoriesHeader h1{
+    font-size: 25px;
+    color: #fff;
+    font-family: myFontBold;
+}
+.cart p{
+    color: #7d7d7d;
+    font-size: 12px;
+    text-align: center;
+}
+.cart i{
+    font-size: 18px;
+    color: #7d7d7d;
+}
+.cart:hover.cart p{
+    color: #fff;
+}
+.cart:hover.cart i{
+    color: #fff;
+}
+/*TVD*/
+.tvdHeader h1{
+    font-size: 25px;
+    color: #000;
+    font-family: myFontBold;
+    margin-top: 50px;
+}
+.desImg{
+    width: 200px;
+    height: 120px;
+    position: relative;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.desImg img{
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+.desLoc{
+    position: absolute;
+    margin-top: -45px;
+    margin-left: 1%;
+}
+.desLoc p{
+    font-size: 13px;
+    color: #fff;
+    margin-left: 10px;
+    cursor: pointer;
+    font-family: netflix;
+}
+/*OFFERS*/
+.offersHeader{
+    padding-top: 5px;
+}
+.offersHeader h1{
+    font-size: 25px;
+    color: #000;
+    font-family: myFontBold;
+    margin-top: 50px;
+}
+
+.offerImg{
+    width: 230px;
+    height: 150px;
+    object-fit: cover;
+}
+.offerImg img{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+.offerText{
+    font-family: netflix;
+    font-weight: normal;
+}
+.offerText h3{
+    font-size: 12px;
+    color: #808080;
+    font-weight: normal;
+    margin-top: 1px;
+}
+.offerText h2{
+    font-size: 17px;
+    color: #000;
+    margin-top: -5px;
+}
+.offerText p{
+    font-size: 10px;
+    margin-top: -5px;
+}
+.offerText button{
+    width: 100px;
+    height: 25px;
+    border-radius: 20px;
+    outline: #2659C3;
+    border: 1px solid #2659C3;
+    color: #fff;
+    font-size: 10px;
+    background-color: #2659C3;
+    margin-top: 5px;
+    cursor: pointer;
+}
+.swiper-slide{
+    margin-right: 0px;
+    width: fit-content;
+    height: fit-content;
+}
+.bbptHeader{
+    padding-top: 5px;
+}
+.bbptHeader h1{
+    font-size: 25px;
+    color: #000;
+    font-family: myFontBold;
+    margin-top: 40px;
+}
+.bbpt{
+    padding-top: 10px;
+}
+.bbptImg{
+    width: 210px;
+    height: 120px;
+    object-fit: cover;
+    position: relative;
+}
+
+.bbptText{
+    position: absolute;
+    margin-top: -50px;
+    margin-left: 20px;
+    font-family: netflix;
+}
+.bbptText p{
+    font-size: 15px;
+    font-weight: normal;
+    color: #fff;
+}
+/*PLAN TRIP*/
+.planTrip{
+    border-radius: 20px;
+    width: 80%;
+    margin-top: 70px;
+    height: 100%;
+    padding: 4%;
+    background-image: url(images/image\ 20\ \(2\).png);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+.planTrip h1{
+    font-size: 30px;
+    color: #fff;
+    font-family: myFontBold;
+}
+.planTrip p{
+    font-size: 20px;
+    font-family: netflix;
+    color: #fff;
+}
+/*COMMUNITY*/
+.communityHeader{
+    padding-top: 5px;
+}
+.communityHeader h1{
+    font-size: 25px;
+    color: #000;
+    font-family: myFontBold;
+    margin-top: 50px;
+}
+.communityList{
+    width: fit-content;
+    padding: 3%;
+    height: fit-content;
+    box-shadow: 0px 0px 6px #EAECEF inset;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.communityImg{
+    width: 200px;
+    height: 140px;
+    object-fit: cover;
+}
+.communityImg img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+.communityText{
+    font-family: netflix;
+    font-weight: normal;
+}
+.communityText h1{
+    font-size: 15px;
+}
+.communityText h3{
+    font-size: 13px;
+    margin-top: -5px;
+    color: #808080;
+}
+.communityText p{
+    font-size: 10px;
+    margin-top: -5px;
+    color: #808080;
+}
+/*DOWNLOAD APP*/
+.downloadApp{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: top;
+    background-image: url(images/image\ 21.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 5%;
+    margin-top: 80px;
+}
+.downloadImg{
+    height: 300px;
+    width: 200px;
+}
+.downloadText h1{
+    margin-top: 0px;
+    font-size: 30px;
+    font-family: myFontBold;
+    color: #fff;
+}
+.downloadText p{
+    margin-top: -10px;
+    font-size: 14px;
+    font-family: myFont;
+    color: #fff;
+}
+.wtdta{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 10px;
+    gap: 20px;
+}
+.neButtons{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: -20px;
+}
+.neButton{
+    width: 60px;
+    height: 30px;
+    border-radius: 20px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 12px;
+    color: #fff;
+    cursor: pointer;
+} 
+.neText{
+    padding-top: 23px;
+    font-size: 1px;
+    font-family: myFont;
+}
+.NE p{
+    font-size: 10px;
+}
+/*--INPUT EMAIL OR TEXT*/
+.neInputs{
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+}
+.neInput1{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    display: block;
+    margin-left: 0%;
+    width: fit-content;
+    height: fit-content;
+    padding: 2%;
+    display: flex;
+    border-radius: 15px;
+    background: #ffffff69;
+    backdrop-filter: blur(20px);
+    margin-top: 5px;
+    transition: 0.1s;
+}
+
+.neInput1 input{
+    width: 180px;
+    height: 25px;
+    border: none;
+    outline: none;
+    background: transparent;
+    caret-color: #D1DEE9;
+    color: #D1DEE9;
+    font-size: 10px;
+}
+.neInput1 input::placeholder{
+    color: #D1DEE9;
+}
+.neInput1 button{
+    width: 100px;
+    height: 25px;
+    border-radius: 20px;
+    color: #2659C3;
+    font-size: 10px;
+    background: #fff;
+    font-family: myFontBold;
+    border: 1px solid #fff;
+    background: #fff;
+    outline: #fff;
+    font-size: 10px;
+    cursor: pointer;
+}
+/*EMAIL ADRESS*/
+.neInput2{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 100%;
+    overflow-x: hidden;
+    width: fit-content;
+    height: fit-content;
+    padding: 2%;
+    display: flex;
+    border-radius: 15px;
+    background: #ffffff69;
+    backdrop-filter: blur(20px);
+    margin-top: 5px;
+    display: none;
+    transition: 0.1s;
+}
+.neInput2 input{
+    width: 180px;
+    height: 25px;
+    border: none;
+    outline: none;
+    background: transparent;
+    caret-color: #D1DEE9;
+    color: #D1DEE9;
+    font-size: 10px;
+}
+.neInput2 input::placeholder{
+    color: #D1DEE9;
+    font-size: 10px;
+}
+.neInput2 button{
+    width: 110px;
+    height: 25px;
+    border-radius: 20px;
+    color: #2659C3;
+    font-size: 12px;
+    background: #fff;
+    font-family: myFontBold;
+    border: 1px solid #fff;
+    background: #fff;
+    outline: #fff;
+    cursor: pointer;
+}
+/*END OF INPUT*/
+.orLine p{
+    font-size: 10px;
+}
+.googlePlay{
+    width: 120px;
+    height: 30px;
+    object-fit: cover;
+}
+.appStore{
+    width: 120px;
+    height: 30px;
+    object-fit: cover;
+    margin-top: 10px;
+}
+.googlePlay img,.appStore img{
+    width: 100%;
+    height: 100%;
+}
+/*FOOTER*/
+.footers{
+    padding: 0 10%;
+    margin: 0 auto;
+    background: #141414;
+}
+.footer{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    background: #141414;
+    padding-top: 20px;
+}
+.footerHeader h1{
+    font-size: 25px;
+    font-family: myFontBold;
+    color: #fff;
+}
+.footerList ul li{
+    list-style: none;
+    margin-bottom: 5px;
+}
+.footerList ul li a{
+    text-decoration: none;
+    color: #808080;
+    font-size: 10px;
+}
+.footerList ul button{
+    width: 100px;
+    height: 25px;
+    background: transparent;
+    border: 1px solid #808080;
+    outline: #808080;
+    font-size: 10px;
+    color: #808080;
+}
+.footerList ul p{
+    font-size: 10px;
+    color: #808080;
+}
+.footerList{
+    align-items: center;
+}
+.socialList{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+.socialList i{
+    font-size: 17px;
+    color: #808080;
+    cursor: pointer;
+}
+}
+@media screen and (max-width:1024px) and (min-height:0px) and (orientation:landscape){
+    .bar{
+        display: none;
+    }
+    .hamburger{
+        display: none;
+    }
+    .tvdHeader h1{
+        color: #000;
+    }
+    .offersHeader h1{
+        color: #000;
+    }
+    .tvd{
+        margin-top: 5%;
+    }
+}
+@media screen and (max-width:1024px) and (min-height:650px) and (orientation:landscape){
+    .bar{
+        display: none;
+    }
+    .hamburger{
+        display: none;
+    }
+    .tvd{
+        position: relative;
+        z-index: 4;
+        margin-top: -45%;
+    }
+    .tvdHeader h1{
+        color: #fff;
+    }
+    .offers{
+        position: relative;
+        z-index: 4;
+    }
+    .offersHeader h1{
+        color: #fff;
+    }
+}
+@media screen and (max-width:1024px) and (orientation:portrait){
+    .bar{
+        display: none;
+    }
+    .hamburger{
+        display: none;
+    }
+    .heroSearchBox{
+        border: 1px solid #EAECEF;
+    }
+    .heros{
+        height: 50vh;
+    }
+    .header h1{
+        font-size: 30px;
+    }
+    .navList ul{
+        gap: 40px;
+    }
+    .Links{
+        font-size: 14px;
+    }
+    /*HERO*/
+    .heroHeader h1{
+        font-size: 50px;
+    }
+    .search i{
+        font-size: 13px;
+    }
+    .search{
+        width: 160px;
+    }
+    .search input{
+        width: 160px;
+        font-size: 12px;
+    }
+    .search input::placeholder{
+        font-size: 12px;
+    }
+    .searchButton button{
+        width: 100px;
+        height: 35px;
+    }
+    input[type="datetime-local"]{
+        width: 120px;
+        height: 40px;
+        background: transparent;
+        border: 0.01px solid #EAECEF;
+        outline: none;
+        color: #EAECEF;
+        cursor: pointer;
+        border-radius: 10px;
+        padding: 2%;
+        border-top: none;
+        border-bottom: none;
+    }
+    .searchPeople,.searchRooms{
+        gap: 3px;
+    }
+    .searchPeople input,.searchRooms input{
+        font-size: 12px;
+    }
+    .searchPeople input::placeholder{
+        font-size: 12px;
+    }
+    .SR i{
+        font-size: 13px;
+    }
+    .CheckInOut p{
+        font-size: 10px;
+    }
+    /*CARTEGORIES*/
+    .categories{
+        margin-top: 30px;
+    }
+    .categoriesHeader h1{
+        font-size: 30px;
+    }
+    .categoriesHeader h1{
+        font-size: 30px;
+        color: #fff;
+        font-family: myFontBold;
+    }
+    .cart p{
+        color: #7d7d7d;
+        font-size: 13px;
+        text-align: center;
+    }
+    .cart i{
+        font-size: 22px;
+        color: #7d7d7d;
+    }
+    /*TVD*/
+    .tvdHeader h1{
+        font-size: 30px;
+        color: #000;
+        font-family: myFontBold;
+        margin-top: 50px;
+    }
+    .desImg{
+        width: 200px;
+        height: 130px;
+        position: relative;
+        border-radius: 20px;
+        cursor: pointer;
+    }
+    .desImg img{
+        width: 100%;
+        height: 100%;
+        border-radius: 12px;
+    }
+    .desLoc{
+        position: absolute;
+        margin-top: -50px;
+        margin-left: 1%;
+    }
+    .desLoc p{
+        font-size: 14px;
+        color: #fff;
+        margin-left: 10px;
+        cursor: pointer;
+        font-family: netflix;
+    }
+    /*OFFERS*/
+.offersHeader{
+    padding-top: 10px;
+}
+.offersHeader h1{
+    font-size: 30px;
+    color: #000;
+    font-family: myFontBold;
+    margin-top: 50px;
+}
+.offerList{
+    background: #fff;
+    display: flex;
+    align-items: top;
+    height: fit-content;
+    width: fit-content;
+    gap: 20px;
+    padding: 2.5%;
+    box-shadow: 0px 0px 12px #EAECEF inset;
+    border-radius: 10px;
+}
+.offerImg{
+    width: 220px;
+    height: 150px;
+    object-fit: cover;
+}
+.offerText{
+    width: fit-content;
+}
+.offerText h3{
+    font-size: 13px;
+    color: #808080;
+    font-weight: normal;
+    margin-top: 1px;
+}
+.offerText h2{
+    font-size: 17px;
+    color: #000;
+    margin-top: -5px;
+}
+.offerText p{
+    font-size: 11px;
+    margin-top: -5px;
+}
+.offerText button{
+    width: 100px;
+    height: 30px;
+    border-radius: 20px;
+    outline: #2659C3;
+    border: 1px solid #2659C3;
+    color: #fff;
+    font-size: 13px;
+    background-color: #2659C3;
+    margin-top: -5px;
+    cursor: pointer;
+}
+/*BBPT*/
+.bbptHeader{
+    padding-top: 10px;
+}
+.bbptHeader h1{
+    font-size: 30px;
+    color: #000;
+    font-family: myFontBold;
+    margin-top: 50px;
+}
+.bbpt{
+    padding-top: 10px;
+}
+.bbptImg{
+    width: 200px;
+    height: 130px;
+    object-fit: cover;
+    position: relative;
+}
+.bbptText{
+    position: absolute;
+    margin-top: -60px;
+    margin-left: 20px;
+    font-family: netflix;
+}
+.bbptText p{
+    font-size: 17px;
+    font-weight: normal;
+    color: #fff;
+}
+/*PLAN TRIP*/
+.planTrip{
+    border-radius: 20px;
+    width: 80%;
+    margin-top: 70px;
+    height: 100%;
+    padding: 4%;
+    background-image: url(images/image\ 20\ \(2\).png);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+.planTrip h1{
+    font-size: 30px;
+    color: #fff;
+    font-family: myFontBold;
+}
+.planTrip p{
+    font-size: 15px;
+    font-family: netflix;
+    color: #fff;
+}
+/*COMMUNITY*/
+.communityHeader{
+    padding-top: 10px;
+}
+.communityHeader h1{
+    font-size: 30px;
+    color: #000;
+    font-family: myFontBold;
+    margin-top: 50px;
+}
+.communityList{
+    width: fit-content;
+    padding: 6%;
+    height: fit-content;
+    box-shadow: 0px 0px 6px #EAECEF inset;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.communityImg{
+    width: 220px;
+    height: 170px;
+    object-fit: cover;
+}
+.communityImg img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+.communityText{
+    font-family: netflix;
+    font-weight: normal;
+}
+.communityText h1{
+    font-size: 16px;
+}
+.communityText h3{
+    font-size: 13px;
+    margin-top: -5px;
+    color: #808080;
+}
+.communityText p{
+    font-size: 10px;
+    margin-top: -5px;
+    color: #808080;
+}
+/*DOWNLOAD APP*/
+.downloadApp{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: top;
+    background-image: url(images/image\ 21.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 5%;
+    margin-top: 80px;
+}
+.downloadImg{
+    height: 300px;
+    width: 200px;
+}
+.downloadImg img{
+    width: 100%;
+    height: 100%;
+}
+.downloadText h1{
+    margin-top: 0px;
+    font-size: 30px;
+    font-family: myFontBold;
+    color: #fff;
+}
+.downloadText p{
+    margin-top: -10px;
+    font-size: 14px;
+    font-family: myFont;
+    color: #fff;
+}
+.wtdta{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 10px;
+    gap: 20px;
+}
+.neButtons{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.neButton{
+    width: 60px;
+    height: 28px;
+    border-radius: 20px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 12px;
+    color: #fff;
+    cursor: pointer;
+} 
+.neText{
+    padding-top: 23px;
+    font-size: 1px;
+    font-family: myFont;
+}
+.NE p{
+    font-size: 10px;
+}
+/*--INPUT EMAIL OR TEXT*/
+.neInputs{
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+}
+.neInput1{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    display: block;
+    margin-left: 0%;
+    width: fit-content;
+    height: fit-content;
+    padding: 2%;
+    display: flex;
+    border-radius: 15px;
+    background: #ffffff69;
+    backdrop-filter: blur(20px);
+    margin-top: 5px;
+    transition: 0.1s;
+}
+.neInput1 input{
+    width: 170px;
+    height: 30px;
+    border: none;
+    outline: none;
+    background: transparent;
+    caret-color: #D1DEE9;
+    color: #D1DEE9;
+}
+.neInput1 button{
+    width: 100px;
+    height: 30px;
+    border-radius: 20px;
+    color: #2659C3;
+    font-size: 10px;
+    background: #fff;
+    font-family: myFontBold;
+    border: 1px solid #fff;
+    background: #fff;
+    outline: #fff;
+    cursor: pointer;
+}
+/*EMAIL ADRESS*/
+.neInput2{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 100%;
+    overflow-x: hidden;
+    width: fit-content;
+    height: fit-content;
+    padding: 2%;
+    display: flex;
+    border-radius: 15px;
+    background: #ffffff69;
+    backdrop-filter: blur(20px);
+    margin-top: 5px;
+    display: none;
+    transition: 0.1s;
+}
+.neInput2 input{
+    width: 170px;
+    height: 30px;
+    border: none;
+    outline: none;
+    background: transparent;
+    caret-color: #D1DEE9;
+    color: #D1DEE9;
+}
+.neInput2 input::placeholder{
+    color: #D1DEE9;
+}
+.neInput2 button{
+    width: 100px;
+    height: 30px;
+    border-radius: 20px;
+    color: #2659C3;
+    font-size: 10px;
+    background: #fff;
+    font-family: myFontBold;
+    border: 1px solid #fff;
+    background: #fff;
+    outline: #fff;
+    cursor: pointer;
+}
+/*END OF INPUT*/
+.orLine p{
+    font-size: 11px;
+}
+.googlePlay{
+    width: 120px;
+    height: 30px;
+    object-fit: cover;
+}
+.appStore{
+    width: 120px;
+    height: 30px;
+    object-fit: cover;
+    margin-top: 20px;
+}
+.googlePlay img,.appStore img{
+    width: 100%;
+    height: 100%;
+}
+/*FOOTER*/
+.footers{
+    padding: 0 10%;
+    margin: 0 auto;
+    background: #141414;
+}
+.footer{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    background: #141414;
+    padding-top: 20px;
+}
+.footerHeader h1{
+    font-size: 30px;
+    font-family: myFontBold;
+    color: #fff;
+}
+.footerList ul li{
+    list-style: none;
+    margin-bottom: 20px;
+}
+.footerList ul li a{
+    text-decoration: none;
+    color: #808080;
+    font-size: 12px;
+}
+.footerList ul button{
+    width: 100px;
+    height: 28px;
+    background: transparent;
+    border: 1px solid #808080;
+    outline: #808080;
+    font-size: 13px;
+    color: #808080;
+    cursor: pointer;
+}
+.footerList ul p{
+    font-size: 10px;
+    color: #808080;
+}
+.footerList{
+    align-items: center;
+}
+.socialList{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+.socialList i{
+    font-size: 20px;
+    color: #808080;
+    cursor: pointer;
+}
+}
+@media screen and (max-width:850px) and (orientation:portrait){
+    .bar{
+        display: none;
+    }
+    .hamburger{
+        display: none;
+    }
+    .header h1{
+        font-size: 25px;
+        font-family: myFontBold;
+        color: #fff;
+    }
+    .navList ul{
+        gap: 35px;
+    }
+    .Links{
+        font-size: 13px;
+    }
+    .heroHeader h1{
+        font-size: 40px;
+    }
+    /*HERO*/
+    .heroSearchBox{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        backdrop-filter: blur(20px);
+        border-radius: 10px;
+        background: transparent;
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+    .CheckInOut{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: #EAECEF;
+    }
+    .RP{
+        display: flex;
+        align-items: center;
+        gap: 1px;
+    }
+    .search{
+        width: 120px;
+        height: 30px;
+        align-items: center;
+        padding: 0 10px;
+        display: flex;
+        gap: 8px;
+        background: transparent;
+        color: #EAECEF;
+    }
+    .search i{
+        color: #EAECEF;
+        font-size: 10px;
+    }
+    .search input{
+        height: 40px;
+        width: 120px;
+        background: transparent;
+        border: none;
+        outline: none;
+        color: #EAECEF;
+        caret-color: #fff;
+    }
+    .search input::placeholder{
+        color: #EAECEF;
+    }
+    .searchRooms{
+        display: flex;
+        align-items: center;
+        gap: 1px;
+        color: #EAECEF;
+    }
+    .searchPeople{
+        display: flex;
+        align-items: center;
+        gap: 1px;
+        color: #EAECEF;
+    }
+    .searchRooms input::placeholder{
+        font-size: 10px;
+    }
+    .searchPeople input::placeholder{
+        font-size: 10px;
+    }
+    #searchPerson,#searchRoom{
+        background: transparent;
+        border: none;
+        outline: none;
+        color: #EAECEF;
+        font-size: 10px;
+        caret-color: #fff;
+    }
+    .searchButton button{
+        width: 80px;
+        height: 30px;
+        font-size: 10px;
+        color: #2659C3;
+        border-radius: 20px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        background: #fff;
+    }
+    input[type="datetime-local"]{
+        width: 100px;
+        height: 30px;
+        background: transparent;
+        border: 0.01px solid #EAECEF;
+        outline: none;
+        color: #EAECEF;
+        cursor: pointer;
+        border-radius: 10px;
+        padding: 2%;
+        font-size: 10px;
+        border-top: none;
+        border-bottom: none;
+    }
+    /*CART*/
+.categoriesHeader h1{
+    font-size: 25px;
+    color: #fff;
+    font-family: myFontBold;
+}
+.cart p{
+    color: #7d7d7d;
+    font-size: 10px;
+    text-align: center;
+}
+.cart i{
+    font-size: 19px;
+    color: #7d7d7d;
+}
+/*TVD*/
+.tvdHeader h1{
+    font-size: 25px;
+    color: #000;
+    font-family: myFontBold;
+    margin-top: 50px;
+}
+.desImg{
+    width: 180px;
+    height: 120px;
+    position: relative;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.desImg img{
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+.desLoc{
+    position: absolute;
+    margin-top: -50px;
+    margin-left: 1%;
+}
+.desLoc p{
+    font-size: 13px;
+    color: #fff;
+    margin-left: 10px;
+    cursor: pointer;
+    font-family: netflix;
+}
+/*OFFERS*/
+.offersHeader{
+    padding-top: 10px;
+}
+.offersHeader h1{
+    font-size: 25px;
+    color: #000;
+    font-family: myFontBold;
+    margin-top: 50px;
+}
+.offerList{
+    background: #fff;
+    display: flex;
+    align-items: top;
+    height: fit-content;
+    width: fit-content;
+    gap: 20px;
+    padding: 2%;
+    box-shadow: 0px 0px 6px #EAECEF inset;
+    border-radius: 10px;
+}
+.offerImg{
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+}
+.offerImg img{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+.offerText{
+    font-family: netflix;
+    font-weight: normal;
+}
+.offerText h3{
+    font-size: 11px;
+    color: #808080;
+    font-weight: normal;
+    margin-top: 1px;
+}
+.offerText h2{
+    font-size: 16px;
+    color: #000;
+    margin-top: -5px;
+}
+.offerText p{
+    font-size: 10px;
+    margin-top: -5px;
+}
+.offerText button{
+    width: 100px;
+    height: 30px;
+    border-radius: 20px;
+    outline: #2659C3;
+    border: 1px solid #2659C3;
+    color: #fff;
+    font-size: 10px;
+    background-color: #2659C3;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.swiper-slide{
+    margin-right: 0px;
+    width: fit-content;
+    height: fit-content;
+}
+/*BBPT*/
+.bbptHeader{
+    padding-top: 10px;
+}
+.bbptHeader h1{
+    font-size: 25px;
+    color: #000;
+    font-family: myFontBold;
+    margin-top: 50px;
+}
+.bbptImg{
+    width: 180px;
+    height: 120px;
+    object-fit: cover;
+    position: relative;
+}
+.bbptText{
+    position: absolute;
+    margin-top: -55px;
+    margin-left: 20px;
+    font-family: netflix;
+}
+.bbptText p{
+    font-size: 15px;
+    font-weight: normal;
+    color: #fff;
+}
+/*COMMUNITY*/
+.communityHeader{
+    padding-top: 10px;
+}
+.communityHeader h1{
+    font-size: 25px;
+    color: #000;
+    font-family: myFontBold;
+    margin-top: 50px;
+}
+.communityList{
+    width: fit-content;
+    padding: 3%;
+    height: fit-content;
+    box-shadow: 0px 0px 6px #EAECEF inset;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.communityImg{
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+}
+.communityImg img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+.communityText{
+    font-family: netflix;
+    font-weight: normal;
+}
+.communityText h1{
+    font-size: 17px;
+}
+.communityText h3{
+    font-size: 13px;
+    margin-top: -5px;
+    color: #808080;
+}
+.communityText p{
+    font-size: 10px;
+    margin-top: -5px;
+    color: #808080;
+}
+/*FOOTER*/
+.footers{
+    padding: 0 10%;
+    margin: 0 auto;
+    background: #141414;
+}
+.footer{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    background: #141414;
+    padding-top: 20px;
+}
+.footerHeader h1{
+    font-size: 25px;
+    font-family: myFontBold;
+    color: #fff;
+}
+.footerList ul li{
+    list-style: none;
+    margin-bottom: 15px;
+}
+.footerList ul li a{
+    text-decoration: none;
+    color: #808080;
+    font-size: 10px;
+}
+.footerList ul button{
+    width: 100px;
+    height: 30px;
+    background: transparent;
+    border: 1px solid #808080;
+    outline: #808080;
+    font-size: 13px;
+    color: #808080;
+    cursor: pointer;
+}
+.footerList ul p{
+    font-size: 10px;
+    color: #808080;
+}
+.footerList{
+    align-items: center;
+}
+.socialList{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+.socialList i{
+    font-size: 20px;
+    color: #808080;
+    cursor: pointer;
+}
+}
+@media screen and (max-width:899px) and (orientation:landscape){
+    .bar{
+        display: none;
+    }
+    .hamburger{
+        display: none;
+    }
+    .header h1{
+        font-size: 25px;
+    }
+    .Links{
+        font-size: 12px;
+    }
+    .navList ul{
+        gap: 30px;
+    }
+    .heroHeader{
+        margin-top: -15px;
+    }
+    /*HERO*/
+.hero{
+    width: 80%;
+    margin: 0 auto;
+}
+.heroSearchBox{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(20px);
+    border-radius: 10px;
+    background: transparent;
+    gap: 0;
+    padding: 1%;
+}
+.CheckInOut{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #EAECEF;
+}
+.RP{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.search{
+    width: 150px;
+    height: 35px;
+    align-items: center;
+    padding: 0 10px;
+    display: flex;
+    gap: 2px;
+    background: transparent;
+    color: #EAECEF;
+}
+.search i{
+    color: #EAECEF;
+    font-size: 10px;
+}
+.search input{
+    height: 35px;
+    width: 150px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #EAECEF;
+    caret-color: #fff;
+    font-size: 10px;
+}
+.search input::placeholder{
+    color: #EAECEF;
+    font-size: 10px;
+}
+.searchRooms{
+    display: flex;
+    align-items: center;
+    gap: 1px;
+    color: #EAECEF;
+}
+.searchPeople{
+    display: flex;
+    align-items: center;
+    gap: 1px;
+    color: #EAECEF;
+}
+.searchRooms input::placeholder{
+    color: #EAECEF;
+    font-size: 11px;
+}
+.searchPeople input::placeholder{
+    color: #EAECEF;
+    font-size: 11px;
+}
+#searchPerson,#searchRoom{
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #EAECEF;
+    caret-color: #fff;
+    font-size: 12px;
+}
+.searchButton button{
+    width: 85px;
+    height: 35px;
+    font-size: 10px;
+    color: #2659C3;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: #fff;
+}
+    .heroHeader h1{
+        font-size: 35px;
+    }
+    input[type="datetime-local"]{
+        width: 90px;
+        height: 35px;
+        background: transparent;
+        border: 0.01px solid #EAECEF;
+        outline: none;
+        color: #EAECEF;
+        cursor: pointer;
+        border-radius: 10px;
+        padding: 2%;
+        border-top: none;
+        border-bottom: none;
+    }
+    .SR i{
+        font-size: 15px;
+    }
+    /*CART*/
+.carts{
+    display: flex;
+    justify-content: space-between;
+}
+.cart{
+    width: fit-content;
+    height: fit-content;
+    text-align: center;
+    align-items: center;
+    padding-top: 10px;
+    cursor: pointer;
+}
+.categoriesHeader h1{
+    font-size: 25px;
+    color: #fff;
+    font-family: myFontBold;
+}
+.cart p{
+    color: #7d7d7d;
+    font-size: 11px;
+    text-align: center;
+}
+.cart i{
+    font-size: 20px;
+    color: #7d7d7d;
+}
+.cart:hover.cart p{
+    color: #fff;
+}
+.cart:hover.cart i{
+    color: #fff;
+}
+/*TVD*/
+.tvdHeader h1{
+    font-size: 25px;
+    color: #000;
+    font-family: myFontBold;
+    margin-top: 40px;
+}
+.desImg{
+    width: 180px;
+    height: 120px;
+    position: relative;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.desImg img{
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+.desLoc{
+    position: absolute;
+    margin-top: -50px;
+    margin-left: 1%;
+}
+.desLoc p{
+    font-size: 14px;
+    color: #fff;
+    margin-left: 10px;
+    cursor: pointer;
+    font-family: netflix;
+}
+/*OFFERS*/
+.offersHeader{
+    padding-top: 5px;
+}
+.offersHeader h1{
+    font-size: 25px;
+    color: #000;
+    font-family: myFontBold;
+    margin-top: 50px;
+}
+.offerList{
+    background: #fff;
+    display: flex;
+    align-items: top;
+    height: fit-content;
+    width: fit-content;
+    gap: 20px;
+    padding: 1.5%;
+    box-shadow: 0px 0px 6px #EAECEF inset;
+    border-radius: 10px;
+}
+.offerImg{
+    width: 220px;
+    height: 140px;
+    object-fit: cover;
+}
+.offerImg img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+.offerText{
+    font-family: netflix;
+    font-weight: normal;
+}
+.offerText h3{
+    font-size: 10px;
+    color: #808080;
+    font-weight: normal;
+    margin-top: 1px;
+}
+.offerText h2{
+    font-size: 13px;
+    color: #000;
+    margin-top: -5px;
+}
+.offerText p{
+    font-size: 10px;
+    margin-top: -5px;
+}
+.offerText button{
+    width: 100px;
+    height: 30px;
+    border-radius: 20px;
+    outline: #2659C3;
+    border: 1px solid #2659C3;
+    color: #fff;
+    font-size: 13px;
+    background-color: #2659C3;
+    margin-top: 5px;
+    cursor: pointer;
+}
+/*BBPT*/
+.bbptHeader{
+    padding-top: 5px;
+}
+.bbptHeader h1{
+    font-size: 25px;
+    color: #000;
+    font-family: myFontBold;
+    margin-top: 50px;
+}
+.bbpt{
+    padding-top: 5px;
+}
+.bbptImg{
+    width: 190px;
+    height: 120px;
+    object-fit: cover;
+    position: relative;
+}
+.bbptImg img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+.bbptText{
+    position: absolute;
+    margin-top: -55px;
+    margin-left: 20px;
+    font-family: netflix;
+}
+.bbptText p{
+    font-size: 16px;
+    font-weight: normal;
+    color: #fff;
+}
+/*PLAN TRIP*/
+.planTrip{
+    border-radius: 20px;
+    width: 80%;
+    margin-top: 70px;
+    height: 100%;
+    padding: 3%;
+    background-image: url(images/image\ 20\ \(2\).png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.planTrip h1{
+    font-size: 30px;
+    color: #fff;
+    font-family: myFontBold;
+}
+.planTrip p{
+    font-size: 20px;
+    font-family: netflix;
+    color: #fff;
+}
+/*COMMUNITY*/
+.communityHeader{
+    padding-top: 10px;
+}
+.communityHeader h1{
+    font-size: 25px;
+    color: #000;
+    font-family: myFontBold;
+    margin-top: 50px;
+}
+.communityList{
+    width: fit-content;
+    padding: 3%;
+    height: fit-content;
+    box-shadow: 0px 0px 6px #EAECEF inset;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.communityImg{
+    width: 200px;
+    height: 140px;
+    object-fit: cover;
+}
+.communityText h1{
+    font-size: 15px;
+}
+.communityText h3{
+    font-size: 13px;
+    margin-top: -5px;
+    color: #808080;
+}
+.communityText p{
+    font-size: 10px;
+    margin-top: -5px;
+    color: #808080;
+}
+/*DOWNLOAD APP*/
+.downloadApp{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: top;
+    background-image: url(images/image\ 21.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 5%;
+    margin-top: 80px;
+}
+.downloadImg{
+    height: 290px;
+    width: 250px;
+}
+.downloadImg img{
+    width: 100%;
+    height: 100%;
+}
+.downloadText h1{
+    margin-top: 0px;
+    font-size: 25px;
+    font-family: myFontBold;
+    color: #fff;
+}
+.downloadText p{
+    margin-top: -10px;
+    font-size: 8px;
+    font-family: myFont;
+    color: #fff;
+}
+.wtdta{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 10px;
+    gap: 20px;
+}
+.neButtons{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: -10px;
+}
+.neButton{
+    width: 60px;
+    height: 28px;
+    border-radius: 20px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 12px;
+    color: #fff;
+    cursor: pointer;
+} 
+.neButton.neActive{
+    background: #ffffff63;
+    border: none;
+    outline: none;
+    backdrop-filter: blur(30px);
+    color: #fff;
+    font-family: myFont;
+}
+.neText{
+    padding-top: 15px;
+    font-size: 1px;
+    font-family: myFont;
+}
+.NE p{
+    font-size: 9px;
+}
+/*--INPUT EMAIL OR TEXT*/
+.neInputs{
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+}
+.neInput1{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    display: block;
+    margin-left: 0%;
+    width: fit-content;
+    height: fit-content;
+    padding: 2%;
+    display: flex;
+    border-radius: 15px;
+    background: #ffffff69;
+    backdrop-filter: blur(20px);
+    margin-top: 5px;
+    transition: 0.1s;
+}
+
+.neInput1 input{
+    width: 180px;
+    height: 30px;
+    border: none;
+    outline: none;
+    background: transparent;
+    caret-color: #D1DEE9;
+    color: #D1DEE9;
+}
+.neInput1 input::placeholder{
+    color: #D1DEE9;
+}
+.neInput1 button{
+    width: 120px;
+    height: 30px;
+    border-radius: 20px;
+    color: #2659C3;
+    font-size: 10px;
+    background: #fff;
+    font-family: myFontBold;
+    border: 1px solid #fff;
+    background: #fff;
+    outline: #fff;
+    cursor: pointer;
+}
+/*EMAIL ADRESS*/
+.neInput2{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 100%;
+    overflow-x: hidden;
+    width: fit-content;
+    height: fit-content;
+    padding: 1%;
+    display: flex;
+    border-radius: 15px;
+    background: #ffffff69;
+    backdrop-filter: blur(20px);
+    margin-top: 5px;
+    display: none;
+    transition: 0.1s;
+}
+.neInput2 input{
+    width: 180px;
+    height: 30px;
+    border: none;
+    outline: none;
+    background: transparent;
+    caret-color: #D1DEE9;
+    color: #D1DEE9;
+}
+.neInput2 input::placeholder{
+    color: #D1DEE9;
+}
+.neInput2 button{
+    width: 120px;
+    height: 30px;
+    border-radius: 20px;
+    color: #2659C3;
+    font-size: 10px;
+    background: #fff;
+    font-family: myFontBold;
+    border: 1px solid #fff;
+    background: #fff;
+    outline: #fff;
+    cursor: pointer;
+}
+/*END OF INPUT*/
+.orLine p{
+    font-size: 10px;
+}
+.googlePlay{
+    width: 120px;
+    height: 35px;
+    object-fit: cover;
+}
+.appStore{
+    width: 120px;
+    height: 35px;
+    object-fit: cover;
+    margin-top: 20px;
+}
+.googlePlay img,.appStore img{
+    width: 100%;
+    height: 100%;
+}
+/*FOOTER*/
+.socialList{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 30px;
+    padding-bottom: 20px;
+}
+.socialList i{
+    font-size: 20px;
+    color: #808080;
+    cursor: pointer;
+}
+}
+@media screen and (max-width:700px) and (orientation:landscape){
+    .bar{
+        display: none;
+    }
+    .hamburger{
+        display: none;
+    }
+    .header h1{
+        font-size: 25px;
+    }
+    .Links{
+        font-size: 11px;
+    }
+    .navList ul{
+        gap: 25px;
+    }
+    .heroHeader{
+        margin-top: -15px;
+    }
+
+       /*HERO*/
+.hero{
+    width: 80%;
+    margin: 0 auto;
+}
+.heroSearchBox{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(20px);
+    border-radius: 10px;
+    background: transparent;
+    gap: 0;
+    padding: 1%;
+}
+.CheckInOut{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: #EAECEF;
+}
+.RP{
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+.search{
+    width: 120px;
+    height: 30px;
+    align-items: center;
+    padding: 0 10px;
+    display: flex;
+    gap: 2px;
+    background: transparent;
+    color: #EAECEF;
+}
+.search i{
+    color: #EAECEF;
+    font-size: 10px;
+}
+.search input{
+    height: 30px;
+    width: 120px;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #EAECEF;
+    caret-color: #fff;
+    font-size: 10px;
+}
+.search input::placeholder{
+    color: #EAECEF;
+    font-size: 9px;
+}
+.searchRooms{
+    display: flex;
+    align-items: center;
+    gap: 1px;
+    color: #EAECEF;
+}
+.searchPeople{
+    display: flex;
+    align-items: center;
+    gap: 1px;
+    color: #EAECEF;
+}
+.searchRooms input::placeholder{
+    color: #EAECEF;
+    font-size: 8px;
+}
+.searchPeople input::placeholder{
+    color: #EAECEF;
+    font-size: 8px;
+}
+#searchPerson,#searchRoom{
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #EAECEF;
+    caret-color: #fff;
+    font-size: 8px;
+}
+.searchButton button{
+    width: 75px;
+    height: 30px;
+    font-size: 10px;
+    color: #2659C3;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: #fff;
+}
+    .heroHeader h1{
+        font-size: 35px;
+    }
+    input[type="datetime-local"]{
+        width: 75px;
+        height: 30px;
+        background: transparent;
+        border: 0.01px solid #EAECEF;
+        outline: none;
+        color: #EAECEF;
+        cursor: pointer;
+        border-radius: 10px;
+        padding: 2%;
+        border-top: none;
+        border-bottom: none;
+        font-size: 10px;
+    }
+    .SR i{
+        font-size: 10px;
+    }
+        /*CART*/
+.carts{
+    display: flex;
+    justify-content: space-between;
+}
+.cart{
+    width: fit-content;
+    height: fit-content;
+    text-align: center;
+    align-items: center;
+    padding-top: 10px;
+    cursor: pointer;
+}
+.categoriesHeader h1{
+    font-size: 25px;
+    color: #fff;
+    font-family: myFontBold;
+}
+.cart p{
+    color: #7d7d7d;
+    font-size: 10px;
+    text-align: center;
+}
+.cart i{
+    font-size: 18px;
+    color: #7d7d7d;
+}
+.cart:hover.cart p{
+    color: #fff;
+}
+.cart:hover.cart i{
+    color: #fff;
+}
+.tvdHeader h1{
+    font-size: 25px;
+    color: #000;
+    font-family: myFontBold;
+    margin-top: 40px;
+}
+.desImg{
+    width: 160px;
+    height: 100px;
+    position: relative;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.desImg img{
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+.desLoc{
+    position: absolute;
+    margin-top: -40px;
+    margin-left: 1%;
+}
+.desLoc p{
+    font-size: 12px;
+    color: #fff;
+    margin-left: 10px;
+    cursor: pointer;
+    font-family: netflix;
+}
+/*OFFERS*/
+.offersHeader{
+    padding-top: 5px;
+}
+.offersHeader h1{
+    font-size: 25px;
+    color: #000;
+    font-family: myFontBold;
+    margin-top: 50px;
+}
+.offerList{
+    background: #fff;
+    display: flex;
+    align-items: top;
+    height: fit-content;
+    width: fit-content;
+    gap: 20px;
+    padding: 1.5%;
+    box-shadow: 0px 0px 6px #EAECEF inset;
+    border-radius: 10px;
+}
+.offerImg{
+    width: 200px;
+    height: 120px;
+    object-fit: cover;
+}
+.offerImg img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+.offerText{
+    font-family: netflix;
+    font-weight: normal;
+}
+.offerText h3{
+    font-size: 9px;
+    color: #808080;
+    font-weight: normal;
+    margin-top: 1px;
+}
+.offerText h2{
+    font-size: 12px;
+    color: #000;
+    margin-top: -5px;
+}
+.offerText p{
+    font-size: 9px;
+    margin-top: -5px;
+}
+.offerText button{
+    width: 80px;
+    height: 25px;
+    border-radius: 20px;
+    outline: #2659C3;
+    border: 1px solid #2659C3;
+    color: #fff;
+    font-size: 10px;
+    background-color: #2659C3;
+    margin-top: 0px;
+    cursor: pointer;
+}
+/*BBPT*/
+.bbptHeader{
+    padding-top: 5px;
+}
+.bbptHeader h1{
+    font-size: 25px;
+    color: #000;
+    font-family: myFontBold;
+    margin-top: 50px;
+}
+.bbpt{
+    padding-top: 5px;
+}
+.bbptImg{
+    width: 170px;
+    height: 100px;
+    object-fit: cover;
+    position: relative;
+}
+.bbptImg img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+.bbptText{
+    position: absolute;
+    margin-top: -45px;
+    margin-left: 20px;
+    font-family: netflix;
+}
+.bbptText p{
+    font-size: 12px;
+    font-weight: normal;
+    color: #fff;
+}
+/*PLAN TRIP*/
+.planTrip{
+    border-radius: 20px;
+    width: 80%;
+    margin-top: 60px;
+    height: 100%;
+    padding: 3%;
+    background-image: url(images/image\ 20\ \(2\).png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.planTrip h1{
+    font-size: 25px;
+    color: #fff;
+    font-family: myFontBold;
+}
+.planTrip p{
+    font-size: 15px;
+    font-family: netflix;
+    color: #fff;
+}
+/*COMMUNITY*/
+.communityHeader{
+    padding-top: 10px;
+}
+.communityHeader h1{
+    font-size: 20px;
+    color: #000;
+    font-family: myFontBold;
+    margin-top: 50px;
+}
+.communityList{
+    width: fit-content;
+    padding: 3%;
+    height: fit-content;
+    box-shadow: 0px 0px 6px #EAECEF inset;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.communityImg{
+    width: 180px;
+    height: 120px;
+    object-fit: cover;
+}
+.communityText h1{
+    font-size: 14;
+}
+.communityText h3{
+    font-size: 12px;
+    margin-top: -5px;
+    color: #808080;
+}
+.communityText p{
+    font-size: 10px;
+    margin-top: -5px;
+    color: #808080;
+}
+}
+@media screen and (max-width:550px) and (orientation:portrait){
+    .bar{
+        display: block;
+        z-index: 100;
+    }
+    .hamburger{
+        display: block;
+        z-index: 100;
+    }
+    .TW{
+        width: 90%;
+    }
+    .heros{
+        height: 60vh;
+    }
+    .Links{
+        display: none;
+    }
+    .nav{
+        padding-top: 10px;
+    }
+    .nav ul{
+        gap: 0;
+    }
+    .bar{
+        display: block;
+    }
+    .header{
+        text-align: center;
+        z-index: 100;
+    }
+    .header h1{
+        font-size: 25px;
+        z-index: 100
+        ;
+    }
+    .androidMenu{
+        display: none;
+        width: 100%;
+        z-index: 2;
+    }
+    .androidMenu ul{
+        display: flex;
+        justify-content: space-around;
+        padding: 0;
+        padding-top: 3%;
+    }
+    .androidMenu ul li a i{
+        font-size: 20px;
+    }
+    .androidMenu ul li a p{
+        font-size: 15px;
+    }
+    .androidMenu.androidMenuHidden{
+        display: block;
+    }
+    /*HERO*/
+    .heroHeader h1{
+        font-size: 30px;
+    }
+    .heroSearchBox{
+        display: block;
+        backdrop-filter: blur(0px);
+        border: none;
+    }
+    .search{
+        width: 93%;
+        border: none;
+        height: 40px;
+        align-items: center;
+        margin-bottom: 15px;
+        border-radius: 20px;
+        backdrop-filter: blur(20px);
+        background: #ffffff69;
+    }
+    .CheckInOut{
+        width: 100%;
+        border: none;
+        height: 40px;
+        justify-content: space-around;
+        align-items: center;
+        margin-bottom: 15px;
+        border-radius: 20px;
+        backdrop-filter: blur(20px);
+        background: #ffffff69;
+        overflow-x: hidden;
+    }
+    .RP{
+        width: 100%;
+        border: none;
+        height: 40px;
+        justify-content: center;
+        align-items: center;
+        gap: px;
+        margin-bottom: 15px;
+        border-radius: 20px;
+        backdrop-filter: blur(20px);
+        background: #ffffff69;
+    }
+    .searchButton{
+        width: 100%;
+        border: none;
+        height: 50px;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        text-align: center;
+    }
+    .search i{
+        font-size: 15px;
+        padding-left: 12%;
+    }
+    .search input{
+        width: 280px;
+        font-size: 12px;
+    }
+    .search input::placeholder{
+        font-size: 13px;
+    }
+    .CheckInOut .checkIn input:nth-child(1){
+        border-left: none;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+    .CheckInOut .checkOut input:nth-child(1){
+        border-right: none;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    input[type="datetime-local"]{
+        width: 120px;
+        height: 30px;
+        background: transparent;
+        border: 0.01px solid #EAECEF;
+        outline: none;
+        color: #EAECEF;
+        cursor: pointer;
+        border-radius: 10px;
+        padding: 2%;
+    }
+    .SR i{
+        font-size: 15px;
+    }
+    .searchPeople input::placeholder ,.searchRooms input::placeholder{
+        font-size: 13px;
+    }
+    #searchRoom,#searchPerson{
+        width: 45px;
+    }
+    .searchButton button{
+        width: 295px;
+        height: 40px;
+        font-size: 14px;
+        background: #2659C3;
+        color: #fff;
+    }
+    /*CART*/
+    .categories{
+        display: none;
+    }
+    .categoriesMobile{
+        position: relative;
+        margin-top: 10%;
+        z-index: 1;
+        width: 100%;
+        display: block;
+    }
+    .categoriesHeaderMobile h1{
+        color: #000;
+        font-size: 24px;
+        font-family: myFontBold;
+    }
+    .cartMobile:nth-child(1){
+        margin-left: 0px;
+    }
+    .cartsMobile::-webkit-scrollbar{
+        width: 0;
+        display: none;
+    }
+    .cartsMobile{
+        overflow-x: auto;
+        width: 100%;
+        display: flex;
+    }
+    .cartMobile{
+        margin-left: 25px;
+    }
+    .cartImgMobile i{
+        font-size: 23px;
+    }
+    .cartMobile p{
+        font-size: 12px;
+    }
+    .cartMobile:hover.cartMobile p{
+        color: #000;
+    }
+    .cartMobile:hover.cartMobile i{
+        color: #000;
+    }
+    .cartMobile p{
+        color: #7d7d7d;
+        font-size: 13px;
+        text-align: center;
+    }
+    .cartMobile i{
+        font-size: 22px;
+        color: #7d7d7d;
+    }
+    .cartsMobile{
+        display: flex;
+        justify-content: space-between;
+    }
+    .cartMobile{
+        width: fit-content;
+        height: fit-content;
+        text-align: center;
+        align-items: center;
+        padding-top: 10px;
+        cursor: pointer;
+    }
+    /*TVD*/
+    .tvdHeader h1{
+        font-size: 24px;
+        margin-top: 30px;
+    }
+    /*OFFER*/
+    .offerList{
+        padding: 2%;
+    }
+    .offerImg{
+        width: 180px;
+        height: 130px;
+    }
+    .offerText h3{
+        font-size: 10px;
+    }
+    .offerText h2{
+        font-size: 14px;
+    }
+    .offerText p{
+        font-size: 10px;
+    }
+    .offerText button{
+        margin-top: -5px;
+    }
+    .bbptHeader h1{
+        margin-top: 40px;
+        font-size: 24px;
+    }
+    /*PLAN*/
+    .planTrip{
+        border-radius: 10px;
+        width: 90%;
+    }
+    .planTrip h1{
+        font-size: 22px;
+    }
+    .planTrip p{
+        font-size: 12px;
+    }
+    /*COMMUNITY*/
+    .communityHeader h1{
+        margin-top: 40px;
+        font-size: 24px;
+    }
+    /*DOWNLOAD*/
+    .downloadApp{
+        display: block;
+    }
+    .downloadImg{
+        margin: 0 auto;
+        height: 250px;
+    }
+    .downloadText{
+        margin: 0 auto;
+        text-align: center;
+    }
+    .downloadText h1{
+        font-size: 24px;
+    }
+    .downloadText p{
+        font-size: 11px;
+    }
+    .wtdta{
+        display: block;
+    }
+    .neButtons{
+        display: flex;
+        justify-content: center;
+    }
+    .neButton{
+        width: 120px;
+        font-size: 12px;
+        height: 30px;
+    }
+    .neInput2{
+        height: 30px;
+    }
+    .NE p{
+        font-size: 11px;
+    }
+    .neInputs{
+        margin: 0 auto;
+    }
+    .orLine{
+        margin-top: 20px;
+        font-size: 15px;
+    }
+    .googlePlay,.appStore{
+        margin: 0 auto;
+        padding-bottom: 20px;
+        height: 35px;
+        width: 130px;
+    }
+    /*FOOTER*/
+    .footers{
+        padding: 0;
+        padding-bottom: 100px;
+    }
+    .footer{
+        display: block;
+    }
+    .footerHeader h1{
+        font-size: 25px;
+        text-align: center;
+    }
+    .footerList ul{
+        text-align: center;
+        margin: 0 auto;
+        padding: 0;
+    }
+    .footerList ul li{
+        margin-bottom: 20px;
+    }
+    .footerList ul button{
+        font-size: 10px;
+        margin-bottom: 15px;
+    }
+    .footerList ul p{
+        font-size: 12px;
+        margin-bottom: 20px;
+    }
+    .socialList{
+        justify-content: space-around;
+    }
+    .socialList i{
+        font-size: 30px;
+    }
+}

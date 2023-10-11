@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"/>
+    <link rel="stylesheet" href="style.css">
+    <title>TRXVL WEBSITE</title>
+</head>
+<body class="body">
+    <div class="maxWidth">
+        <h1>There is no design for the screen</h1>
+        <p>Please reduce your device width</p>
+    </div>
+   
+    <div class="trxvl">
+        <div class="heros">
+            <div class="nav">
+                    
+                    <div class="hamburger">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+        
+                    <div class="header">
+                        <h1>trxvl.</h1>
+                    </div>
+                    <div class="navList">
+                        <ul>
+                            <li><a href="#" class="Links active">Home</a></li>
+                            <li><a href="#" class="Links">Stay</a></li>
+                            <li><a href="#" class="Links">Flights</a></li>
+                            <li><a href="#" class="Links">Packages</a></li>
+                            <li><a href="#" class="Links">Sign Up</a></li>
+                        </ul>
+                    </div>
+                     
+                    <div class="nav-menu" id="menu">
+                        <a href="#"><button>Sign Up</button></a>
+                        <a href="#"><button>Sign In</button></a>
+                    </div>
+            </div>
+            <!--ANDROID MENU-->
+            <div class="androidMenu">
+                <ul>
+                    <li><a href="#" class="AM amActive">
+                        <i class="fa-solid fa-house"></i>
+                        <p>Home</p>
+                    </a></li>
+                    <li><a href="#" class="AM">
+                        <i class="fa-solid fa-suitcase-rolling"></i>
+                        <p>Packages</p>
+                    </a></li>
+                    <li><a href="#" class="AM">
+                        <i class="fa-solid fa-building-user"></i>
+                        <p>Stays</p>
+                    </a></li>
+                    <li><a href="#" class="AM">
+                        <i class="fa-solid fa-plane-up"></i>
+                        <p>Flights</p>
+                    </a></li>
+                </ul>
+            </div>
+            <!--HERO-->
+            <div class="hero">
+                <div class="heroHeader">
+                    <h1>The whole world <br>
+                         awaits.</h1>
+                </div>
+                <div class="heroSearch">
+                    <!--SEARCHBOX-->
+                    <div class="heroSearchBox">
+                        <div class="search">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <input type="search" name="search" id="search" placeholder="search destinations, hotels">
+                        </div>
+                        <!--CHECKIN&OUT-->
+                        <div class="CheckInOut">
+                            <div class="checkIn">
+                                <input type="datetime-local" name="checkInDate" id="checkInDate">
+                            </div>
+                            <p>~</p>
+                            <div class="checkOut">
+                                <input type="datetime-local" name="checkOutDate" id="checkOutDate" >
+                            </div>
+                        </div>
+                        <!--ROOMS&PEOPLE-->
+                        <div class="RP">
+                            <!--SEARCH ROOMS-->
+                            <div class="searchRooms">
+                                <span class="SR"><i class="fa-solid fa-building"></i></span>
+                                <input type="number" name="searchRooms" id="searchRoom" placeholder="Rooms" min="1" max="20">
+                            </div>
+                            <!--SEARCH PEOPLE-->
+                            <div class="searchPeople">
+                                <span class="SR"><i class="fa-solid fa-user"></i></span>
+                                <input type="number" name="searchPeople" id="searchPerson" placeholder="Adults"  min="1" max="20">
+                            </div>
+                        </div>
+                        <!--SEARCH BUTTON-->
+                        <div class="searchButton">
+                            <button type="submit">Search</button>
+                        </div>
+                    </div>
+                </div>
+                 <!--CATEGORIES-->
+                 <div class="categories">
+                    <div class="categoriesHeader">
+                        <h1>Top categories</h1>
+                    </div>
+                    <div class="carts">
+                        <div class="cart">
+                            <div class="cartImg">
+                                <i class="fa-solid fa-tractor"></i>
+                            </div>
+                            <p>Countryside</p>
+                        </div>
+                        <div class="cart">
+                            <div class="cartImg">
+                                <i class="fa-brands fa-fort-awesome"></i>
+                            </div>
+                            <p>Castle</p>
+                        </div>
+                        <div class="cart">
+                            <div class="cartImg">
+                                <i class="fa-solid fa-monument"></i>
+                            </div>
+                            <p>Iconic~Cities</p>
+                        </div>
+                        <div class="cart">
+                            <div class="cartImg">
+                                <i class="fa-solid fa-person-skiing"></i>
+                            </div>
+                            <p>Skiing</p>
+                        </div>
+                        <div class="cart">
+                            <div class="cartImg">
+                                <i class="fa-solid fa-sun-plant-wilt"></i>
+                            </div>
+                            <p>Desert</p>
+                        </div>
+                        <div class="cart">
+                            <div class="cartImg">
+                                <i class="fa-solid fa-ferry"></i>
+                            </div>
+                            <p>Houseboats</p>
+                        </div>
+                        <div class="cart">
+                            <div class="cartImg">
+                                <i class="fa-solid fa-mountain-sun"></i>
+                            </div>
+                            <p>Mountain</p>
+                        </div>
+                        <div class="cart">
+                            <div class="cartImg">
+                                <i class="fa-solid fa-umbrella-beach"></i>
+                            </div>
+                            <p>Beach</p>
+                        </div>
+                        <div class="cart">
+                            <div class="cartImg">
+                                <i class="fa-solid fa-campground"></i>
+                            </div>
+                            <p>Camping</p>
+                        </div>
+                        <div class="cart">
+                            <div class="cartImg">
+                                <i class="fa-solid fa-water"></i>
+                            </div>
+                            <p>Tropical</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="TW">
+                 <!--CATEGORIES_mobile-->
+                 <div class="categoriesMobile">
+                    <div class="categoriesHeaderMobile">
+                        <h1>Top categories</h1>
+                    </div>
+                    <div class="cartsMobile">
+                        <div class="cartMobile">
+                            <div class="cartImgMobile">
+                                <i class="fa-solid fa-tractor"></i>
+                            </div>
+                            <p>Countryside</p>
+                        </div>
+                        <div class="cartMobile">
+                            <div class="cartImgMobile">
+                                <i class="fa-brands fa-fort-awesome"></i>
+                            </div>
+                            <p>Castle</p>
+                        </div>
+                        <div class="cartMobile">
+                            <div class="cartImgMobile">
+                                <i class="fa-solid fa-monument"></i>
+                            </div>
+                            <p>Iconic~Cities</p>
+                        </div>
+                        <div class="cartMobile">
+                            <div class="cartImgcartImgMobile">
+                                <i class="fa-solid fa-person-skiing"></i>
+                            </div>
+                            <p>Skiing</p>
+                        </div>
+                        <div class="cartMobile">
+                            <div class="cartImgMobile">
+                                <i class="fa-solid fa-sun-plant-wilt"></i>
+                            </div>
+                            <p>Desert</p>
+                        </div>
+                        <div class="cartMobile">
+                            <div class="cartImgMobile">
+                                <i class="fa-solid fa-ferry"></i>
+                            </div>
+                            <p>Houseboats</p>
+                        </div>
+                        <div class="cartMobile">
+                            <div class="cartImgMobile">
+                                <i class="fa-solid fa-mountain-sun"></i>
+                            </div>
+                            <p>Mountain</p>
+                        </div>
+                        <div class="cartMobile">
+                            <div class="cartImgMobile">
+                                <i class="fa-solid fa-umbrella-beach"></i>
+                            </div>
+                            <p>Beach</p>
+                        </div>
+                        <div class="cartMobile">
+                            <div class="cartImgMobile">
+                                <i class="fa-solid fa-campground"></i>
+                            </div>
+                            <p>Camping</p>
+                        </div>
+                        <div class="cartMobile">
+                            <div class="cartImg">
+                                <i class="fa-solid fa-water"></i>
+                            </div>
+                            <p>Tropical</p>
+                        </div>
+                    </div>
+                </div>
+    
+           <!--TOP VACATION DESTINATION-->
+           <div class="tvd">
+            <div class="tvdHeader">
+                <h1>Top Vacation Destinations</h1>
+            </div>
+            <div class="swiper mySwiper1">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="destinations">
+                        <div class="destination">
+                            <div class="desImg">
+                                <img src="images/image 18 (1).png" alt="">
+                            </div>
+                            <div class="desLoc">
+                                <p>Bali, Indonasia</p>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                  <!--slider2-->
+                  <div class="swiper-slide">
+                    <div class="destinations">
+                        <div class="destination">
+                            <div class="desImg">
+                                <img src="images/image 18 (2).png" alt="">
+                            </div>
+                            <div class="desLoc">
+                                <p>Kerry, Ireland</p>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                   <!--slider2-->
+                   <div class="swiper-slide">
+                    <div class="destinations">
+                        <div class="destination">
+                            <div class="desImg">
+                                <img src="images/image 18 (3).png" alt="">
+                            </div>
+                            <div class="desLoc">
+                                <p>Sydney, Australia</p>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                   <!--slider2-->
+                   <div class="swiper-slide">
+                    <div class="destinations">
+                        <div class="destination">
+                            <div class="desImg">
+                                <img src="images/image 18 (4).png" alt="">
+                            </div>
+                            <div class="desLoc">
+                                <p>Paris, France</p>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                   <!--slider2-->
+                   <div class="swiper-slide">
+                    <div class="destinations">
+                        <div class="destination">
+                            <div class="desImg">
+                                <img src="images/National Arts Theatre Lagos.jpeg" alt="">
+                            </div>
+                            <div class="desLoc">
+                                <p>Lagos, Nigeria</p>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                   <!--slider2-->
+                   <div class="swiper-slide">
+                    <div class="destinations">
+                        <div class="destination">
+                            <div class="desImg">
+                                <img src="images/download (1).jpeg" alt="">
+                            </div>
+                            <div class="desLoc">
+                                <p>Fujiyoshida, Japan</p>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                   <!--slider2-->
+                   <div class="swiper-slide">
+                    <div class="destinations">
+                        <div class="destination">
+                            <div class="desImg">
+                                <img src="images/Incredible pictures show Egypt in all its glory.jpeg" alt="">
+                            </div>
+                            <div class="desLoc">
+                                <p>Giza, Egypt</p>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                   <!--slider2-->
+                   <div class="swiper-slide">
+                    <div class="destinations">
+                        <div class="destination">
+                            <div class="desImg">
+                                <img src="images/Drakensberg-Amphitheatre.jpeg" alt="">
+                            </div>
+                            <div class="desLoc">
+                                <p>Durban, SouthAfrica</p>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+           </div>
+    
+           <!--OFFERS-->
+           <div class="offers">
+            <div class="offersHeader">
+                <h1>Offers</h1>
+            </div>
+            <!--OFFER SLIDER-->
+            <div class="offerLists">
+                <div class="swiper mySwiper2">
+                    <div class="swiper-wrapper">
+                        <!--SWIPER-->
+                      <div class="swiper-slide">
+                        <div class="offerList">
+                            <div class="offerImg">
+                                <img src="images/image 19 (1).png" alt="Image">
+                            </div>
+                            <div class="offerText">
+                                <h3>Domestic Flights</h3>
+                                <h2>Enjoy Upto 20% of on<br>
+                                    International hotels
+                                </h2>
+                                <p>Book Domestic Flights Starting From &#8358;70000 </p>
+                                <button type="submit">Book Now</button>
+                            </div>
+                        </div>
+                      </div>
+                      <!--SWIPER-->
+                      <div class="swiper-slide">
+                        <div class="offerList">
+                            <div class="offerImg">
+                                <img src="images/image 19 (2).png" alt="Image">
+                            </div>
+                            <div class="offerText">
+                                <h3>International Hotle</h3>
+                                <h2>Enjoy Upto 20% of on<br>
+                                    International hotels
+                                </h2>
+                                <p>Book Domestic Flights Starting From &#8358;70000 </p>
+                                <button type="submit">Book Now</button>
+                            </div>
+                        </div>
+                      </div>
+                       <!--SWIPER-->
+                       <div class="swiper-slide">
+                        <div class="offerList">
+                            <div class="offerImg">
+                                <img src="images/image 19 (1).png" alt="Image">
+                            </div>
+                            <div class="offerText">
+                                <h3>Domestic Flights</h3>
+                                <h2>Enjoy Upto 20% of on<br>
+                                    International hotels
+                                </h2>
+                                <p>Book Domestic Flights Starting From &#8358;70000 </p>
+                                <button type="submit">Book Now</button>
+                            </div>
+                        </div>
+                      </div>
+                       <!--SWIPER-->
+                       <div class="swiper-slide">
+                        <div class="offerList">
+                            <div class="offerImg">
+                                <img src="images/image 19 (1).png" alt="Image">
+                            </div>
+                            <div class="offerText">
+                                <h3>Domestic Flights</h3>
+                                <h2>Enjoy Upto 20% of on<br>
+                                    International hotels
+                                </h2>
+                                <p>Book Domestic Flights Starting From &#8358;70000 </p>
+                                <button type="submit">Book Now</button>
+                            </div>
+                        </div>
+                      </div>
+                       <!--SWIPER-->
+                       <div class="swiper-slide">
+                        <div class="offerList">
+                            <div class="offerImg">
+                                <img src="images/image 19 (1).png" alt="Image">
+                            </div>
+                            <div class="offerText">
+                                <h3>Domestic Flights</h3>
+                                <h2>Enjoy Upto 20% of on<br>
+                                    International hotels
+                                </h2>
+                                <p>Book Domestic Flights Starting From &#8358;70000 </p>
+                                <button type="submit">Book Now</button>
+                            </div>
+                        </div>
+                      </div>
+                       <!--SWIPER-->
+                       <div class="swiper-slide">
+                        <div class="offerList">
+                            <div class="offerImg">
+                                <img src="images/image 19 (1).png" alt="Image">
+                            </div>
+                            <div class="offerText">
+                                <h2>Enjoy Upto 20% of on<br>
+                                    International hotels
+                                </h2>
+                                <p>Book Domestic Flights Starting From &#8358;70000 </p>
+                                <button type="submit">Book Now</button>
+                            </div>
+                        </div>
+                      </div>
+                      <!--SWIPER END-->
+                    </div>
+                  </div>
+            </div>
+           </div>
+    
+           <!--BBPT-->
+           <div class="browseByProperyType">
+            <div class="bbptHeader">
+                <h1>Browse By Property Type</h1>
+            </div>
+            <div class="bbpt">
+                <div class="swiper mySwiper3">
+                    <div class="swiper-wrapper">
+                     <!--SWIPER-->
+                      <div class="swiper-slide">
+                        <div class="bbptList">
+                            <div class="bbptImg">
+                                <img src="images/image 18 (5).png" alt="image">
+                            </div>
+                            <div class="bbptText">
+                                <p>Hotels</p>
+                            </div>
+                        </div>
+                      </div>
+                      <!--SWIPER-->
+                      <div class="swiper-slide">
+                        <div class="bbptList">
+                            <div class="bbptImg">
+                                <img src="images/image 18 (6).png" alt="image">
+                            </div>
+                            <div class="bbptText">
+                                <p>Apartment</p>
+                            </div>
+                        </div>
+                      </div>
+                      <!--SWIPER-->
+                      <div class="swiper-slide">
+                        <div class="bbptList">
+                            <div class="bbptImg">
+                                <img src="images/image 18 (7).png" alt="image">
+                            </div>
+                            <div class="bbptText">
+                                <p>Resorts</p>
+                            </div>
+                        </div>
+                      </div>
+                      <!--SWIPER-->
+                      <div class="swiper-slide">
+                        <div class="bbptList">
+                            <div class="bbptImg">
+                                <img src="images/image 18 (8).png" alt="image">
+                            </div>
+                            <div class="bbptText">
+                                <p>Villas</p>
+                            </div>
+                        </div>
+                      </div>
+                      <!--SWIPER-->
+                      <div class="swiper-slide">
+                        <div class="bbptList">
+                            <div class="bbptImg">
+                                <img src="images/Beachfront Pensacola Home _ Beautiful Gulf Views, Large Private Deck and Grill!.jpeg" alt="image">
+                            </div>
+                            <div class="bbptText">
+                                <p>Beach House</p>
+                            </div>
+                        </div>
+                      </div>
+                      <!--SWIPER-->
+                      <div class="swiper-slide">
+                        <div class="bbptList">
+                            <div class="bbptImg">
+                                <img src="images/Suite of the week_ Sultan Suite, Ciragan Palace Kempinski, Istanbul, Turkey.jpeg" alt="image">
+                            </div>
+                            <div class="bbptText">
+                                <p>Luxury Mansion</p>
+                            </div>
+                        </div>
+                      </div>
+                      <!--SWIPER-->
+                      <div class="swiper-slide">
+                        <div class="bbptList">
+                            <div class="bbptImg">
+                                <img src="images/6 Luxury Vacation Rental Sites (That Aren’t Airbnb).jpeg" alt="image">
+                            </div>
+                            <div class="bbptText">
+                                <p>Mansion</p>
+                            </div>
+                        </div>
+                      </div>
+                      <!--SWIPER-->
+                      <div class="swiper-slide">
+                        <div class="bbptList">
+                            <div class="bbptImg">
+                                <img src="images/Luxury Villa & Vacation Rentals _ Luxury Retreats _ Airbnb Luxe.jpeg" alt="image">
+                            </div>
+                            <div class="bbptText">
+                                <p>Desert House</p>
+                            </div>
+                        </div>
+                      </div>
+                      <!--SWIPER-->
+                      <div class="swiper-slide">
+                        <div class="bbptList">
+                            <div class="bbptImg">
+                                <img src="images/e71fce58-702f-48fa-b8fe-ed1311e5d525.jpeg" alt="image">
+                            </div>
+                            <div class="bbptText">
+                                <p>Houseboat</p>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+           </div>
+           
+           <!--PLAN TRIP-->
+           <div class="planTrip">
+            <h1>Plan your trip with a travel <br> expert</h1>
+            <p>Our professional advisors can craft your perfect itinerary</p>
+           </div>
+    
+    
+           <!--Connect with other travellers in our community-->
+           <div class="communitys">
+            <div class="communityHeader">
+                <h1>Connect with other travellers in our community</h1>
+            </div>
+            <div class="community">
+                <div class="swiper mySwiper4">
+                    <div class="swiper-wrapper">
+                        <!--SWIPER-->
+                      <div class="swiper-slide">
+                        <div class="communityList">
+                            <div class="communityImg">
+                                <img src="images/Frame 31.png" alt="image">
+                            </div>
+                            <div class="communityText">
+                                <h1>India</h1>
+                                <h3>Travel Community</h3>
+                                <p>184,502 Travelers</p>
+                            </div>
+                        </div>
+                      </div>
+                         <!--SWIPER-->
+                         <div class="swiper-slide">
+                            <div class="communityList">
+                                <div class="communityImg">
+                                    <img src="images/Frame 31 (1).png" alt="image">
+                                </div>
+                                <div class="communityText">
+                                    <h1>Travel Talks</h1>
+                                    <h3>Travel Community</h3>
+                                    <p>184,502 Travelers</p>
+                                </div>
+                            </div>
+                          </div>
+                             <!--SWIPER-->
+                      <div class="swiper-slide">
+                        <div class="communityList">
+                            <div class="communityImg">
+                                <img src="images/Frame 31 (2).png" alt="image">
+                            </div>
+                            <div class="communityText">
+                                <h1>Beach</h1>
+                                <h3>Travel Community</h3>
+                                <p>184,502 Travelers</p>
+                            </div>
+                        </div>
+                      </div>
+                         <!--SWIPER-->
+                         <div class="swiper-slide">
+                            <div class="communityList">
+                                <div class="communityImg">
+                                    <img src="images/Frame 31 (3).png" alt="image">
+                                </div>
+                                <div class="communityText">
+                                    <h1>Mountains</h1>
+                                    <h3>Travel Community</h3>
+                                    <p>184,502 Travelers</p>
+                                </div>
+                            </div>
+                          </div>
+                             <!--SWIPER-->
+                      <div class="swiper-slide">
+                        <div class="communityList">
+                            <div class="communityImg">
+                                <img src="images/Frame 31.png" alt="image">
+                            </div>
+                            <div class="communityText">
+                                <h1>India</h1>
+                                <h3>Travel Community</h3>
+                                <p>184,502 Travelers</p>
+                            </div>
+                        </div>
+                      </div>
+                         <!--SWIPER-->
+                         <div class="swiper-slide">
+                            <div class="communityList">
+                                <div class="communityImg">
+                                    <img src="images/Frame 31.png" alt="image">
+                                </div>
+                                <div class="communityText">
+                                    <h1>India</h1>
+                                    <h3>Travel Community</h3>
+                                    <p>184,502 Travelers</p>
+                                </div>
+                            </div>
+                          </div>
+                             <!--SWIPER-->
+                      <div class="swiper-slide">
+                        <div class="communityList">
+                            <div class="communityImg">
+                                <img src="images/Frame 31.png" alt="image">
+                            </div>
+                            <div class="communityText">
+                                <h1>India</h1>
+                                <h3>Travel Community</h3>
+                                <p>184,502 Travelers</p>
+                            </div>
+                        </div>
+                      </div>
+                         <!--SWIPER-->
+                         <div class="swiper-slide">
+                            <div class="communityList">
+                                <div class="communityImg">
+                                    <img src="images/Frame 31.png" alt="image">
+                                </div>
+                                <div class="communityText">
+                                    <h1>India</h1>
+                                    <h3>Travel Community</h3>
+                                    <p>184,502 Travelers</p>
+                                </div>
+                            </div>
+                          </div>
+                             <!--SWIPER-->
+                      <div class="swiper-slide">
+                        <div class="communityList">
+                            <div class="communityImg">
+                                <img src="images/Frame 31.png" alt="image">
+                            </div>
+                            <div class="communityText">
+                                <h1>India</h1>
+                                <h3>Travel Community</h3>
+                                <p>184,502 Travelers</p>
+                            </div>
+                        </div>
+                      </div>
+    
+                    </div>
+                  </div>
+            </div>
+           </div>
+    
+        </div>
+    
+    
+        
+           <!--DOWNLOAD APP-->
+           <div class="downloadApp">
+            <div class="downloadImg">
+                <img src="images/iPhone 13 Mockup.png" alt="image">
+            </div>
+            <div class="downloadText">
+                <h1>Your all-in-one travel app.</h1>
+                <p>Book flights, hotels, trains & rental cars anywhere in the world in just <br>
+                     seconds. Get real-time flight updates, travel info, exclusive deals, and <br>
+                      30% more Trip Coins only on the app!
+                </p>
+                <!--WHERE TO DOWNLOAD THE APP-->
+                <div class="wtdta">
+                    <!--NUMBER OR EMAIL-->
+                    <div class="NE">
+                        <!--NUMBER OR EMAIL BUTTONS-->
+                        <div class="neButtons">
+                            <button class="neButton neActive" id="numberButton">Mobile</button>
+                            <button class="neButton" id="emailButton">Email</button>
+                        </div>
+                        <p class="neText">
+                            Enter your phone number to receive a text with a link to download the app.
+                        </p>
+                        <!--INPUT EMAIL OR TEXT-->
+                        <div class="neInputs">
+                            <!--PHONE NUMBER-->
+                            <div class="neInput1">
+                                    <input type="tel" name="telPhone" id="telPhone" placeholder="Mobile Number">
+                                    <button type="submit" id="neSubmit">Search</button>
+                            </div>
+                              <!--PHONE NUMBER-->
+                              <div class="neInput2">
+                                <input type="email" name="emailPhone" id="emailPhone" placeholder="Enter Email Address">
+                                <button type="submit">Search</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="orLine">
+                        <p>~ OR ~</p>
+                    </div>
+                    <div class="GA">
+                        <div class="googlePlay">
+                            <a href="#">
+                                <img src="images/image 23.png" alt="link to download app on google playstore">
+                            </a>
+                        </div>
+                        <div class="appStore">
+                            <a href="#">
+                                <img src="images/image 22.png" alt="link to download app on app store">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           </div>
+    
+           <!-- FOOTER-->
+           <div class="footers">
+            <footer>
+               <div class="footer">
+                <div class="footerHeader">
+                    <h1>Trxvl.</h1>
+                </div>
+                <div class="footerList">
+                    <ul>
+                        <li><a href="#">Seslendirme ve Alt Yazı</a></li>
+                        <li><a href="#">Medya Merkezi</a></li>
+                        <li><a href="#">Gizlilik</a></li>
+                        <li><a href="#">Bize Ulaşın</a></li>
+                        <button>Helmet KOD</button>
+                        <p>© 1997-2021 Netflix, Inc. {i-062d573a0ee099242}</p>
+                    </ul>
+                </div>
+                <!--FOOTER LIST-->
+                <div class="footerList">
+                    <ul>
+                        <li><a href="#">Sesli Betimleme</a></li>
+                        <li><a href="#">Yatırımcı İlişkileri</a></li>
+                        <li><a href="#">Yasal Hükümler</a></li>
+                    </ul>
+                </div>
+                <!--FOOTER LIST-->
+                <div class="footerList">
+                    <ul>
+                        <li><a href="#">Yardım Merkezi</a></li>
+                        <li><a href="#">İş İmkanları</a></li>
+                        <li><a href="#">Çerez Tercihleri</a></li>
+                    </ul>
+                </div>
+                <!--FOOTER LIST-->
+                <div class="footerList">
+                    <ul>
+                        <li><a href="#">Hediye Kartları</a></li>
+                        <li><a href="#">Kullanım Koşulları</a></li>
+                        <li><a href="#">Kurumsal Bilgiler</a></li>
+                    </ul>
+                    <div class="socialList">
+                        <i class="fa-brands fa-square-facebook"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-x-twitter"></i>
+                        <i class="fa-brands fa-youtube"></i>
+                    </div>
+                </div>
+    
+    
+               </div>
+            </footer>
+           </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+    <script src="main.js"></script>
+     <script>
+        //TOP VACATION DESTINATION
+        var swiper = new Swiper(".mySwiper1", {
+          slidesPerView: 3.5,
+          spaceBetween: 30,
+          breakpoints:{     
+            850: {
+                slidesPerView:3.4,
+                spaceBetween: 40
+            },
+            451: {
+                slidesPerView:3.3,
+                spaceBetween: 50
+            }
+            ,
+            300: {
+                slidesPerView:2.1,
+                spaceBetween: 70
+            }
+
+
+          }
+
+        });
+
+        //OFFERS
+        var swiper = new Swiper(".mySwiper2", {
+          slidesPerView: 1.6,
+          spaceBetween: 30,
+          breakpoints:{     
+          1300: {
+                slidesPerView:1.6,
+                spaceBetween: 50
+            },
+            1025: {
+                slidesPerView:1.5,
+                spaceBetween: 10
+            },
+            850: {
+                slidesPerView:1.4,
+                spaceBetween: 50
+            },
+            600: {
+                slidesPerView:1.35,
+                spaceBetween: 40
+            }
+            ,
+            300: {
+                slidesPerView:1,
+                spaceBetween: 40
+            }
+
+          }
+        });
+        
+        //BBPT
+        var swiper = new Swiper(".mySwiper3", {
+          slidesPerView: 3.6,
+          spaceBetween: 50,
+          breakpoints:{     
+          1300: {
+                slidesPerView:3.6,
+                spaceBetween: 50
+            },
+            1025: {
+                slidesPerView:3.5,
+                spaceBetween: 100
+            },
+            850: {
+                slidesPerView:3.4,
+                spaceBetween: 100
+            },
+            600: {
+                slidesPerView:3.4,
+                spaceBetween: 80
+            },
+            300: {
+                slidesPerView:2,
+                spaceBetween: 60
+            }
+
+          }
+        });
+        
+        //COMMUNITY
+        var swiper = new Swiper(".mySwiper4", {
+          slidesPerView: 3.5,
+          spaceBetween: 50,
+          breakpoints:{     
+          1300: {
+                slidesPerView:3.5,
+                spaceBetween: 100
+            },
+            1025: {
+                slidesPerView:3.4,
+                spaceBetween: 100
+            },
+            850: {
+                slidesPerView:3.3,
+                spaceBetween: 100
+            },
+            600: {
+                slidesPerView:3.1,
+                spaceBetween: 100
+            },
+            300: {
+                slidesPerView:1.7,
+                spaceBetween: 60
+            }
+          }
+        });
+      </script>
+</body>
+</html>
