@@ -11,19 +11,19 @@ body{
 }
 @font-face {
     font-family: myFontRetina;
-    src: url(./fira-code/FiraCode-Retina.otf);
+    src: url(./fira-code/FiraCode-Retina.otf) format("otf");
 }
 @font-face {
     font-family: myFontBold;
-    src: url(./fira-code/FiraCode-Bold.otf);
+    src: url(./fira-code/FiraCode-Bold.otf) format("otf");
 }
 @font-face {
     font-family: myFontThin;
-    src: url(./fira-code/FiraCode-Light.otf);
+    src: url(./fira-code/FiraCode-Light.otf) format("otf");
 }
 @font-face {
     font-family: myFontRegular;
-    src: url(./fira-code/FiraCode-Regular.otf);
+    src: url(./fira-code/FiraCode-Regular.otf) format("otf");
 }
 .loading{
     height: 100vh;
