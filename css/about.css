@@ -910,10 +910,10 @@ body{
 }
 
 .navContact ul a:nth-child(1):hover{
-    opacity: 1;
+    opacity: 0.5;
 }
 .navContact ul a:nth-child(2):hover{
-    opacity: 1;
+    opacity: 0.5;
 }
 .navContact ul li:nth-child(1):hover{
    border-bottom: transparent;
