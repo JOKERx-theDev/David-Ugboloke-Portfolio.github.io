@@ -1,6 +1,7 @@
 //WEBSITE LOADING
 let loderPage = document.querySelector('.loading')
 let preLoaded = document.querySelector('.p')
+preLoaded.style.display = 'none'
 window.addEventListener('load',()=>{
     loderPage.style.display = 'none'
     preLoaded.style.display = 'block'
