@@ -1345,6 +1345,42 @@ body{
     }
 
 }
+@media screen and (max-width:650px) and (orientation:landscape) {
+    .onLoadContent h1{
+        font-size: 25px;
+    }
+    .main{
+        overflow: hidden;
+    }
+    .heroText{
+        margin-top: 10%;
+    }
+    .heroText p{
+        font-size: 9px;
+    }
+    .heroText h1{
+        font-size: 20px;
+        margin-top: -11px;
+    }
+    .heroText h3{
+        font-size: 12px;
+        margin-top: -13px;
+    }
+    .heroTextSub p{
+        font-size: 7px;
+    }
+    .heroImgContainer{
+        width: 230px;
+        margin-top: 10px;
+    }
+    .heroImgContainer p{
+        font-size: 6px;
+        line-height: 12px;
+    }
+    .footer{
+        bottom: 0%;
+    }
+}
 @media screen and (max-width:550px) and (orientation:portrait) {
     .load{
         width: 200px;
@@ -1438,4 +1474,10 @@ body{
         display: none;
     }
 
+}
+@media screen and (max-width:380px) and (orientation:portrait) {
+    body{
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
 }
