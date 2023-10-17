@@ -1,9 +1,11 @@
 
 //WEBSITE LOADING
 let loderPage = document.querySelector('.loading')
+let main = document.querySelector('.main')
 
 window.addEventListener('load',()=>{
     loderPage.style.display = 'none'
+    main.style.display= 'block'
 })
 window.history.pushState(null, null, window.location.href);
 window.onpopstate = function () {
