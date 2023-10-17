@@ -1858,15 +1858,17 @@ body{
         margin-left: 14%;
     }
 }
-@media screen and (max-width:430px) and (orientation:portrait) {
-    .myResume{
-        height: 80vh;
-        margin-left: 11%;
-    }
-}
 @media screen and (max-width:400px) and (orientation:portrait) {
     .myResume{
         height: 80vh;
         margin-left: 8%;
+        padding-bottom: 20%;
+    }
+}
+@media screen and (max-width:380px) and (orientation:portrait) {
+    .myResume {
+        height: 80vh;
+        margin-left: 4%;
+        padding-bottom: 30%;
     }
 }
