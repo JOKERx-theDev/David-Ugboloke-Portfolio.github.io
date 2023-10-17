@@ -1,9 +1,11 @@
 //WEBSITE LOADING
 let loderPage = document.querySelector('.loading')
-
+let cc = document.querySelector('.cc')
 window.addEventListener('load',()=>{
     loderPage.style.display = 'none'
+    cc.style.display = 'block'
 })
+
 
 
 const username = document.getElementById('Name')
