@@ -494,6 +494,9 @@ body{
 .maxWidth{
     display: none;
 }
+.main{
+    display: none;
+}
 @media screen and (min-width:2101px) and (orientation:landscape)  {
     .main{
         display: none;
