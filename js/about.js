@@ -20,6 +20,7 @@ let personalContent = document.querySelector('.personalInfoContent')
 let professionalContent = document.querySelector('.professionalInfoContent')
 let personalPara = document.querySelector('.personalInfoP')
 let professionalPara = document.querySelector('.professionalInfoP')
+let AboutContent = document.querySelector('.AboutContent')
 
 
 folder.addEventListener('click' , ()=>{
@@ -48,6 +49,7 @@ personalPara.addEventListener('click' ,()=>{
     professionalBtn.classList.remove('professionalInfoActiveBorder')
     personalContent.classList.add('personalInfoContentActive')
     professionalContent.classList.remove('professionalInfoContentActive')
+    AboutContent.style.display = 'block'
 })
 
 professionalPara.addEventListener('click' , ()=>{
@@ -55,6 +57,7 @@ professionalPara.addEventListener('click' , ()=>{
     presonalBtn.classList.remove('presonalInfoActiveBorder')
     personalContent.classList.remove('personalInfoContentActive')
     professionalContent.classList.add('professionalInfoContentActive')
+    AboutContent.style.display = 'block'
 })
 
 presonalClose.addEventListener('click',()=>{
