@@ -152,3 +152,15 @@ const body = document.querySelector(".body")
   navMenu.classList.toggle("is-active");
   body.classList.toggle("onscroll")
 });
+
+//MESSAGE COUNTER*/
+let maxCounter = 250
+message.maxLength = 250
+document.querySelector('.counter').textContent = "Text Left:" + ' ' + maxCounter
+
+message.addEventListener('input', ()=>{
+    if(message.value.length){
+        let currCount = maxCounter - message.value.length
+        document.querySelector('.counter').textContent = "Text Left:" + ' ' + currCount
+    }
+})
