@@ -1826,6 +1826,7 @@ body{
     /*ABOUT CONTENT*/
     .AboutContent{
         height: 60vh;
+        display: none;
     }
     .personalInfoContent ul li{
         font-size: 9px;
@@ -1856,9 +1857,7 @@ body{
     .professionalInfoContent ul li {
         font-size: 9.3px;
     }
-    .AboutContent{
-        display: none;
-    }
+    
 }
 @media screen and (max-width:450px) and (orientation:portrait) {
     .myResume{
