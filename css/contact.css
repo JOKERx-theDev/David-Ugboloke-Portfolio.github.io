@@ -14,19 +14,19 @@ html, body {
 }
 @font-face {
     font-family: myFontRetina;
-    src: url(../fira-code/FiraCode-Retina.otf);
+    src: url(/fira-code/FiraCode-Retina.OTF);
 }
 @font-face {
     font-family: myFontBold;
-    src: url(../fira-code/FiraCode-Bold.otf);
+    src: url(/fira-code/FiraCode-Bold.OTF);
 }
 @font-face {
     font-family: myFontThin;
-    src: url(../fira-code/FiraCode-Light.otf);
+    src: url(/fira-code/FiraCode-Light.OTF);
 }
 @font-face {
     font-family: myFontRegular;
-    src: url(../fira-code/FiraCode-Regular.otf) format("OpenType");
+    src: url(/fira-code/FiraCode-Regular.OTF);
 }
 .loading{
     height: 100vh;
@@ -297,11 +297,16 @@ html, body {
     border: 1px solid #1E2D3D;
     outline: #1E2D3D;
     color: #607B96;
-    margin-bottom: 20px;
     border-radius: 5px;
     caret-color: transparent;
     font-size: 12px;
     padding-left: 3%;
+    resize: none;
+}
+.counter{
+    margin-bottom: 20px;
+    font-size: 12px;
+    color: #607B96;
 }
 .contactMeContent button{
     background: #1C2B3A;
@@ -521,6 +526,11 @@ html, body {
         height: 90px;
         font-size: 15px;
     }
+    .counter{
+        margin-bottom: 20px;
+        font-size: 15px;
+        color: #607B96;
+    }
     .contactMeContent button{
         width: 200px;
         font-size: 17px;
@@ -618,6 +628,12 @@ html, body {
     #Message{
         width: 400px;
         height: 70px;
+        margin-bottom: 0;
+    }
+    .counter{
+        margin-bottom: 20px;
+        font-size: 14px;
+        color: #607B96;
     }
     .contactMeContent button{
         width: 170px;
@@ -835,11 +851,15 @@ html, body {
     border: 1px solid #1E2D3D;
     outline: #1E2D3D;
     color: #607B96;
-    margin-bottom: 20px;
     border-radius: 5px;
     caret-color: transparent;
     font-size: 12px;
     padding-left: 3%;
+}
+.counter{
+    margin-bottom: 20px;
+    font-size: 12px;
+    color: #607B96;
 }
 .contactMeContent button{
     background: #1C2B3A;
@@ -1017,6 +1037,11 @@ html, body {
         font-size: 10px;
         padding-bottom: 10px;
     }
+    .counter{
+        margin-bottom: 20px;
+        font-size: 9px;
+        color: #607B96;
+    }
     .contactMeContent button{
         height: 25px;
         width: 100px;
@@ -1080,6 +1105,11 @@ html, body {
         width: 500px;
         padding-bottom: 100px;
         font-size: 18px;
+    }
+    .counter{
+        margin-bottom: 20px;
+        font-size: 15px;
+        color: #607B96;
     }
     .contactMeContent button{
         width: 200px;
@@ -1157,6 +1187,11 @@ html, body {
         padding-bottom: 70px;
         font-size: 18px;
     }
+    .counter{
+        margin-bottom: 20px;
+        font-size: 12px;
+        color: #607B96;
+    }
     .contactMeContent button{
         width: 150px;
         height: 30px;
@@ -1209,7 +1244,12 @@ html, body {
     #Message{
         width: 230px;
         height: 50px;
+        margin-bottom: 0px;
+    }
+    .counter{
         margin-bottom: 15px;
+        font-size: 9px;
+        color: #607B96;
     }
     .contactMeOutput ul{
         padding: 0;
@@ -1217,7 +1257,7 @@ html, body {
     }
     .contactMeContent button{
         width: 130px;
-        height: 35px;
+        height: 30px;
         font-size: 10px;
     }
     .contactMeOutput ul li{
@@ -1672,12 +1712,6 @@ html, body {
         padding: 9% 0;
     }
 }
-@media screen and (max-width:380px) and (orientation:portrait) {
-    .contactMeContent form {
-        padding: 0;
-        padding-left: 13%;
-    }
-}
 @media screen and (max-width:350px) and (orientation:portrait) {
     .load{
         width: 200px;
@@ -1808,4 +1842,9 @@ html, body {
         padding: 9% 0;
     }
 }
-
+@media screen and (max-width:380px) and (orientation:portrait) {
+    .contactMeContent form {
+        padding: 0;
+        padding-left: 13%;
+    }
+}
