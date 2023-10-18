@@ -57,7 +57,7 @@ professionalPara.addEventListener('click' , ()=>{
     presonalBtn.classList.remove('presonalInfoActiveBorder')
     personalContent.classList.remove('personalInfoContentActive')
     professionalContent.classList.add('professionalInfoContentActive')
-    AboutContent.style.display = 'block'
+    Aboutcontent.style.display = 'block'
 })
 
 presonalClose.addEventListener('click',()=>{
