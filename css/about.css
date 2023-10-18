@@ -1704,6 +1704,9 @@ body{
     .myResume {
         margin-left: 13%;
     }
+    .AboutContent{
+        display: none;
+    }
 }
 @media screen and (max-width:550px) and (orientation:portrait) {
     .load{
@@ -1853,6 +1856,9 @@ body{
     .professionalInfoContent ul li {
         font-size: 9.3px;
     }
+    .AboutContent{
+        display: none;
+    }
 }
 @media screen and (max-width:450px) and (orientation:portrait) {
     .myResume{
@@ -1870,7 +1876,7 @@ body{
 @media screen and (max-width:380px) and (orientation:portrait) {
     .myResume {
         height: 80vh;
-        margin-left: 4%;
+        margin-left: 7%;
         padding-bottom: 30%;
     }
 }
