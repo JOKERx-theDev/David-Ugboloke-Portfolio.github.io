@@ -43,6 +43,7 @@ let now = new Date()
 let dates = now.getDate()
 let month = now.getMonth()+1
 let day = now.getDay()
+let year = now.getFullYear()
 // FIXING DAY
 if (day == 1 ){
     day = 'Mon'
@@ -108,7 +109,7 @@ if (dates < 10){
     dates = "0" + dates
 }
 
-currentDate.textContent = '"' + day + ' ' + dates + ' ' + month + '"'
+currentDate.textContent = '"' + day + ' ' + dates + ' ' + month + ' ' + year + '"'
 
 
 let formDate = currentDate.innerText
