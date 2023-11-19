@@ -2,6 +2,7 @@
 //WEBSITE LOADING
 let loderPage = document.querySelector('.loading')
 let main = document.querySelector('.main')
+main.style.display= 'none'
 
 window.addEventListener('load',()=>{
     loderPage.style.display = 'none'
